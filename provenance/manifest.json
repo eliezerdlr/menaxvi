@@ -155,7 +155,7 @@
         "docs/governance/PROVENANCE.md"
       ],
       "releaseAllowed": true,
-      "sha256": "6b2a3a5d34748c38ae186484b2f6bae852c406f1dd770a3b476fd4c155a8366d"
+      "sha256": "4b854c2e565210d4870fa2eb64ff98914967281f764baca94a6e8c9d0ce0aece"
     },
     {
       "path": "SECURITY.md",
@@ -2009,6 +2009,20 @@
       "sha256": "1dd17470b954197ebffb2d5c6ffffc4775b34e254f2ffb60ca0724be38007b1b"
     },
     {
+      "path": "catalog/provenance/build-multichannel-campaign.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI multichannel campaign implementation",
+      "license": "MIT",
+      "rightsBasis": "Created as original clean-room MENAXVI source, contract, documentation, example, or test.",
+      "evidence": [
+        "LICENSE",
+        "NOTICE.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d765d1491bd27a96e55aea62712d064360e491cad0535f67f5dd653a90e577c2"
+    },
+    {
       "path": "catalog/provenance/business-automation-diagnosis.json",
       "classification": "rewritten-clean-room",
       "source": "MENAXVI governed corpus remediation",
@@ -2398,6 +2412,20 @@
       "sha256": "0bfba22c105397201bf85fb3f1e48a736d209dbf71c505f03fde756efbc7c39a"
     },
     {
+      "path": "catalog/provenance/reviewed-multichannel-campaign.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI multichannel campaign implementation",
+      "license": "MIT",
+      "rightsBasis": "Created as original clean-room MENAXVI source, contract, documentation, example, or test.",
+      "evidence": [
+        "LICENSE",
+        "NOTICE.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "2b64467748966f3f3fe202dbcdac1d8000afd5d28def41edea937066af3c0ec2"
+    },
+    {
       "path": "catalog/provenance/social-carousel-production.json",
       "classification": "rewritten-clean-room",
       "source": "MENAXVI governed corpus remediation",
@@ -2496,6 +2524,20 @@
       "sha256": "7022831737d48b420d85782f57a10f8303eace9546722e9586213532a1f6eddd"
     },
     {
+      "path": "catalog/tasks/build-multichannel-campaign.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI multichannel campaign implementation",
+      "license": "MIT",
+      "rightsBasis": "Created as original clean-room MENAXVI source, contract, documentation, example, or test.",
+      "evidence": [
+        "LICENSE",
+        "NOTICE.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "827d678b1fb29475ea2013dbbea1e2f5de37a8add484b5ffda9919a726f3e0d9"
+    },
+    {
       "path": "catalog/tasks/draft-campaign-message.json",
       "classification": "rewritten-clean-room",
       "source": "MENAXVI clean-room remediation workstream",
@@ -2520,6 +2562,20 @@
       ],
       "releaseAllowed": true,
       "sha256": "1eddc4e5cfc85cde379cb505c0b25f02dc08b415094ea2c56957689fb53df413"
+    },
+    {
+      "path": "catalog/workflows/reviewed-multichannel-campaign.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI multichannel campaign implementation",
+      "license": "MIT",
+      "rightsBasis": "Created as original clean-room MENAXVI source, contract, documentation, example, or test.",
+      "evidence": [
+        "LICENSE",
+        "NOTICE.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "7962ef669af86be4566e45bc84a758cb9ee2680c723fd0fa20f6f70aab18c644"
     },
     {
       "path": "core/__init__.py",
@@ -2702,6 +2758,20 @@
       "sha256": "fbc51ba47839e082971f953bffe3f53fc631537655fcc25476453e3262a4d39b"
     },
     {
+      "path": "docs/customer/MULTICHANNEL-CAMPAIGNS.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI multichannel campaign implementation",
+      "license": "MIT",
+      "rightsBasis": "Created as original clean-room MENAXVI source, contract, documentation, example, or test.",
+      "evidence": [
+        "LICENSE",
+        "NOTICE.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d71995076f25c8ab0e516fa60215fd8fb8c2581c440e08a5944b52bb01edde58"
+    },
+    {
       "path": "docs/customer/README.md",
       "classification": "MENAXVI-original",
       "source": "MENAXVI remediation working set",
@@ -2711,7 +2781,7 @@
         "docs/governance/PROVENANCE.md"
       ],
       "releaseAllowed": true,
-      "sha256": "7df3c6a1fa6b0df7cefc09f591af3ebe1a18ab81a99acd33937f65e1b038b1eb"
+      "sha256": "4441f22619949972cd2ac371cb85f3e328e2ad758ea72e1ba97810e9a4651215"
     },
     {
       "path": "docs/customer/SUPPORT-AND-UPGRADES.md",
@@ -2892,6 +2962,20 @@
       ],
       "releaseAllowed": true,
       "sha256": "a05018adb6f0e79a4b87ebea05364608063c19a7a591653c3b05470de512abb2"
+    },
+    {
+      "path": "examples/multichannel-campaign/inputs.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI multichannel campaign implementation",
+      "license": "MIT",
+      "rightsBasis": "Created as original clean-room MENAXVI source, contract, documentation, example, or test.",
+      "evidence": [
+        "LICENSE",
+        "NOTICE.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "cc274650a370e5cf976f2929903ad043d4314971e77839d9120067c40278d78f"
     },
     {
       "path": "examples/reviewed-campaign-message/README.md",
@@ -3386,6 +3470,20 @@
       "sha256": "a5ae7213685b470061da51ee27c2bfda5d78742e315fd32a4987b1d621987c13"
     },
     {
+      "path": "tests/test_campaign.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI multichannel campaign implementation",
+      "license": "MIT",
+      "rightsBasis": "Created as original clean-room MENAXVI source, contract, documentation, example, or test.",
+      "evidence": [
+        "LICENSE",
+        "NOTICE.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "47903da82a2768138dcfb142ca4d58da164dc74211b95f1d81cbd57dae0536dd"
+    },
+    {
       "path": "tests/test_canonical_schemas.py",
       "classification": "MENAXVI-original",
       "source": "MENAXVI remediation working set",
@@ -3455,7 +3553,7 @@
         "docs/architecture/CUSTOMER-DASHBOARD.md"
       ],
       "releaseAllowed": true,
-      "sha256": "8ef876c6173cbf8bffa3c170e2ef913357ca68ef21c629ceb50fbcb5de418a3f"
+      "sha256": "72a2f8af623642ac85949394b5576efa29ef302df89c19e420c09f8858a06c1e"
     },
     {
       "path": "tests/test_dashboard_api.py",
@@ -3602,6 +3700,20 @@
       "sha256": "d3ebe6709443a20a0e2224f5146000427c822c7ab6c4a345d770acfacc39652a"
     },
     {
+      "path": "tooling/menaxvi/campaign.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI multichannel campaign implementation",
+      "license": "MIT",
+      "rightsBasis": "Created as original clean-room MENAXVI source, contract, documentation, example, or test.",
+      "evidence": [
+        "LICENSE",
+        "NOTICE.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "fa16cb58b79382d41672da3ba30bae43a2e3306c37c087cedb7079d0bc86dba4"
+    },
+    {
       "path": "tooling/menaxvi/cli.py",
       "classification": "MENAXVI-original",
       "source": "MENAXVI remediation working set",
@@ -3624,7 +3736,7 @@
         "docs/architecture/CUSTOMER-DASHBOARD.md"
       ],
       "releaseAllowed": true,
-      "sha256": "76a832f645c0c181c61649eeb13a5e0dfa8c0ff679844fa608e53fb945f434a0"
+      "sha256": "01c55fb8c69696d4ff5d170a47278ecebba0708bf5c2802ff1c8e22f800de80b"
     },
     {
       "path": "tooling/menaxvi/dashboard.py",
@@ -3636,7 +3748,7 @@
         "docs/architecture/CUSTOMER-DASHBOARD.md"
       ],
       "releaseAllowed": true,
-      "sha256": "76224ea8c934cf5c7bbd506c45799e9472b9a5f7f4fb11ef596234293e79fc7e"
+      "sha256": "11163d2edc6d002f73e127bf98210f8729f28b344550e205ba502d3b3df71af7"
     },
     {
       "path": "tooling/menaxvi/manual.py",
@@ -3688,9 +3800,9 @@
     }
   ],
   "summary": {
-    "fileCount": 304,
+    "fileCount": 312,
     "classifications": {
-      "MENAXVI-original": 108,
+      "MENAXVI-original": 116,
       "rewritten-clean-room": 195,
       "third-party-compatible": 1
     }

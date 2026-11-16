@@ -1,0 +1,23 @@
+{
+  "brief": {
+    "company": "North Texas Clean Co.",
+    "audience": "busy homeowners in North Texas",
+    "offer": "dependable residential cleaning",
+    "brand": "local, practical, and evidence-led",
+    "objective": "local reach and qualified quote requests",
+    "geography": "North Texas, United States",
+    "channels": "meta-ads,google-search,email,organic-social",
+    "language": "en-US",
+    "budget": "900",
+    "currency": "USD",
+    "durationDays": "30",
+    "constraints": "Do not invent prices, reviews, guarantees, or service areas."
+  },
+  "evidence": [
+    {
+      "id": "customer-claims",
+      "statement": "The company requires a service-needs review before confirming a quote.",
+      "source": "customer-provided operating policy"
+    }
+  ]
+}

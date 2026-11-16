@@ -1,0 +1,46 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Task",
+  "metadata": {
+    "id": "task.build-multichannel-campaign",
+    "version": "1.0.0",
+    "title": "Build a governed multichannel campaign",
+    "status": "active",
+    "provenanceRef": {"kind": "ProvenanceRecord", "id": "provenance.build-multichannel-campaign", "version": "1.0.0"}
+  },
+  "spec": {
+    "purpose": "Create a complete reviewable campaign package across selected channels without publishing or spending funds.",
+    "roleRef": {"kind": "Role", "id": "role.copy-strategist", "version": "1.0.0"},
+    "skillRefs": [{"kind": "Skill", "id": "skill.message-clarity-review", "version": "1.0.0"}],
+    "inputs": [
+      {"name": "brief", "required": true, "schema": {"type": "object", "required": ["company", "audience", "offer", "objective", "geography", "channels", "language", "budget", "currency", "durationDays", "constraints"]}},
+      {"name": "evidence", "required": true, "schema": {"type": "array", "items": {"type": "object", "required": ["id", "statement", "source"]}}}
+    ],
+    "outputs": [
+      {"name": "campaign-package", "required": true, "schema": {"type": "object", "required": ["schemaVersion", "language", "summary", "positioning", "channelPlans", "landingPage", "measurement", "launchChecklist", "assumptions", "approvalInstruction"]}},
+      {"name": "claim-ledger", "required": true, "schema": {"type": "array", "items": {"type": "object", "required": ["claim", "evidenceRef"]}}},
+      {"name": "quality-review", "required": true, "schema": {"type": "object", "required": ["audience", "objective", "language", "evidence", "budget", "channels", "safety", "overall"]}}
+    ],
+    "preconditions": [
+      {"description": "The business brief, market, objective, budget, duration, language, and channels are explicit."},
+      {"description": "At least two supported channels are selected."},
+      {"description": "Claims and supporting evidence are separated and traceable."}
+    ],
+    "steps": [
+      {"id": "position", "dependsOn": [], "instruction": "Define audience, offer, benefit, campaign angle, objective, geography, and brand direction."},
+      {"id": "allocate", "dependsOn": ["position"], "instruction": "Allocate the declared budget across selected channels using transparent planning defaults."},
+      {"id": "produce", "dependsOn": ["allocate"], "instruction": "Produce channel-specific plans and creative drafts in the selected locale."},
+      {"id": "verify", "dependsOn": ["produce"], "instruction": "Verify completeness, language, claims, budget, safety boundaries, and cross-channel consistency."}
+    ],
+    "acceptanceCriteria": [
+      {"description": "The package contains strategy, selected channel plans, a landing-page brief, measurement, checklist, assumptions, and approval guidance."},
+      {"description": "Every factual claim maps to supplied evidence.", "requiredEvidence": ["claim-ledger"]},
+      {"description": "No external publication, account modification, forecast, or unsupported statistic is performed."},
+      {"description": "All quality checks pass before human approval.", "requiredEvidence": ["quality-review"]}
+    ],
+    "policies": [
+      {"policyId": "policy.claims-require-evidence", "enforcement": "required"},
+      {"policyId": "policy.human-approval-before-publication", "enforcement": "required"}
+    ]
+  }
+}

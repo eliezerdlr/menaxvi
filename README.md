@@ -59,12 +59,12 @@ local evaluation interface, not a hosted multi-user service.
 
 ## Workflow example
 
-Validate the reviewed campaign-message workflow:
+Validate the reviewed multichannel-campaign workflow:
 
 ```bash
 PYTHONPATH=tooling:. python3 -m menaxvi workflow validate \
   --root . \
-  --workflow workflow.reviewed-campaign-message@1.0.0
+  --workflow workflow.reviewed-multichannel-campaign@1.0.0
 ```
 
 Create a deterministic plan:
@@ -72,9 +72,9 @@ Create a deterministic plan:
 ```bash
 PYTHONPATH=tooling:. python3 -m menaxvi workflow plan \
   --root . \
-  --workflow workflow.reviewed-campaign-message@1.0.0 \
+  --workflow workflow.reviewed-multichannel-campaign@1.0.0 \
   --execution-id example-001 \
-  --inputs examples/reviewed-campaign-message/inputs.json \
+  --inputs examples/multichannel-campaign/inputs.json \
   --output /tmp/menaxvi-plan.json
 ```
 
@@ -144,6 +144,7 @@ versioned. Release artifacts are attached to GitHub Releases.
 
 - [Customer documentation](docs/customer/README.md)
 - [Dashboard tutorial](docs/customer/DASHBOARD-TUTORIAL.md)
+- [Multichannel campaigns](docs/customer/MULTICHANNEL-CAMPAIGNS.md)
 - [Workflow tutorial](docs/customer/WORKFLOW-TUTORIAL.md)
 - [Compatibility](docs/customer/COMPATIBILITY.md)
 - [Known limitations](docs/customer/LIMITATIONS.md)
@@ -158,7 +159,7 @@ MENAXVI `0.1.0` is an **OSS pre-alpha for local evaluation**.
 Validated in this release:
 
 - canonical resource loading and schema checks;
-- one complete governed workflow vertical slice;
+- complete governed multichannel campaigns for Meta Ads, Google Search, email, and organic social;
 - human approval, artifact, and evidence lifecycle;
 - local dashboard authentication and persistence;
 - controlled failure, bounded retry, and rollback planning;

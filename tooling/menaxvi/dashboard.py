@@ -19,10 +19,11 @@ from pathlib import Path
 from typing import Any, Mapping
 from urllib.parse import urlparse
 
+from menaxvi.campaign import CampaignError, generate_campaign, review_campaign
 from menaxvi.manual import ManualWorkflowError, record_results, render_plan
 from menaxvi.recovery import create_retry_plan, create_rollback_plan
 
-WORKFLOW = "workflow.reviewed-campaign-message@1.0.0"
+WORKFLOW = "workflow.reviewed-multichannel-campaign@1.0.0"
 SESSION_COOKIE = "menaxvi_session"
 
 
@@ -148,7 +149,7 @@ class DashboardService:
         workspaces = [value for value in data["workspaces"].values() if value["owner"] == email]
         executions = [value for value in data["executions"].values() if value["owner"] == email]
         executions.sort(key=lambda item: item["createdAt"], reverse=True)
-        return {"email": email, "workspaces": workspaces, "executions": executions, "modules": [{"id": WORKFLOW, "title": "Reviewed campaign message", "status": "approved"}]}
+        return {"email": email, "workspaces": workspaces, "executions": executions, "modules": [{"id": WORKFLOW, "title": "Reviewed multichannel campaign", "status": "approved"}]}
 
     @staticmethod
     def _split_claim_evidence(value: str) -> tuple[str, str]:
@@ -178,39 +179,13 @@ class DashboardService:
                 sections[current].append(line)
         return " ".join(sections["claim"]), " ".join(sections["evidence"])
 
-    @staticmethod
-    def _language_consistent(text: str, language: str) -> bool:
-        normalized = f" {text.casefold()} "
-        forbidden = {
-            "pt-BR": (" for ", " reply ", " request ", " next step ", " the ", " with "),
-            "en": (" para ", " responda ", " solicitar ", " próximo passo ", " você ", " evidência "),
-        }
-        return not any(marker in normalized for marker in forbidden[language])
-
-    @classmethod
-    def _quality_review(
-        cls, context: Mapping[str, str], draft: str, claim: str, evidence: str
-    ) -> dict[str, str]:
-        language = context["language"]
-        consistent = cls._language_consistent(draft, language)
-        expected_action = "responda para solicitar" if language == "pt-BR" else "reply to request"
-        checks = {
-            "audience": context["audience"].casefold() in draft.casefold() and consistent,
-            "outcome": context["offer"].casefold() in draft.casefold() and consistent,
-            "evidence": bool(claim and evidence),
-            "action": expected_action in draft.casefold() and consistent,
-        }
-        review = {key: "pass" if passed else "fail" for key, passed in checks.items()}
-        review["overall"] = "pass" if all(checks.values()) else "fail"
-        return review
-
     def create_workspace(self, email: str, payload: Mapping[str, Any]) -> dict[str, Any]:
-        required = ("company", "audience", "offer", "brand", "channels", "language", "claims", "constraints", "approvalOwners")
+        required = ("company", "audience", "offer", "brand", "objective", "geography", "channels", "language", "budget", "currency", "durationDays", "claims", "constraints", "approvalOwners")
         missing = [key for key in required if not str(payload.get(key, "")).strip()]
         if missing:
             raise DashboardError(f"Complete the required onboarding field: {missing[0]}.")
-        if str(payload["language"]).strip() not in {"pt-BR", "en"}:
-            raise DashboardError("Choose a supported output language: pt-BR or en.")
+        if str(payload["language"]).strip() not in {"pt-PT", "en-US"}:
+            raise DashboardError("Choose a supported output language: pt-PT or en-US.")
         claim, evidence = self._split_claim_evidence(str(payload["claims"]))
         if not claim or not evidence:
             raise DashboardError("Enter separate Claim and Evidence sections in the onboarding field.")
@@ -237,7 +212,10 @@ class DashboardService:
             "brief": {
                 "company": context["company"], "audience": context["audience"],
                 "offer": context["offer"], "brand": context["brand"],
-                "channels": context["channels"], "constraints": context["constraints"],
+                "objective": context["objective"], "geography": context["geography"],
+                "channels": context["channels"], "language": context["language"],
+                "budget": context["budget"], "currency": context["currency"],
+                "durationDays": context["durationDays"], "constraints": context["constraints"],
             },
             "evidence": [{"id": "customer-claims", "statement": evidence, "source": "customer onboarding"}],
         }
@@ -261,7 +239,7 @@ class DashboardService:
                 raise DashboardError("This execution is not ready to run.")
             plan = execution["plan"]
             if fail:
-                results = {"executionId": execution_id, "nodes": [{"id": "draft-and-review", "status": "failed", "error": "Controlled validation failure"}], "gates": [{"id": "human-approval", "status": "not-run", "reason": "node failed"}], "outputs": {}, "residualRisks": ["Controlled validation failure; no artifact was published."]}
+                results = {"executionId": execution_id, "nodes": [{"id": "build-and-review", "status": "failed", "error": "Controlled validation failure"}], "gates": [{"id": "human-approval", "status": "not-run", "reason": "node failed"}], "outputs": {}, "residualRisks": ["Controlled validation failure; no campaign was activated or published."]}
                 record = record_results(plan, results)
                 execution["status"] = "failed"
                 execution["record"] = record
@@ -269,8 +247,8 @@ class DashboardService:
             else:
                 context = data["workspaces"][execution["workspaceId"]]["context"]
                 artifact = self._draft_outputs(context)
-                node_outputs = {"message-draft": artifact["draft"], "claim-ledger": artifact["claimLedger"], "quality-review": artifact["qualityReview"]}
-                validation = {"executionId": execution_id, "nodes": [{"id": "draft-and-review", "status": "completed", "outputs": node_outputs}], "gates": [{"id": "human-approval", "status": "not-run", "reason": "awaiting human review"}], "outputs": {}, "residualRisks": ["Human approval is required before handoff."]}
+                node_outputs = {"campaign-package": artifact["campaign"], "claim-ledger": artifact["claimLedger"], "quality-review": artifact["qualityReview"]}
+                validation = {"executionId": execution_id, "nodes": [{"id": "build-and-review", "status": "completed", "outputs": node_outputs}], "gates": [{"id": "human-approval", "status": "not-run", "reason": "awaiting human review"}], "outputs": {}, "residualRisks": ["Human approval is required before handoff. No channel was activated."]}
                 try:
                     record_results(plan, validation)
                 except ManualWorkflowError as error:
@@ -288,13 +266,13 @@ class DashboardService:
             if execution["status"] != "awaiting-approval" or not execution["artifact"]:
                 raise DashboardError("Generate and review the draft outputs before deciding the gate.")
             context = data["workspaces"][execution["workspaceId"]]["context"]
-            required_checks = ("audience", "outcome", "evidence", "action", "overall")
+            required_checks = ("audience", "objective", "language", "evidence", "budget", "channels", "safety", "overall")
             quality = execution["artifact"].get("qualityReview", {})
             if any(quality.get(check) != "pass" for check in required_checks):
                 raise DashboardError("The quality review must pass before human approval.")
-            artifact = {**execution["artifact"], "gateDecision": "approve_draft"}
-            node_outputs = {"message-draft": artifact["draft"], "claim-ledger": artifact["claimLedger"], "quality-review": artifact["qualityReview"]}
-            results = {"executionId": execution_id, "nodes": [{"id": "draft-and-review", "status": "completed", "outputs": node_outputs}], "gates": [{"id": "human-approval", "status": "passed", "decision": "approve_draft", "decidedBy": context["approvalOwners"], "evidence": "dashboard-review-confirmation"}], "outputs": {"reviewed-message-package": artifact}, "residualRisks": ["The local dashboard does not publish content."]}
+            artifact = {**execution["artifact"], "gateDecision": "approve_campaign"}
+            node_outputs = {"campaign-package": artifact["campaign"], "claim-ledger": artifact["claimLedger"], "quality-review": artifact["qualityReview"]}
+            results = {"executionId": execution_id, "nodes": [{"id": "build-and-review", "status": "completed", "outputs": node_outputs}], "gates": [{"id": "human-approval", "status": "passed", "decision": "approve_campaign", "decidedBy": context["approvalOwners"], "evidence": "dashboard-review-confirmation"}], "outputs": {"reviewed-campaign-package": artifact}, "residualRisks": ["The local dashboard does not publish content, spend funds, or modify channel accounts."]}
             try:
                 record = record_results(execution["plan"], results)
             except ManualWorkflowError as error:
@@ -302,7 +280,7 @@ class DashboardService:
             execution["status"] = "completed"
             execution["record"] = record
             execution["artifact"] = artifact
-            execution["evidence"].append(self._event("gate_decided", {"gate": "human-approval", "decision": "approve_draft", "decidedBy": context["approvalOwners"]}))
+            execution["evidence"].append(self._event("gate_decided", {"gate": "human-approval", "decision": "approve_campaign", "decidedBy": context["approvalOwners"]}))
             execution["updatedAt"] = _now()
             return execution
         return self.store.update(operation)
@@ -310,14 +288,14 @@ class DashboardService:
     @classmethod
     def _draft_outputs(cls, context: Mapping[str, str]) -> dict[str, Any]:
         claim, evidence = cls._split_claim_evidence(context["claims"])
-        if context["language"] == "pt-BR":
-            draft = f"{context['offer']} para {context['audience']}. {claim} Responda para solicitar o próximo passo revisado."
-        else:
-            draft = f"{context['offer']} for {context['audience']}. {claim} Reply to request the reviewed next step."
+        try:
+            campaign = generate_campaign(context, claim, evidence)
+        except CampaignError as error:
+            raise DashboardError(str(error)) from error
         return {
-            "draft": draft,
+            "campaign": campaign,
             "claimLedger": [{"claim": claim, "evidenceRef": "customer-claims"}],
-            "qualityReview": cls._quality_review(context, draft, claim, evidence),
+            "qualityReview": review_campaign(campaign, claim, evidence),
         }
 
     def retry(self, email: str, execution_id: str) -> dict[str, Any]:

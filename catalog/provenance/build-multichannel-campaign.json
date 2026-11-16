@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.build-multichannel-campaign",
+    "version": "1.0.0",
+    "title": "Multichannel campaign task provenance",
+    "status": "active"
+  },
+  "spec": {
+    "subject": {
+      "path": "catalog/tasks/build-multichannel-campaign.json"
+    },
+    "source": {
+      "type": "original"
+    },
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "MENAXVI-original",
+    "license": {
+      "spdxId": "MIT",
+      "redistributionAllowed": true
+    },
+    "evidence": [
+      {
+        "path": "catalog/tasks/build-multichannel-campaign.json",
+        "algorithm": "sha256",
+        "digest": "827d678b1fb29475ea2013dbbea1e2f5de37a8add484b5ffda9919a726f3e0d9"
+      }
+    ],
+    "review": {
+      "status": "approved",
+      "reviewedBy": "MENAXVI project review",
+      "reviewedAt": "2026-11-16T00:00:00Z",
+      "notes": "Created as original clean-room MENAXVI campaign contract."
+    }
+  }
+}

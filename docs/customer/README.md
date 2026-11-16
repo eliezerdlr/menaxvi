@@ -15,6 +15,7 @@ part of the OSS distribution.
 - [Tutorial: validate a repository](VALIDATION-TUTORIAL.md)
 - [Tutorial: run the reviewed campaign-message workflow](WORKFLOW-TUTORIAL.md)
 - [Tutorial: complete the customer dashboard journey](DASHBOARD-TUTORIAL.md)
+- [Multichannel campaign workspace](MULTICHANNEL-CAMPAIGNS.md)
 - [Compatibility matrix](COMPATIBILITY.md)
 - [Support and upgrade policy](SUPPORT-AND-UPGRADES.md)
 - [Known limitations](LIMITATIONS.md)
@@ -24,11 +25,11 @@ part of the OSS distribution.
 
 1. build the deterministic zipapp or run the CLI from a trusted checkout;
 2. diagnose and validate a MENAXVI repository root;
-3. open the local dashboard and create a workspace;
-4. complete synthetic business-context onboarding;
+3. open the local dashboard and create a multichannel campaign workspace;
+4. supply objective, geography, channels, locale, budget, evidence, and approval authority;
 5. review and approve the workflow plan;
-6. execute the bounded local workflow;
-7. inspect the artifact and evidence;
+6. generate and review the bounded campaign package;
+7. inspect each channel plan, artifact, quality check, and evidence;
 8. test controlled failure, retry, rollback, and persistence.
 
 The CLI and dashboard do not call a model, publish content, spend money, use
