@@ -3455,7 +3455,7 @@
         "docs/architecture/CUSTOMER-DASHBOARD.md"
       ],
       "releaseAllowed": true,
-      "sha256": "9ed6b6e305c35cee812af5ef8d29d09db132817a94b973e3af9935927ee02c7f"
+      "sha256": "8ef876c6173cbf8bffa3c170e2ef913357ca68ef21c629ceb50fbcb5de418a3f"
     },
     {
       "path": "tests/test_dashboard_api.py",
@@ -3624,7 +3624,7 @@
         "docs/architecture/CUSTOMER-DASHBOARD.md"
       ],
       "releaseAllowed": true,
-      "sha256": "6b8cd0706a2e646fbc1e6b357391fea5de1d86270173ee9b78292f239191fd4a"
+      "sha256": "76a832f645c0c181c61649eeb13a5e0dfa8c0ff679844fa608e53fb945f434a0"
     },
     {
       "path": "tooling/menaxvi/dashboard.py",
@@ -3636,7 +3636,7 @@
         "docs/architecture/CUSTOMER-DASHBOARD.md"
       ],
       "releaseAllowed": true,
-      "sha256": "2fc0a49f7e44ff858a1207d463490eedd9813d860f1572789231e4e0455a96fc"
+      "sha256": "76224ea8c934cf5c7bbd506c45799e9472b9a5f7f4fb11ef596234293e79fc7e"
     },
     {
       "path": "tooling/menaxvi/manual.py",

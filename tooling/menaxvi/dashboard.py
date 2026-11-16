@@ -150,11 +150,70 @@ class DashboardService:
         executions.sort(key=lambda item: item["createdAt"], reverse=True)
         return {"email": email, "workspaces": workspaces, "executions": executions, "modules": [{"id": WORKFLOW, "title": "Reviewed campaign message", "status": "approved"}]}
 
+    @staticmethod
+    def _split_claim_evidence(value: str) -> tuple[str, str]:
+        sections: dict[str, list[str]] = {"claim": [], "evidence": []}
+        current: str | None = None
+        for raw_line in value.splitlines():
+            line = raw_line.strip()
+            if not line:
+                continue
+            normalized = line.casefold()
+            matched = False
+            for section, labels in {
+                "claim": ("claim:", "alegação:", "alegacao:"),
+                "evidence": ("evidence:", "evidência:", "evidencia:"),
+            }.items():
+                for label in labels:
+                    if normalized.startswith(label):
+                        current = section
+                        content = line[len(label):].strip()
+                        if content:
+                            sections[section].append(content)
+                        matched = True
+                        break
+                if matched:
+                    break
+            if not matched and current:
+                sections[current].append(line)
+        return " ".join(sections["claim"]), " ".join(sections["evidence"])
+
+    @staticmethod
+    def _language_consistent(text: str, language: str) -> bool:
+        normalized = f" {text.casefold()} "
+        forbidden = {
+            "pt-BR": (" for ", " reply ", " request ", " next step ", " the ", " with "),
+            "en": (" para ", " responda ", " solicitar ", " próximo passo ", " você ", " evidência "),
+        }
+        return not any(marker in normalized for marker in forbidden[language])
+
+    @classmethod
+    def _quality_review(
+        cls, context: Mapping[str, str], draft: str, claim: str, evidence: str
+    ) -> dict[str, str]:
+        language = context["language"]
+        consistent = cls._language_consistent(draft, language)
+        expected_action = "responda para solicitar" if language == "pt-BR" else "reply to request"
+        checks = {
+            "audience": context["audience"].casefold() in draft.casefold() and consistent,
+            "outcome": context["offer"].casefold() in draft.casefold() and consistent,
+            "evidence": bool(claim and evidence),
+            "action": expected_action in draft.casefold() and consistent,
+        }
+        review = {key: "pass" if passed else "fail" for key, passed in checks.items()}
+        review["overall"] = "pass" if all(checks.values()) else "fail"
+        return review
+
     def create_workspace(self, email: str, payload: Mapping[str, Any]) -> dict[str, Any]:
-        required = ("company", "audience", "offer", "brand", "channels", "claims", "constraints", "approvalOwners")
+        required = ("company", "audience", "offer", "brand", "channels", "language", "claims", "constraints", "approvalOwners")
         missing = [key for key in required if not str(payload.get(key, "")).strip()]
         if missing:
             raise DashboardError(f"Complete the required onboarding field: {missing[0]}.")
+        if str(payload["language"]).strip() not in {"pt-BR", "en"}:
+            raise DashboardError("Choose a supported output language: pt-BR or en.")
+        claim, evidence = self._split_claim_evidence(str(payload["claims"]))
+        if not claim or not evidence:
+            raise DashboardError("Enter separate Claim and Evidence sections in the onboarding field.")
         workspace_id = f"ws-{uuid.uuid4().hex[:12]}"
         workspace = {
             "id": workspace_id,
@@ -173,13 +232,14 @@ class DashboardService:
             raise DashboardError("Select a workspace that belongs to your account.")
         execution_id = f"run-{uuid.uuid4().hex[:12]}"
         context = workspace["context"]
+        claim, evidence = self._split_claim_evidence(context["claims"])
         inputs = {
             "brief": {
                 "company": context["company"], "audience": context["audience"],
                 "offer": context["offer"], "brand": context["brand"],
                 "channels": context["channels"], "constraints": context["constraints"],
             },
-            "evidence": [{"id": "customer-claims", "statement": context["claims"], "source": "customer onboarding"}],
+            "evidence": [{"id": "customer-claims", "statement": evidence, "source": "customer onboarding"}],
         }
         try:
             plan = render_plan(self.root, WORKFLOW, execution_id, inputs)
@@ -228,6 +288,10 @@ class DashboardService:
             if execution["status"] != "awaiting-approval" or not execution["artifact"]:
                 raise DashboardError("Generate and review the draft outputs before deciding the gate.")
             context = data["workspaces"][execution["workspaceId"]]["context"]
+            required_checks = ("audience", "outcome", "evidence", "action", "overall")
+            quality = execution["artifact"].get("qualityReview", {})
+            if any(quality.get(check) != "pass" for check in required_checks):
+                raise DashboardError("The quality review must pass before human approval.")
             artifact = {**execution["artifact"], "gateDecision": "approve_draft"}
             node_outputs = {"message-draft": artifact["draft"], "claim-ledger": artifact["claimLedger"], "quality-review": artifact["qualityReview"]}
             results = {"executionId": execution_id, "nodes": [{"id": "draft-and-review", "status": "completed", "outputs": node_outputs}], "gates": [{"id": "human-approval", "status": "passed", "decision": "approve_draft", "decidedBy": context["approvalOwners"], "evidence": "dashboard-review-confirmation"}], "outputs": {"reviewed-message-package": artifact}, "residualRisks": ["The local dashboard does not publish content."]}
@@ -243,17 +307,17 @@ class DashboardService:
             return execution
         return self.store.update(operation)
 
-    @staticmethod
-    def _draft_outputs(context: Mapping[str, str]) -> dict[str, Any]:
-        portuguese = any(word in f" {context['offer']} {context['audience']} {context['claims']} ".lower() for word in (" para ", " com ", " sua ", " seu ", " você ", " líderes ", " mensagem "))
-        if portuguese:
-            draft = f"{context['offer']} para {context['audience']}. {context['claims']} Responda para solicitar o próximo passo revisado."
+    @classmethod
+    def _draft_outputs(cls, context: Mapping[str, str]) -> dict[str, Any]:
+        claim, evidence = cls._split_claim_evidence(context["claims"])
+        if context["language"] == "pt-BR":
+            draft = f"{context['offer']} para {context['audience']}. {claim} Responda para solicitar o próximo passo revisado."
         else:
-            draft = f"{context['offer']} for {context['audience']}. {context['claims']} Reply to request the reviewed next step."
+            draft = f"{context['offer']} for {context['audience']}. {claim} Reply to request the reviewed next step."
         return {
             "draft": draft,
-            "claimLedger": [{"claim": context["claims"], "evidenceRef": "customer-claims"}],
-            "qualityReview": {"audience": "pass", "outcome": "pass", "evidence": "pass", "action": "pass", "overall": "pass"},
+            "claimLedger": [{"claim": claim, "evidenceRef": "customer-claims"}],
+            "qualityReview": cls._quality_review(context, draft, claim, evidence),
         }
 
     def retry(self, email: str, execution_id: str) -> dict[str, Any]:

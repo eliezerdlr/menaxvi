@@ -18,7 +18,8 @@ CONTEXT = {
     "offer": "Governed campaign review",
     "brand": "Clear and evidence-led",
     "channels": "Email",
-    "claims": "Every message requires a recorded human decision.",
+    "language": "en",
+    "claims": "Claim: Every message requires a recorded human decision.\nEvidence: The customer requires a human decision before use.",
     "constraints": "Do not publish automatically.",
     "approvalOwners": "owner@example.test",
 }
@@ -42,8 +43,9 @@ class DashboardJourneyTests(unittest.TestCase):
         prepared = self.service.execute(self.email, execution["id"])
         self.assertEqual(prepared["status"], "awaiting-approval")
         self.assertEqual([event["type"] for event in prepared["evidence"]], ["plan_created", "output_recorded"])
-        self.assertEqual(prepared["artifact"]["claimLedger"], [{"claim": CONTEXT["claims"], "evidenceRef": "customer-claims"}])
+        self.assertEqual(prepared["artifact"]["claimLedger"], [{"claim": "Every message requires a recorded human decision.", "evidenceRef": "customer-claims"}])
         self.assertEqual(set(prepared["artifact"]["qualityReview"]), {"audience", "outcome", "evidence", "action", "overall"})
+        self.assertEqual(prepared["artifact"]["qualityReview"]["overall"], "pass")
 
         completed = self.service.approve(self.email, execution["id"])
         self.assertEqual(completed["status"], "completed")
@@ -75,6 +77,54 @@ class DashboardJourneyTests(unittest.TestCase):
         self.assertFalse(rollback["rollback"]["automaticActionsPerformed"])
         self.assertEqual(rollback["rollback"]["sourceRecordDigest"], completed["record"]["recordDigest"])
         self.assertEqual(self.service.state(self.email)["executions"][-1]["status"], "failed")
+
+    def test_portuguese_output_separates_claim_evidence_and_uses_one_language(self) -> None:
+        context = {
+            **CONTEXT,
+            "audience": "Gestores de operações de pequenas empresas",
+            "offer": "Diagnóstico gratuito de eficiência operacional",
+            "language": "pt-BR",
+            "claims": "Claim: O diagnóstico identifica oportunidades de melhoria operacional.\nEvidence: A análise utiliza informações fornecidas pelo cliente.",
+        }
+        workspace = self.service.create_workspace(self.email, context)
+        execution = self.service.create_plan(self.email, workspace["id"])
+        prepared = self.service.execute(self.email, execution["id"])
+
+        artifact = prepared["artifact"]
+        self.assertNotIn(" for ", artifact["draft"].lower())
+        self.assertNotIn("reply to", artifact["draft"].lower())
+        self.assertEqual(
+            artifact["claimLedger"],
+            [{"claim": "O diagnóstico identifica oportunidades de melhoria operacional.", "evidenceRef": "customer-claims"}],
+        )
+        self.assertEqual(
+            execution["plan"]["inputs"]["evidence"][0]["statement"],
+            "A análise utiliza informações fornecidas pelo cliente.",
+        )
+        self.assertEqual(artifact["qualityReview"]["overall"], "pass")
+
+    def test_quality_failure_blocks_human_approval(self) -> None:
+        workspace = self.service.create_workspace(self.email, CONTEXT)
+        execution = self.service.create_plan(self.email, workspace["id"])
+        failing_artifact = {
+            "draft": "Governed campaign review for Operations leaders. Responda agora.",
+            "claimLedger": [{"claim": "Every message requires a recorded human decision.", "evidenceRef": "customer-claims"}],
+            "qualityReview": {"audience": "pass", "outcome": "pass", "evidence": "pass", "action": "fail", "overall": "fail"},
+        }
+        with patch.object(DashboardService, "_draft_outputs", return_value=failing_artifact):
+            prepared = self.service.execute(self.email, execution["id"])
+        self.assertEqual(prepared["status"], "awaiting-approval")
+        with self.assertRaisesRegex(DashboardError, "quality review must pass"):
+            self.service.approve(self.email, execution["id"])
+        restored = self.service.state(self.email)["executions"][0]
+        self.assertEqual(restored["status"], "awaiting-approval")
+        self.assertEqual([event["type"] for event in restored["evidence"]], ["plan_created", "output_recorded"])
+
+    def test_onboarding_requires_explicit_language_and_separate_evidence(self) -> None:
+        with self.assertRaisesRegex(DashboardError, "required onboarding field: language"):
+            self.service.create_workspace(self.email, {key: value for key, value in CONTEXT.items() if key != "language"})
+        with self.assertRaisesRegex(DashboardError, "separate Claim and Evidence"):
+            self.service.create_workspace(self.email, {**CONTEXT, "claims": "An unsupported claim."})
 
     def test_generated_output_schema_violation_fails_closed_before_gate(self) -> None:
         workspace = self.service.create_workspace(self.email, CONTEXT)
