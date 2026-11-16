@@ -60,6 +60,7 @@ def main() -> int:
             unittest.defaultTestLoader.discover(
                 str(start_directory),
                 pattern=args.pattern,
+                top_level_dir=str(start_directory),
             )
         )
     runner = unittest.TextTestRunner(

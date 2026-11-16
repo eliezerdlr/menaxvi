@@ -3119,7 +3119,7 @@
         "docs/governance/PROVENANCE.md"
       ],
       "releaseAllowed": true,
-      "sha256": "b0ce38f2c6af2e72085da8a16858b75f4610fcd3f87248a8033fa568142bdfb0"
+      "sha256": "9ba1dfdf23503903374466ff11eeaa206ea64359d61ece5a6dfc0e8219ff2b5f"
     },
     {
       "path": "scripts/validate_repository.py",
