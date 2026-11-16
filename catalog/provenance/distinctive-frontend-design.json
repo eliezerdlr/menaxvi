@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.distinctive-frontend-design",
+    "status": "active",
+    "title": "Distinctive frontend design provenance",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "rewritten-clean-room",
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "8535ce267c667ff8a0d7817e3421cede693fc56b77da336f6facfb73a5399cd1",
+        "path": "catalog/migrated/skill/distinctive-frontend-design.json"
+      }
+    ],
+    "license": {
+      "redistributionAllowed": true,
+      "spdxId": "MIT"
+    },
+    "review": {
+      "notes": "Professional clean-room replacement. Legacy files remain preserved in quarantine and are mapped by the migration record.",
+      "reviewedAt": "2026-11-13T23:48:58Z",
+      "reviewedBy": "MENAXVI migration review",
+      "status": "approved"
+    },
+    "source": {
+      "type": "original"
+    },
+    "subject": {
+      "path": "catalog/migrated/skill/distinctive-frontend-design.json"
+    }
+  }
+}

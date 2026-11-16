@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.clean-room-interface-build",
+    "status": "active",
+    "title": "Clean-room interface build provenance",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "rewritten-clean-room",
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "a1f990d229778200cfb6e45faf6e42f1d7546f4d373a43d37dc5fdcb3a346a0c",
+        "path": "catalog/migrated/skill/clean-room-interface-build.json"
+      }
+    ],
+    "license": {
+      "redistributionAllowed": true,
+      "spdxId": "MIT"
+    },
+    "review": {
+      "notes": "Professional clean-room replacement. Legacy files remain preserved in quarantine and are mapped by the migration record.",
+      "reviewedAt": "2026-11-13T23:48:58Z",
+      "reviewedBy": "MENAXVI migration review",
+      "status": "approved"
+    },
+    "source": {
+      "type": "original"
+    },
+    "subject": {
+      "path": "catalog/migrated/skill/clean-room-interface-build.json"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.product-reconstruction-architecture",
+    "status": "active",
+    "title": "Product reconstruction architecture provenance",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "rewritten-clean-room",
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "361e7df0755bf6a3dbe6b321bd9406f39ea1c8c9198495a2f88f013faf04dd46",
+        "path": "catalog/migrated/skill/product-reconstruction-architecture.json"
+      }
+    ],
+    "license": {
+      "redistributionAllowed": true,
+      "spdxId": "MIT"
+    },
+    "review": {
+      "notes": "Professional clean-room replacement. Legacy files remain preserved in quarantine and are mapped by the migration record.",
+      "reviewedAt": "2026-11-13T23:48:58Z",
+      "reviewedBy": "MENAXVI migration review",
+      "status": "approved"
+    },
+    "source": {
+      "type": "original"
+    },
+    "subject": {
+      "path": "catalog/migrated/skill/product-reconstruction-architecture.json"
+    }
+  }
+}

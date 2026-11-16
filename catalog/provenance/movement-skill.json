@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.movement-skill",
+    "status": "active",
+    "title": "Community strategy ethics review provenance",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "rewritten-clean-room",
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "75ccbaf092dd61da0693039f71182465f1944c1577ed1b669f681bee567bc9ac",
+        "path": "catalog/migrated/skills/movement-quality-review.json"
+      }
+    ],
+    "license": {
+      "redistributionAllowed": true,
+      "spdxId": "MIT"
+    },
+    "review": {
+      "notes": "Original professional quality review capability.",
+      "reviewedAt": "2026-11-14T00:00:00Z",
+      "reviewedBy": "MENAXVI project review",
+      "status": "approved"
+    },
+    "source": {
+      "type": "original"
+    },
+    "subject": {
+      "path": "catalog/migrated/skills/movement-quality-review.json"
+    }
+  }
+}

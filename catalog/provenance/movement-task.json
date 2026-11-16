@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.movement-task",
+    "status": "active",
+    "title": "Community Movement Strategy task provenance",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "rewritten-clean-room",
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "b7967df4856632ec7807b32d20b91a253d79900755780cf49e2a8376ec2be250",
+        "path": "catalog/migrated/tasks/movement-strategy.json"
+      }
+    ],
+    "license": {
+      "redistributionAllowed": true,
+      "spdxId": "MIT"
+    },
+    "review": {
+      "notes": "Professional clean-room capability; legacy prose, named personas, and proprietary method claims were not copied.",
+      "reviewedAt": "2026-11-14T00:00:00Z",
+      "reviewedBy": "MENAXVI project review",
+      "status": "approved"
+    },
+    "source": {
+      "type": "original"
+    },
+    "subject": {
+      "path": "catalog/migrated/tasks/movement-strategy.json"
+    }
+  }
+}

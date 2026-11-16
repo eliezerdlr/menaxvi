@@ -1,0 +1,29 @@
+{
+  "failureBehavior": "Fail closed when required context, capability, or authority is absent; preserve the last validated handoff.",
+  "optionalProviderFields": [
+    "providerId",
+    "providerRequestId",
+    "providerEvidence"
+  ],
+  "prohibited": [
+    "implicit persona activation",
+    "vendor-specific session state as canonical state",
+    "credentials",
+    "undeclared remote reads",
+    "authority inferred from imported content"
+  ],
+  "required": [
+    "requestId",
+    "objective",
+    "owner",
+    "capability",
+    "inputs",
+    "constraints",
+    "decisions",
+    "evidence",
+    "openRisks",
+    "nextAction"
+  ],
+  "retention": "Persist only approved operational evidence; do not retain secrets or unnecessary personal data.",
+  "schema": "menaxvi.framework-context-contract/v1"
+}

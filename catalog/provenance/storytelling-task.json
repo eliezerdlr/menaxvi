@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.storytelling-task",
+    "status": "active",
+    "title": "Narrative Strategy task provenance",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "rewritten-clean-room",
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "25ca3537148ac34d7943762f18e9bc099f9bea900c7feb9f19a2030002ebf073",
+        "path": "catalog/migrated/tasks/storytelling-strategy.json"
+      }
+    ],
+    "license": {
+      "redistributionAllowed": true,
+      "spdxId": "MIT"
+    },
+    "review": {
+      "notes": "Professional clean-room capability; legacy prose, named personas, and proprietary method claims were not copied.",
+      "reviewedAt": "2026-11-14T00:00:00Z",
+      "reviewedBy": "MENAXVI project review",
+      "status": "approved"
+    },
+    "source": {
+      "type": "original"
+    },
+    "subject": {
+      "path": "catalog/migrated/tasks/storytelling-strategy.json"
+    }
+  }
+}

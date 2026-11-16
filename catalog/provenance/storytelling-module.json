@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.storytelling-module",
+    "status": "active",
+    "title": "Narrative Strategy module provenance",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "rewritten-clean-room",
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "a094ccc33ce9534fb472955b7b2d59d5f1875d3e712841bda2ae4a6debfd2030",
+        "path": "catalog/migrated/modules/storytelling-strategy.json"
+      }
+    ],
+    "license": {
+      "redistributionAllowed": true,
+      "spdxId": "MIT"
+    },
+    "review": {
+      "notes": "Professional clean-room capability; legacy prose, named personas, and proprietary method claims were not copied.",
+      "reviewedAt": "2026-11-14T00:00:00Z",
+      "reviewedBy": "MENAXVI project review",
+      "status": "approved"
+    },
+    "source": {
+      "type": "original"
+    },
+    "subject": {
+      "path": "catalog/migrated/modules/storytelling-strategy.json"
+    }
+  }
+}

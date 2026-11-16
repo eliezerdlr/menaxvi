@@ -1,0 +1,68 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Skill",
+  "metadata": {
+    "id": "skill.clean-room-design-system",
+    "provenanceRef": {
+      "id": "provenance.clean-room-design-system",
+      "kind": "ProvenanceRecord",
+      "version": "1.0.0"
+    },
+    "status": "active",
+    "title": "Clean-room design system",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "constraints": [
+      "Do not copy protected source code, private identifiers, personal likenesses, or unlicensed creative assets.",
+      "Do not claim facts, permissions, legal clearance, or test results without evidence.",
+      "Stop and request review when authorization, rights, safety, or required evidence is unresolved."
+    ],
+    "inputs": [
+      {
+        "name": "approved-brief",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      },
+      {
+        "name": "supporting-evidence",
+        "required": false,
+        "schema": {
+          "type": "array"
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "name": "reviewed-deliverable",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      }
+    ],
+    "policies": [],
+    "procedure": [
+      {
+        "id": "confirm-scope",
+        "instruction": "Confirm the requested outcome, authorized sources, constraints, acceptance criteria, and required human decisions."
+      },
+      {
+        "id": "inspect-evidence",
+        "instruction": "Inspect supplied evidence, identify missing or conflicting facts, and separate verified requirements from assumptions."
+      },
+      {
+        "id": "produce-deliverable",
+        "instruction": "Produce the bounded deliverable with original expression, professional identifiers, and traceable decisions."
+      },
+      {
+        "id": "verify-result",
+        "instruction": "Check the result against the brief, safety and rights constraints, accessibility needs, and stated acceptance criteria."
+      }
+    ],
+    "purpose": "Create an original design system that supports required interaction patterns without copying protected logos, illustrations, fonts, or distinctive trade dress.",
+    "summary": "Create an original design system that supports required interaction patterns without copying protected logos, illustrations, fonts, or distinctive trade dress."
+  }
+}

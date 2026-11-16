@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.brand-workflow",
+    "status": "active",
+    "title": "Brand Strategy workflow provenance",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "rewritten-clean-room",
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "2085b8abe337ba0e6aed56a1c584a43ad5c78bef08a60331393c35ecee610658",
+        "path": "catalog/migrated/workflows/brand-strategy.json"
+      }
+    ],
+    "license": {
+      "redistributionAllowed": true,
+      "spdxId": "MIT"
+    },
+    "review": {
+      "notes": "Professional clean-room capability; legacy prose, named personas, and proprietary method claims were not copied.",
+      "reviewedAt": "2026-11-14T00:00:00Z",
+      "reviewedBy": "MENAXVI project review",
+      "status": "approved"
+    },
+    "source": {
+      "type": "original"
+    },
+    "subject": {
+      "path": "catalog/migrated/workflows/brand-strategy.json"
+    }
+  }
+}

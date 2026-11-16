@@ -1,0 +1,3698 @@
+{
+  "schemaVersion": 1,
+  "policy": "docs/governance/PROVENANCE.md",
+  "identityPolicy": "docs/governance/CONTENT-POLICY.json",
+  "scope": "Git-tracked redistributable files; generated reports, build outputs, private operations, restricted migration inputs, and this trust-root manifest are excluded.",
+  "generatedPaths": [
+    "reports/",
+    "build/",
+    "dist/",
+    ".paperclip/",
+    "quarantine/",
+    "migrations/"
+  ],
+  "selfRecordPolicy": "provenance/manifest.json is the trust root and cannot contain its own digest.",
+  "files": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI OSS release preparation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as original project automation, contribution guidance, security policy, or community template.",
+      "evidence": [
+        "CONTRIBUTING.md",
+        "SECURITY.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "2aa5d59259c3f20145285ce4e45fbd29889318c60c1e623e5497d58504542aa1"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI OSS release preparation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as original project automation, contribution guidance, security policy, or community template.",
+      "evidence": [
+        "CONTRIBUTING.md",
+        "SECURITY.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1dac423d32546ee901c59a35f733544d29c7bfd4242ba4efce058465730011f3"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI OSS release preparation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as original project automation, contribution guidance, security policy, or community template.",
+      "evidence": [
+        "CONTRIBUTING.md",
+        "SECURITY.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "3309d83cc803785ad08d30a8b601a9f535b6246ea036eb3faa779e46183e8984"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI OSS release preparation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as original project automation, contribution guidance, security policy, or community template.",
+      "evidence": [
+        "CONTRIBUTING.md",
+        "SECURITY.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "ac82f8f2f609624c07d1fd75e5ede041aacc72e5d967cf7bd8e0d1e235321493"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI OSS release preparation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as original project automation, contribution guidance, security policy, or community template.",
+      "evidence": [
+        "CONTRIBUTING.md",
+        "SECURITY.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "64fc098bcb4b442db886ba12b7298267f37547207e3f4efb2e126afa6da764d0"
+    },
+    {
+      "path": ".gitignore",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "81abf55c2b503598483a4ed7d2a463fd520e9ed6ea91ab5c8c00a5e060d611ca"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI OSS release preparation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as original project automation, contribution guidance, security policy, or community template.",
+      "evidence": [
+        "CONTRIBUTING.md",
+        "SECURITY.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "fb0ddba5c6ca200b2b373d51c84765de6506beb74777b598bcbec5b7eeea4e34"
+    },
+    {
+      "path": "LICENSE",
+      "classification": "third-party-compatible",
+      "source": "Standard MIT License text with MENAXVI copyright notice",
+      "license": "MIT",
+      "rightsBasis": "The standard OSI-approved MIT text is compatible. Its repository presence does not relicense files whose own records are restricted or unverified.",
+      "evidence": [
+        "NOTICE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c5ebeb3adc1a4df2331ce210a6b22e15ea743f4ec7128c2b460cfa245fcecfc8"
+    },
+    {
+      "path": "Makefile",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "7495c6872a420504c1a17222ecc28f7e245f3bd4f49741cc9935166fbedd2a18"
+    },
+    {
+      "path": "NOTICE.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "868ea4eb1d9916ab4c491e019db2cd9db35648ea5e12caeb3cd7f854e328f567"
+    },
+    {
+      "path": "README.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "6b2a3a5d34748c38ae186484b2f6bae852c406f1dd770a3b476fd4c155a8366d"
+    },
+    {
+      "path": "SECURITY.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI OSS release preparation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as original project automation, contribution guidance, security policy, or community template.",
+      "evidence": [
+        "CONTRIBUTING.md",
+        "SECURITY.md",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "53bb408b321a6e3c381d25ddd0b086a96c5ca3e5d659c9fd7da48d30646a83e2"
+    },
+    {
+      "path": "catalog/migrated/business-growth/frameworks.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "20d1ac1f266b00eca5f99cadeaeac83d26b3f7deb2d3219df6296859915c7991"
+    },
+    {
+      "path": "catalog/migrated/context-policy-management/manifest-contract.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "2c08a4c31df626711f4181cb584c8a2bdd3eca933561bb3d12a4468750e4b9a9"
+    },
+    {
+      "path": "catalog/migrated/context-policy-management/module.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "3e372bed99a73c9916ba9371ca8bac4c810d635e7640bfeedd15f6e246733bf4"
+    },
+    {
+      "path": "catalog/migrated/context-policy-management/operations.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "4b9063c12adc41e6efaa9b6ba62c8b7ec10e5af33e7438915270158890abaa8f"
+    },
+    {
+      "path": "catalog/migrated/data/evidence-contract.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "37bd96ed6a1da5aa0b3ae755f839129bbf36330fb4405774b1ec88f7bfb6495c"
+    },
+    {
+      "path": "catalog/migrated/data/module.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "ecb1334f117fbb9d181e3ca015264b21a498865ac0b38d297457dd62df37482b"
+    },
+    {
+      "path": "catalog/migrated/data/roles.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "ad8924dddfb905e3427fde97727489ad97436f6bf083176e0c04722c7ee9b910"
+    },
+    {
+      "path": "catalog/migrated/data/tasks.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "230fe77284cb39c2f90d79e3b934d675fe708bf1eea8a9ae7aabb28a1f08166e"
+    },
+    {
+      "path": "catalog/migrated/data/workflows.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "06f2106b9985bccf0288ad176fc450e17241696391a2cb8acc4c597919b8c09c"
+    },
+    {
+      "path": "catalog/migrated/development-assistance/capabilities.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "9639afc0d898bd9d5e7e042f757170772714c408519098995339b6f5215a30e8"
+    },
+    {
+      "path": "catalog/migrated/development-assistance/context-contract.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "7831ffe68c2ccc4c71bfc1aaddfa62eb698188b48548dabeed1026105b5bb9e4"
+    },
+    {
+      "path": "catalog/migrated/development-assistance/module.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "bd142f893410e124b0f762326e0bb159ce4a0c06d196b9d4ede943a2f07566bc"
+    },
+    {
+      "path": "catalog/migrated/development-assistance/operations.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "98475fd0c2f8f1deac6fa4565fcbbc10f3c1fc471cfb71ef3848e7da675cb2fa"
+    },
+    {
+      "path": "catalog/migrated/development-assistance/patterns.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "57d14af6cd1e898e6619010d7001f9fc285d704f0cd35affdfecc9e7d207ff2a"
+    },
+    {
+      "path": "catalog/migrated/development-assistance/workflows.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d3d4c00672341a2a320b91cd48264bd196e0c3691bc004b911214162d915c15c"
+    },
+    {
+      "path": "catalog/migrated/framework-operations/context-contract.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "7eb8949b1b9f984a58ebf29c1c68d8fcaa7e871fbc8bbffe11b680d4e752528a"
+    },
+    {
+      "path": "catalog/migrated/framework-operations/module.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "0c1cfcda720f73964382e4d3522ad7cb6f1749b3c7dbb1af78b91e0edb83921f"
+    },
+    {
+      "path": "catalog/migrated/framework-operations/roles.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "cad105f04dc79463df6b83dc5b81a88f1163cd6196385de56690aaa9d63d106e"
+    },
+    {
+      "path": "catalog/migrated/framework-operations/workflows.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1845674980ae6119c0e2cbe246555b7c4d80283629334f6db94ab186d734ebcf"
+    },
+    {
+      "path": "catalog/migrated/knowledge/commands/advisory-board/checklists/output-quality.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "9fd63811bac402eb6ed0ce61afd2759f11b08005d3cf7227c8d1a6779ab2a0ab"
+    },
+    {
+      "path": "catalog/migrated/knowledge/commands/advisory-board/data/mental-models-catalog.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "46b09c6d7594c8bc7fb2cefdc4916da2718a60a78b37ebb85ba1f5bb4f7662bb"
+    },
+    {
+      "path": "catalog/migrated/knowledge/commands/advisory-board/data/routing-catalog.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "0147dfa6cf9c77dd03b5b95392811ea99e046f056c5b17a6581cc6c2c6f25f11"
+    },
+    {
+      "path": "catalog/migrated/knowledge/commands/c-level-squad/checklists/output-quality.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "9fd63811bac402eb6ed0ce61afd2759f11b08005d3cf7227c8d1a6779ab2a0ab"
+    },
+    {
+      "path": "catalog/migrated/knowledge/commands/c-level-squad/data/executive-frameworks.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "7155217e3fef091d2b924f7e28c7d9fc90788881853aa96ec3363aa633dadb24"
+    },
+    {
+      "path": "catalog/migrated/knowledge/commands/c-level-squad/data/routing-catalog.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "80cb40c35fd6a01cc12450e8763be18abf40d6aac568d1ad063c3b9d80953a8a"
+    },
+    {
+      "path": "catalog/migrated/knowledge/commands/cybersecurity/checklists/output-quality.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "414a4824e66eba6597f1cb569c48714c14c7dff3c3f4ed941077e79b2f09e896"
+    },
+    {
+      "path": "catalog/migrated/knowledge/commands/cybersecurity/data/routing-catalog.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d4d8f4a26348af7ad392bd0d02a7a737825ab883d9f34ca09ef6f23b21bdb9a3"
+    },
+    {
+      "path": "catalog/migrated/knowledge/commands/cybersecurity/data/security-tools-catalog.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d1500a87125dff03c28bc63a1ebd99fe0cb4417930ceb02f6a37667b53b3a0be"
+    },
+    {
+      "path": "catalog/migrated/module/commands/README.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "8cdf75f267f8a786da4891628680385a3e4448c8d8a1aa73f40bca130d2701c0"
+    },
+    {
+      "path": "catalog/migrated/module/commands/advisory-board/README.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "8cfc47d45f1690fff2d91683e1fb51a41829bea600a3f3002ef252f5cd898d48"
+    },
+    {
+      "path": "catalog/migrated/module/commands/advisory-board/config/config.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "df300f1ac06a4bb053c19c690c45ec5ee65b7da275b4326f52ffbc5e65d6f99d"
+    },
+    {
+      "path": "catalog/migrated/module/commands/advisory-board/squad.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "152b316dd1554f4fe95934c688278f17e4906c05b7536eaf5361cd7ff3e6d363"
+    },
+    {
+      "path": "catalog/migrated/module/commands/c-level-squad/README.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "4dc7ccdc591aa3e00c6691ebd23c745971d96fa2342785fd2383474f95967aae"
+    },
+    {
+      "path": "catalog/migrated/module/commands/c-level-squad/config/config.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "ae3fa052d7697721561bf9cb2c7a911a6e66c3ed1205fe5389630b041c6d32cf"
+    },
+    {
+      "path": "catalog/migrated/module/commands/c-level-squad/squad.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c2ad2714e7f454c0314eadd1f68677f934d271b1dc6bcd52456dc0617c13fc56"
+    },
+    {
+      "path": "catalog/migrated/module/commands/cybersecurity/README.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "0f807dc04b8201e2f61559158d2ec43b4732fa54aad00bf4825183ee39f11053"
+    },
+    {
+      "path": "catalog/migrated/module/commands/cybersecurity/config/config.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "8bd8c12c2a4cfcd56d99b1c6537af02b62fd78364840cbd1a5d65dbc58622901"
+    },
+    {
+      "path": "catalog/migrated/module/commands/cybersecurity/squad.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c9c3344f3ef1c63f99b4a4e2f9b0d0989f09ce258964c6b812943ed7a19eb8c9"
+    },
+    {
+      "path": "catalog/migrated/module/copywriting-operations.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c3c0778e50cf1bd654f059eecf2227599e29b68bd7e7f32d04bc189e3df15a8a"
+    },
+    {
+      "path": "catalog/migrated/modules/brand-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b1dd81272bc4655540d1141ff02ade11af7469d30a288ea214b027b42814e732"
+    },
+    {
+      "path": "catalog/migrated/modules/design-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "93f6b971d4f6fc7e10df858f589765ef74604d3024de888edf34eb77de228432"
+    },
+    {
+      "path": "catalog/migrated/modules/movement-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "7d69f612a3cc6c62e070ea26f68eea2c77924ca1155ae5dc0cb2dfaf1fd59cdc"
+    },
+    {
+      "path": "catalog/migrated/modules/storytelling-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "a094ccc33ce9534fb472955b7b2d59d5f1875d3e712841bda2ae4a6debfd2030"
+    },
+    {
+      "path": "catalog/migrated/role/commands/advisory-board/agents/skilln23.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "37717a96ada3d75781caa50a6bebd401e2ec1d0704200393ad525a3949eaab7d"
+    },
+    {
+      "path": "catalog/migrated/role/commands/advisory-board/agents/skilln24.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "bd2b168564870346972cd8d7bfceb62ecf242c8a71b43915605def2c3d6714c5"
+    },
+    {
+      "path": "catalog/migrated/role/commands/advisory-board/agents/skilln25.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b0e6c20e168c62ab2846631914e555b72132a896966a3a3ec7a09f30e6443c9a"
+    },
+    {
+      "path": "catalog/migrated/role/commands/advisory-board/agents/skilln26.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "0b19d0318703ef72feb869f93244d984750931192fca45128a69fb41f7f6daec"
+    },
+    {
+      "path": "catalog/migrated/role/commands/advisory-board/agents/skilln27.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "8e03971ae47c65a11ee1174329e8ddd931241f4b59ca580a28f736cad7157bf1"
+    },
+    {
+      "path": "catalog/migrated/role/commands/advisory-board/agents/skilln28.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "0b1754bfbbe6c3bc05d54066073eeef3f692a6b48a4386bdb2619306f07fe587"
+    },
+    {
+      "path": "catalog/migrated/role/commands/advisory-board/agents/skilln29.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d18148ae4e17f2eca0bcc73c80a63ebe45e9fe764db017865d8531926cd908b3"
+    },
+    {
+      "path": "catalog/migrated/role/commands/advisory-board/agents/skilln30.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "2d4815970bb7b16efd428f9da87243c8bf9918e881023c354a7780fd78007622"
+    },
+    {
+      "path": "catalog/migrated/role/commands/advisory-board/agents/skilln31.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "763749fab4b9a03f3863d03a0e5942ef057e34e287c505d65f6c51d78237a62c"
+    },
+    {
+      "path": "catalog/migrated/role/commands/advisory-board/agents/skilln32.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1179b110f6f82b252d76032051cc46e8f07856f90367ca124364329ce8c396c0"
+    },
+    {
+      "path": "catalog/migrated/role/commands/advisory-board/agents/skilln33.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "502f472250c0100f2cd640aff3fd0127eb86fcf57ae5addab600a9fff737926d"
+    },
+    {
+      "path": "catalog/migrated/role/commands/c-level-squad/agents/skilln17.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b19733a3a16e98543e8da26247f156b05e66cbadbedf1e6db803f9005356b0c4"
+    },
+    {
+      "path": "catalog/migrated/role/commands/c-level-squad/agents/skilln18.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "92731f267d39e5580ed5e8fd9640b549f11116ee70d96d0dd828577fe396d825"
+    },
+    {
+      "path": "catalog/migrated/role/commands/c-level-squad/agents/skilln19.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "a846625298e9a580d51b2eedeed65781ffe147c5eb7460210727f149def66f9c"
+    },
+    {
+      "path": "catalog/migrated/role/commands/c-level-squad/agents/skilln20.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "763cf7efba91553fa4e8722a66b6c8a8ccebcd2911977b9b0f1170153677a4a3"
+    },
+    {
+      "path": "catalog/migrated/role/commands/c-level-squad/agents/skilln21.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b0bc823bbd7efa17f730128df2eb0a70b29db392e9c78016dd017e10678d91d3"
+    },
+    {
+      "path": "catalog/migrated/role/commands/c-level-squad/agents/skilln22.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "e6e5174ba95835bdfa4000becc219aa839c56b32221a07c4b3378b88b81c7c62"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille21.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "8e5572921b3ca45c05d94ae51d74fcb00e5baed9bfce1c3722bfac4d89c89384"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille22.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "9a02df5f8cd2cabcc0daa7609f35946a4f2cd3eabf90356f7c35b7c157ab51ab"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille23.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c6fccb3804cfe58177cd99d65e925d5c1119577b8cff913a717c6f242bdfb200"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille24.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c6807cce41bed812d5f3ed02cf894e30eb79ca563ecb7197372b3229acea32ab"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille25.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "28eb6696233982217339ed7fe73630f9a62affadbb74908e3e0aca283052f830"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille26.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "265931464f5b3396cfa6b76c8aa90f17794fe2ba78c55da48689bd1451231476"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille27.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "cc502ee5cb75f6f767942e115415d7dfa4d7064b89afe877f45791e4a9d4f587"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille28.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "852857f94698d5c12c34da37d7a0d5fbe5b737eec41780b6d14914cdbbe9e383"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille29.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "55e43c268472c127b26ba30cc1d1ef049beb3c926b25aab86a9629218a82b1a1"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille30.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "63574b8fe6bb38490150d08e64ce9bc4182e2161930efc0b7a4bee3ac619c5fe"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille31.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "31b429800fbe31181570fde4fda1b5f3b0bc21603f9484e8b2f420104565403f"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille32.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "dc3181c64cf4f981fd47d6aa45e8c49064ebe755b6776a51ee1534dafb8a0f8d"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille33.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d20d8b8af2e528a8301f000cf3e04b9a818e1cd9264b83c32109aaba22b563fd"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille34.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c5216573ee54331b97f7c972c670d420f3305195d2c9fb5bcb98fe0c5d3eebb5"
+    },
+    {
+      "path": "catalog/migrated/role/commands/cybersecurity/agents/skille35.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "566d3028d79f09520ca09cb9ab747fcad16cdde67902cf8897fa07cb5912ed10"
+    },
+    {
+      "path": "catalog/migrated/roles/brand-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "5f497fc2a2c4a67d8cc9b65e9b63243dca976c536934c1fe49e8d3f396867b90"
+    },
+    {
+      "path": "catalog/migrated/roles/design-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c33184cb1abf6da103f5b11c7440c28084ba9fc26e69a8ee614933a6b7734e76"
+    },
+    {
+      "path": "catalog/migrated/roles/movement-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "6cda9af5295dd005a11cd9d64ee61fa5edd19c850edfc82acb4bbc395e900519"
+    },
+    {
+      "path": "catalog/migrated/roles/storytelling-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b8a8a9c983185b3fac6329430c1be7f318db9ae52f5f7189709df4cec24bee5a"
+    },
+    {
+      "path": "catalog/migrated/skill/application-backend-integration.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "9c6e4b3c86f69893275f7dc2d0b44528be6fa5136747ee027a45c40940dc658a"
+    },
+    {
+      "path": "catalog/migrated/skill/application-quality-verification.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "95476f7e9d52cde677fe7f8280545c319ecc279399c5fe77654fe24d6ee06382"
+    },
+    {
+      "path": "catalog/migrated/skill/business-automation-diagnosis.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "82088df2fe5d8d7193fc0cd0c6453794d05c3e60bfba652c86378fcecca28561"
+    },
+    {
+      "path": "catalog/migrated/skill/business-context-modeling.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "ad6b89bb9e43a0966587e834db8e19b2e708a98dee1591136ebbb5fdb8ceea80"
+    },
+    {
+      "path": "catalog/migrated/skill/capability-parity-assessment.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "3649ed3b209aceffe4c478080f66c4f5b02c8453cdafec10a31a9c45bf2f5019"
+    },
+    {
+      "path": "catalog/migrated/skill/clean-room-design-system.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "768eb735af892dbd496b9a5e54621736bd88445a007ac0e5e6ac9dfa0bdfd906"
+    },
+    {
+      "path": "catalog/migrated/skill/clean-room-interface-build.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "a1f990d229778200cfb6e45faf6e42f1d7546f4d373a43d37dc5fdcb3a346a0c"
+    },
+    {
+      "path": "catalog/migrated/skill/conversion-page-messaging.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b7d0826c35d724febdda120548926d9b756de881da0fa67981226997d83ef939"
+    },
+    {
+      "path": "catalog/migrated/skill/creator-partnership-planning.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b9215865ad6df8d9283e939acdea761d9acdb2deb4290655ce1f571c59626e1a"
+    },
+    {
+      "path": "catalog/migrated/skill/customer-review-research.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "004a85e29ef7e0cce01cedf1785a9bc2d27a76c5fbcc6ffb66b7d01e84544e86"
+    },
+    {
+      "path": "catalog/migrated/skill/distinctive-frontend-design.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "8535ce267c667ff8a0d7817e3421cede693fc56b77da336f6facfb73a5399cd1"
+    },
+    {
+      "path": "catalog/migrated/skill/fluid-interface-motion.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "30d70bfdc898559a7498009ca8c86295d862fee0c02bcc4f778373b5cb68577d"
+    },
+    {
+      "path": "catalog/migrated/skill/generative-media-direction.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "9663b291ab833d398b4777311957ee60ce925ff669df7d8740aca816e297102b"
+    },
+    {
+      "path": "catalog/migrated/skill/platform-interface-guidelines.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "7f3360a460b480049f32b0fe1f0494f0bf3f841a67d77b6003717309bcb117d4"
+    },
+    {
+      "path": "catalog/migrated/skill/product-launch-planning.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "890dc97ab5f4f5364d4eed8346cd1e4d6ff46388377eb9ce068e7e72b34e875f"
+    },
+    {
+      "path": "catalog/migrated/skill/product-rebranding.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "57a55617c215bae39eef1447a1544195fec68293efa7aee496cf56003fdfbb4d"
+    },
+    {
+      "path": "catalog/migrated/skill/product-reconstruction-architecture.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "361e7df0755bf6a3dbe6b321bd9406f39ea1c8c9198495a2f88f013faf04dd46"
+    },
+    {
+      "path": "catalog/migrated/skill/product-reconstruction-discovery.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "16f9a8d610c9b4411a94802755a1ac67dd9d7f37b7eb46678e34dcb725089daa"
+    },
+    {
+      "path": "catalog/migrated/skill/production-release-readiness.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "7305c8b23f41d9486f0dafcbbee7fd26e2a53bfa80101a9609d3a120629eded8"
+    },
+    {
+      "path": "catalog/migrated/skill/social-carousel-production.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "e26d8db8d756cab53f2828d80514d3213e986d700edd4799f1d5e3a6a13a4e52"
+    },
+    {
+      "path": "catalog/migrated/skills/brand-quality-review.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "dc10e5d9cc7939a538ebc1cd67c31da252cc8f038b2d372a3f6759b3dddfffbb"
+    },
+    {
+      "path": "catalog/migrated/skills/design-quality-review.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "40248a17c5d2a4862e40abbaeeeeb2949de4cdcb6c5248692215854f5a15cfac"
+    },
+    {
+      "path": "catalog/migrated/skills/movement-quality-review.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "75ccbaf092dd61da0693039f71182465f1944c1577ed1b669f681bee567bc9ac"
+    },
+    {
+      "path": "catalog/migrated/skills/storytelling-quality-review.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "6619a6985685b9ed910e1d3ae30467b515f9a92eb1f8a371635b66a6b1009812"
+    },
+    {
+      "path": "catalog/migrated/task/commands/advisory-board/tasks/convene-board.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c6267fdf2843f90841f52e3b579b253e2882947203721d28e9813fc22676795d"
+    },
+    {
+      "path": "catalog/migrated/task/commands/advisory-board/tasks/diagnose.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c2374732a5ad7636bffc8096ad35766da451bc3b0e74d845c19a581995b34b25"
+    },
+    {
+      "path": "catalog/migrated/task/commands/advisory-board/tasks/evaluate-scaling.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "427dd91f5c53b42c9fa84c8a5b3b866b8dd3d081cf757c1877017a7744e5fcad"
+    },
+    {
+      "path": "catalog/migrated/task/commands/advisory-board/tasks/get-founder-counsel.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "6e9122ebe54d0a9b67434791e5a8aa0053dfca61c7e329486f8504ce52d9dda0"
+    },
+    {
+      "path": "catalog/migrated/task/commands/advisory-board/tasks/resolve-culture-crisis.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "0fc497628b40e5bb27cec3eea6abc9ee5a5bbc803a2fb0815233f2d44db0f5f1"
+    },
+    {
+      "path": "catalog/migrated/task/commands/advisory-board/tasks/review.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "8bb739d7b9195c999940b11153dd16ca3d23424ed903edb57ebcc8f2328b22a6"
+    },
+    {
+      "path": "catalog/migrated/task/commands/advisory-board/tasks/seek-investment-counsel.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "46f8bc55cb6c78d401c59328c64999dd3aa352b7dd4eb3a98f35f0b487c36589"
+    },
+    {
+      "path": "catalog/migrated/task/commands/c-level-squad/tasks/design-operations.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "7cae8758ac638a5241d938e4a65b5b29c8b02748c04b2eabf32e4f1cff6382df"
+    },
+    {
+      "path": "catalog/migrated/task/commands/c-level-squad/tasks/diagnose.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "f8f3e3a647f17babb998e5b55555c547ab2d2ba1fffffc51ebff19fa2c91ca09"
+    },
+    {
+      "path": "catalog/migrated/task/commands/c-level-squad/tasks/evaluate-technology.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "645ecdc5ffc5a368afda0b6eae1d90146afd21f856f4d132f4fb0cace258bf55"
+    },
+    {
+      "path": "catalog/migrated/task/commands/c-level-squad/tasks/plan-fundraise.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "5ddcca05a3f001890f823e5b8baaca92660b157bf24e2a1931b882cc96523c99"
+    },
+    {
+      "path": "catalog/migrated/task/commands/c-level-squad/tasks/plan-go-to-market.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "00bf72ae81351d24fff1ae0616cf750929d6c8209f0001e9c061e4956df98658"
+    },
+    {
+      "path": "catalog/migrated/task/commands/c-level-squad/tasks/review.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "275297fec11b50fde569050f0381682c47c2e5c9677c7a2864c0207bc72f225d"
+    },
+    {
+      "path": "catalog/migrated/task/commands/c-level-squad/tasks/set-vision.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "08bd704bafdfa7bc1e06b30ea95f49801d4be05f16efc00e17bcb4d7450fcd44"
+    },
+    {
+      "path": "catalog/migrated/task/commands/cybersecurity/tasks/analyze-vulnerability.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "95e3337ab1a43488aa4b3c6cae95c1fa25c6529a29495b9b7186376c73eeaa44"
+    },
+    {
+      "path": "catalog/migrated/task/commands/cybersecurity/tasks/assess-security.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "6931277b9cc75e9fd83032cd69e9640b6bd8f4e4d083564dab2a81dbff62817d"
+    },
+    {
+      "path": "catalog/migrated/task/commands/cybersecurity/tasks/audit-app-security.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "222afd155ce807f497906e6558561a96f6c95c25c9b93c5a1763f5550cd85680"
+    },
+    {
+      "path": "catalog/migrated/task/commands/cybersecurity/tasks/diagnose.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "59a34088ea570ab15e01352964455e35e453b6df5ed24a80f79ee239ea2d93b5"
+    },
+    {
+      "path": "catalog/migrated/task/commands/cybersecurity/tasks/generate-commands.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "f69b932f5387fe29280ab89f933e557e999a7f59bdacc6e6b4dbec1c1d677a32"
+    },
+    {
+      "path": "catalog/migrated/task/commands/cybersecurity/tasks/respond-incident.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "51f2b66e06744c504d3a46d15c8c3c9f88b5de91c920ed52ac3505a5010da317"
+    },
+    {
+      "path": "catalog/migrated/task/commands/cybersecurity/tasks/review.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "beb0da2e436a738c9b8cb1817761101d1f47bbcf251dd072945c816426fde2b1"
+    },
+    {
+      "path": "catalog/migrated/task/commands/cybersecurity/tasks/run-pentest.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "7b27e6cef11cd03ec66c400f62f2136b395e487a00940bcc0ad5eb992d15e82d"
+    },
+    {
+      "path": "catalog/migrated/task/commands/cybersecurity/tasks/run-recon.md",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "813fafbddaf604054707ea312a6b00d6e8d226496cb8d988b48ce0c1896a222b"
+    },
+    {
+      "path": "catalog/migrated/tasks/brand-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "93eb20048b154ea3e890cd3e5af236b31279562603a13100bd73f218d81fb3f5"
+    },
+    {
+      "path": "catalog/migrated/tasks/design-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "e848f057838767d877c875d29ffb5bc4f45b6ae09ef5fee38068a5609a3d6bf7"
+    },
+    {
+      "path": "catalog/migrated/tasks/movement-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b7967df4856632ec7807b32d20b91a253d79900755780cf49e2a8376ec2be250"
+    },
+    {
+      "path": "catalog/migrated/tasks/storytelling-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "25ca3537148ac34d7943762f18e9bc099f9bea900c7feb9f19a2030002ebf073"
+    },
+    {
+      "path": "catalog/migrated/traffic-growth/evidence-contract.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "61a9be6afb7cfdf773c4be872722c5cb90c1a6d4a753af7f0c64b00961a0d185"
+    },
+    {
+      "path": "catalog/migrated/traffic-growth/module.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "fff678bb7ce37b401fb1b9c69bfc9eeff5110b96eedf5330723432c22ef651ae"
+    },
+    {
+      "path": "catalog/migrated/traffic-growth/roles.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "26d9b82592bd2adfacf7eed5f1793d5c491aef1d0cf33984272c7706968ef8ff"
+    },
+    {
+      "path": "catalog/migrated/traffic-growth/tasks.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c40806a4105046a3cb352eefcb7c13e26da01fcf2f70c4a287e2f04d1f54123e"
+    },
+    {
+      "path": "catalog/migrated/traffic-growth/workflows.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "05787571c810306539f4bfe7653fa032318060e2e0a7449f9e8c9b7cd892229b"
+    },
+    {
+      "path": "catalog/migrated/workflow/commands/advisory-board/workflows/wf-board-meeting.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "58b2a1b0e662a6e08805c9315fc1e6ef589547998e257a28de3e11790abbf863"
+    },
+    {
+      "path": "catalog/migrated/workflow/commands/advisory-board/workflows/wf-decision-framework.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "81a4faea7a2f60b75dc9f11963c582e66c022d8dee813356cb1c403d7adbb8ca"
+    },
+    {
+      "path": "catalog/migrated/workflow/commands/c-level-squad/workflows/wf-board-presentation.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "f75b7cbfcf1e8bcb9a8c5afb8656937a9b03fdf21ba1f815f70f1916711e7d8f"
+    },
+    {
+      "path": "catalog/migrated/workflow/commands/c-level-squad/workflows/wf-strategic-planning.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "8efa5ffe790f6c1a34e2913aa09e096ac3eb5a3320b3924105661935377a6fc9"
+    },
+    {
+      "path": "catalog/migrated/workflow/commands/cybersecurity/workflows/wf-incident-response.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c2612bbca3216f34bd413cb420d9cb387d6d6abae24afa31a55bc0fdd5e9f201"
+    },
+    {
+      "path": "catalog/migrated/workflow/commands/cybersecurity/workflows/wf-pentest-engagement.yaml",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room corpus migration workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from factual capability analysis, migration inventories, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b823266b709bbdf054f8774dc005a57b1979c854284b347da53d6c6ed61596a0"
+    },
+    {
+      "path": "catalog/migrated/workflows/brand-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "2085b8abe337ba0e6aed56a1c584a43ad5c78bef08a60331393c35ecee610658"
+    },
+    {
+      "path": "catalog/migrated/workflows/design-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d05729cfafe578502d857f75a8b4c6d267be90199d67cc7740417793869edab9"
+    },
+    {
+      "path": "catalog/migrated/workflows/movement-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "dccff8f91b84dd96036ef4beee3ef4b4cd74bbfc288e01fc0275d5db3848179e"
+    },
+    {
+      "path": "catalog/migrated/workflows/storytelling-strategy.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "941546f95b19eba033d15522785545257e94003a7c1fe2946e8205357950a8a1"
+    },
+    {
+      "path": "catalog/modules/copy-foundation.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room remediation workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from product requirements, factual capability analysis, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "catalog/provenance/copy-foundation.json",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1f07afe994e428e3ac8f4d60040fc1b44022cb36d10eda07b2ce7f7105f79ba7"
+    },
+    {
+      "path": "catalog/provenance/application-backend-integration.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "87d9bd03f4d64c558600dccd0dcfa1eb9b55345f865b702d4745c8fc0364f97b"
+    },
+    {
+      "path": "catalog/provenance/application-quality-verification.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b62f0edfde1ccfafe490b1b100903cd737395a95ef56745f0682e1eeab21fbcb"
+    },
+    {
+      "path": "catalog/provenance/brand-module.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "89b814b55a41f2ea116bb295e1c661be9e7ba4239c9c787d90c8a51d2f939571"
+    },
+    {
+      "path": "catalog/provenance/brand-role.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "33a2ea6575003a52014a819c54dcdb395aecbc29c26f2cdff378567fe7480959"
+    },
+    {
+      "path": "catalog/provenance/brand-skill.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b68a438f61316a113163d617652e80b96e89a04c769846123799cedcabad53fe"
+    },
+    {
+      "path": "catalog/provenance/brand-task.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "48a55fdfc38276daefbe63b90e52ad31b87290bd8254ebabdc88092ec5f9f601"
+    },
+    {
+      "path": "catalog/provenance/brand-workflow.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1dd17470b954197ebffb2d5c6ffffc4775b34e254f2ffb60ca0724be38007b1b"
+    },
+    {
+      "path": "catalog/provenance/business-automation-diagnosis.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "55c919e77d9da8c721e6cdbd92d97f3b21147ccb3292e6a7c20383fb3a9c3721"
+    },
+    {
+      "path": "catalog/provenance/business-context-modeling.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "dff173820e43721c471910764d8818de63d33b258dafda1d8c79674b70e0307c"
+    },
+    {
+      "path": "catalog/provenance/capability-parity-assessment.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "40343c37aa45dd2230f0515fa923cd942789ae814429ce6614d638fc49cd39c8"
+    },
+    {
+      "path": "catalog/provenance/clean-room-design-system.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "2518a2dbe0fdfda5f831d70cad37aa5d6016aa55ad1735770473b35fe24bbbb1"
+    },
+    {
+      "path": "catalog/provenance/clean-room-interface-build.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "a1bd35653a245d6c7720338eb6a79698a6f1a26566af62668b38d5e056de872c"
+    },
+    {
+      "path": "catalog/provenance/conversion-page-messaging.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "f3abea5a4b7273fc2c6f71aa52ad52c4fbd0d20a0aafa389337aacdde22b8704"
+    },
+    {
+      "path": "catalog/provenance/copy-foundation.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room remediation workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from product requirements, factual capability analysis, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "catalog/provenance/copy-foundation.json",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d4a9f735500b4f60c13f46daf8730f2ee4b9a9c5a383cd8247889605ac8680b7"
+    },
+    {
+      "path": "catalog/provenance/copy-strategist.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room remediation workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from product requirements, factual capability analysis, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "catalog/provenance/copy-strategist.json",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d40c28c82eea5bbcd6fe0b7db1e99a54f2af35ad93bb56fee06bf03c86b81b46"
+    },
+    {
+      "path": "catalog/provenance/creator-partnership-planning.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1dcccc3de1ac20656eee2a6a0fe9c9dffb13413753a34d3e18af4da4eab59d9c"
+    },
+    {
+      "path": "catalog/provenance/customer-review-research.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "72764a5ac14f7f083763b2643d1c5ad4f9727ecfd88d9241d721a43c2643def5"
+    },
+    {
+      "path": "catalog/provenance/design-module.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "3c7782f2e4b4d5fe3efaa92c850ec39351850da55110104c0ca22fad308678fd"
+    },
+    {
+      "path": "catalog/provenance/design-role.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "e3a45116061f4ffb666f8dad5fdab0d70a3920e371459f0577afa0dbd500314a"
+    },
+    {
+      "path": "catalog/provenance/design-skill.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "2649344e88b192d67f8f508b98bf6be3511c59d904b35a4c366214381b8c063d"
+    },
+    {
+      "path": "catalog/provenance/design-task.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "cfa47df901209932eb1a1457ff8b79fa28e7486c175aa4716185577397aa0b54"
+    },
+    {
+      "path": "catalog/provenance/design-workflow.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "9f1582d1c399df63a02c46e7aa8e4a194f76b9d8fda2042d9c92b99373a52ede"
+    },
+    {
+      "path": "catalog/provenance/distinctive-frontend-design.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "166e021dd86f838eeb0eed366e0f43fe8772b749732f27a60ccac7f81e62a41c"
+    },
+    {
+      "path": "catalog/provenance/draft-campaign-message.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room remediation workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from product requirements, factual capability analysis, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "catalog/provenance/draft-campaign-message.json",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "af2b07a9f4d858df10fcc91929503cb45a25b026f3ed34b9ad35134b3710fdee"
+    },
+    {
+      "path": "catalog/provenance/fluid-interface-motion.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "bd2dba7999faad99d9fd9bdeae81055838c4b22b0b02ded4d036cfa99af6be69"
+    },
+    {
+      "path": "catalog/provenance/generative-media-direction.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "8305c61969e0f23d2d24d9d2d7d511c5ccf0c870083c5386e381ca98ecbf43ea"
+    },
+    {
+      "path": "catalog/provenance/message-clarity-review.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room remediation workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from product requirements, factual capability analysis, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "catalog/provenance/message-clarity-review.json",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "45071b9ca1a40ed2042cc515129df20743dae5737def5affa1fa38c14aeda972"
+    },
+    {
+      "path": "catalog/provenance/movement-module.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "8c695a6155f800b2a71bf5c74ac3d99a7eda4fd466d510ab48ac01ff65d80e77"
+    },
+    {
+      "path": "catalog/provenance/movement-role.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "54e2afc42abed01dc83a93f0b16668987ebfba2274fb9a54862687118ce727ed"
+    },
+    {
+      "path": "catalog/provenance/movement-skill.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "16f9f59293bfd49992547f536fb47f5495189bb9654753c3d20c72291edc0df4"
+    },
+    {
+      "path": "catalog/provenance/movement-task.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "e2921283991c47f25b4d6ed33e2ee8b9c7a1b541047e33f575c7291a1741d0f7"
+    },
+    {
+      "path": "catalog/provenance/movement-workflow.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "ba04254130fdf89ec6f6d1fbcbae9dd2a507a40a8361c8d46ab5e088335041ce"
+    },
+    {
+      "path": "catalog/provenance/platform-interface-guidelines.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "93fb58ca5499fa057188e0212b4a7e6a3599dda7643034667aa711d085c2499a"
+    },
+    {
+      "path": "catalog/provenance/product-launch-planning.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1294f2de6ea483ab79fb3e28aba7cefddc44455509efeb61c3282c1b8c044d65"
+    },
+    {
+      "path": "catalog/provenance/product-rebranding.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "43e885c3d059421fb38b99f2cb2fc14759a5582c2994f79cd1c6ed3a0283fb48"
+    },
+    {
+      "path": "catalog/provenance/product-reconstruction-architecture.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1440f709c112cd54a0e1f83522f221dda4ec0de3e542127d1a40c5297883f7c7"
+    },
+    {
+      "path": "catalog/provenance/product-reconstruction-discovery.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "2e7abc6d9fb50a92b2201d88fcea2d0bc3c69baece44a65cdfe4a217f070c2c0"
+    },
+    {
+      "path": "catalog/provenance/production-release-readiness.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "080eb88d7f1d1201f66c3529e2dcff532cd28c435f5614dca41de68d0c1b89c3"
+    },
+    {
+      "path": "catalog/provenance/reviewed-campaign-message.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room remediation workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from product requirements, factual capability analysis, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "catalog/provenance/reviewed-campaign-message.json",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "0bfba22c105397201bf85fb3f1e48a736d209dbf71c505f03fde756efbc7c39a"
+    },
+    {
+      "path": "catalog/provenance/social-carousel-production.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "0543d8a9a74200b9ec9afb685ebffdb6dad2cf6073ee49ffdb73e7acbd20e2c8"
+    },
+    {
+      "path": "catalog/provenance/storytelling-module.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "3896453a06bf31589a06f854ae0e31c18365027de8a4c966070745a9798b1c2e"
+    },
+    {
+      "path": "catalog/provenance/storytelling-role.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "09b17403de11f3f7e58f57eaa1b4319f7f270f35af1a1b2893ef46ed8634fc62"
+    },
+    {
+      "path": "catalog/provenance/storytelling-skill.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1150420d9c1f5799e020bf71f8e596ad0f23f7fc2b54b92ef4da9eea0b3053ae"
+    },
+    {
+      "path": "catalog/provenance/storytelling-task.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "07ae74e1bb8f123c14930f6ca4db8e14205a4be6a8296f2eab9f2587fa56787f"
+    },
+    {
+      "path": "catalog/provenance/storytelling-workflow.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI governed corpus remediation",
+      "license": "MIT",
+      "rightsBasis": "Clean-room professional resource created from capability requirements without copying restricted expression.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d02a9f8bff821c1c55dd6e03b016c71116b5ae3bfcd44b2de88185c3cd64dc91"
+    },
+    {
+      "path": "catalog/roles/copy-strategist.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room remediation workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from product requirements, factual capability analysis, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "catalog/provenance/copy-strategist.json",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "a08cb9f0819a9267e41999a9ec1f77c518a65161bda054cc57cca25480c60afe"
+    },
+    {
+      "path": "catalog/skills/message-clarity-review.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room remediation workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from product requirements, factual capability analysis, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "catalog/provenance/message-clarity-review.json",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "7022831737d48b420d85782f57a10f8303eace9546722e9586213532a1f6eddd"
+    },
+    {
+      "path": "catalog/tasks/draft-campaign-message.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room remediation workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from product requirements, factual capability analysis, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "catalog/provenance/draft-campaign-message.json",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d27a76f57ab0dbe570763b9f476fd53b4bf6dc48ce23e2c3fbd06a5184671997"
+    },
+    {
+      "path": "catalog/workflows/reviewed-campaign-message.json",
+      "classification": "rewritten-clean-room",
+      "source": "MENAXVI clean-room remediation workstream",
+      "license": "MIT",
+      "rightsBasis": "Created from product requirements, factual capability analysis, and target architecture without approving or copying restricted legacy expression.",
+      "evidence": [
+        "catalog/provenance/reviewed-campaign-message.json",
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1eddc4e5cfc85cde379cb505c0b25f02dc08b415094ea2c56957689fb53df413"
+    },
+    {
+      "path": "core/__init__.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI professionalization working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original code, documentation, schema, test, migration record, or release evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "44c0662aafad5301b950d60eebb702cce38fe8b76650248d87efc239b8ec9fb4"
+    },
+    {
+      "path": "core/dashboard_api.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI customer dashboard implementation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original dashboard code, documentation, test, or release tooling.",
+      "evidence": [
+        "docs/architecture/CUSTOMER-DASHBOARD.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "a2bb5511f9b40cf031ee317c5fdc9e4371429af30e0f474855108ff081f1dd78"
+    },
+    {
+      "path": "core/evidence/__init__.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI professionalization working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original code, documentation, schema, test, migration record, or release evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c1812a614f0d15f66e2802d4f403b94e4a53241e34daccd3cf9b2358672d3535"
+    },
+    {
+      "path": "core/evidence/execution.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI professionalization working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original code, documentation, schema, test, migration record, or release evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "2fbbb000eae093ea9f82c3dbb499f1a1b7f95e13864bacdb0438cfbe8da81584"
+    },
+    {
+      "path": "core/evidence/log.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI professionalization working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original code, documentation, schema, test, migration record, or release evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "970962364c54d6e3ccae49c0c97b3a4ca0a71e8f9138e10a9f742886fc1fa1dc"
+    },
+    {
+      "path": "core/loader/__init__.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "caac1a71ea68a9231dd8f48d3adddf8b463002857f174ae8e353baef7955b8ef"
+    },
+    {
+      "path": "core/loader/catalog.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "e000955f7bba346d782b9f70c36be5a6d0de24c5f1103430244f6f134d2e0960"
+    },
+    {
+      "path": "core/policy/__init__.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI professionalization working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original code, documentation, schema, test, migration record, or release evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d30ab95469b459b18cebd0b449e8b7b5cea05e112815c39c37f14ad89ed2135e"
+    },
+    {
+      "path": "core/policy/engine.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI professionalization working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original code, documentation, schema, test, migration record, or release evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "062184723720a5ed85cccbf8a9ca7ae6d61e8bbb543cab36814087977063163e"
+    },
+    {
+      "path": "docs/architecture/BUSINESS-CONTEXT.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "83687ac3ffba85b2d6014583ba05a14a36d3b3657befdeb6c97a7b199acbe5fa"
+    },
+    {
+      "path": "docs/architecture/CUSTOMER-DASHBOARD.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI customer dashboard implementation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original dashboard code, documentation, test, or release tooling.",
+      "evidence": [
+        "docs/architecture/CUSTOMER-DASHBOARD.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "37cda7c5c70ceef61f4e84b892f13c971eb66f51c0abc05c58c4a4222799964c"
+    },
+    {
+      "path": "docs/architecture/TARGET-ARCHITECTURE.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "a732ba6f34d4b5f4cf4d61deebae87cd550f6245f634e6bf658bdd7be1a50fc5"
+    },
+    {
+      "path": "docs/customer/COMPATIBILITY.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, example, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "dbc39bb9ba18eb5e8909ea03360d82f73f627682a68b2763048e610bb6188743"
+    },
+    {
+      "path": "docs/customer/DASHBOARD-TUTORIAL.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI customer dashboard implementation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original dashboard code, documentation, test, or release tooling.",
+      "evidence": [
+        "docs/architecture/CUSTOMER-DASHBOARD.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "2945eef2f435bfce1c2e57639811c0e6d502c8f0de033e3d620923c45f831d08"
+    },
+    {
+      "path": "docs/customer/LIMITATIONS.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, example, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "fbc51ba47839e082971f953bffe3f53fc631537655fcc25476453e3262a4d39b"
+    },
+    {
+      "path": "docs/customer/README.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, example, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "7df3c6a1fa6b0df7cefc09f591af3ebe1a18ab81a99acd33937f65e1b038b1eb"
+    },
+    {
+      "path": "docs/customer/SUPPORT-AND-UPGRADES.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, example, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "4622d1dfefb0e77f60ff66242e851876f99eb5aeb6de74e693cb7d75d26db9d4"
+    },
+    {
+      "path": "docs/customer/VALIDATION-TUTORIAL.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, example, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "918ed37854bcf5849c15e4a2f72ba09ab1b4d6376d3a0d560d7ca26a57c19fce"
+    },
+    {
+      "path": "docs/customer/WORKFLOW-TUTORIAL.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, example, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "f127ef1219d3715dc0613e83437c8bbf5eca030aa2b98941d40d194744aa54d2"
+    },
+    {
+      "path": "docs/evidence/MEN-007.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI MEN-007 manual adapter implementation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as provider-neutral workflow code, automated tests, or implementation evidence.",
+      "evidence": [
+        "docs/evidence/MEN-007.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b5194cc84f18e1ee4bc527e25b4b42fc080a871749f48fefa8d268db8084cffb"
+    },
+    {
+      "path": "docs/evidence/MEN-009.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "fb48c9ab0cb591f1fb2c3bcd545fafac2a0d3e5f9abdf0d82e08ee76f34c0742"
+    },
+    {
+      "path": "docs/governance/CONTENT-POLICY.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1c66eb00338276a2a656325755aab1216e8b1afd1bde226a25fe92ff45487a1a"
+    },
+    {
+      "path": "docs/governance/POLICY-EVIDENCE.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI professionalization working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original code, documentation, schema, test, migration record, or release evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1e9c7e4a8ae5287088eba906a197a083392e1add26f533b93bdce1185c858e59"
+    },
+    {
+      "path": "docs/governance/PROVENANCE.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d85267df60dd5377424120ba241bc745bad19c4c268e0eb59392654e028995fc"
+    },
+    {
+      "path": "docs/governance/RELEASE-GATE.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "afb4b20620fb0f362686d00736155eac377978d4b3a218acb627fcccfb1e282e"
+    },
+    {
+      "path": "docs/governance/REMEDIATION-ROADMAP.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "6ec455aabbc2db1e0b038bd4bd3b353b4d7e5754042a80801c9fc64f737d0222"
+    },
+    {
+      "path": "docs/governance/SECURITY.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "6f406dc7aa22931498e068b2c1417b21d09d95e55c6f4d4859b91585537bef62"
+    },
+    {
+      "path": "docs/governance/SUPPLY-CHAIN.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI supply-chain clearance workstream",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI to inventory and enforce immutable, license-reviewed dependencies.",
+      "evidence": [
+        "docs/governance/SUPPLY-CHAIN.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "3706c2f0a87024bc59d688a30647ef8e9c71087e8b69e82b2d5aa3840d8203fb"
+    },
+    {
+      "path": "docs/operations/PRODUCT-RUNBOOK.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "e1e8ad993bd7aa275f779ce75e7a16dbf0f9e7f9eaac06858ede1dedd65a717e"
+    },
+    {
+      "path": "docs/quality/ACCEPTANCE-SUITE.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "35e52f7f9bf28ca71b1af733dca38b3b4f7842db0317b940ce37c50047ca5a9d"
+    },
+    {
+      "path": "docs/security/REMEDIATION.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "a05018adb6f0e79a4b87ebea05364608063c19a7a591653c3b05470de512abb2"
+    },
+    {
+      "path": "examples/reviewed-campaign-message/README.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, example, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "6ee6b33fc7659676a90068befcb97a449cb1af5ccf20169af578e137d882dc6d"
+    },
+    {
+      "path": "examples/reviewed-campaign-message/inputs.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, example, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "728f614d55fa527b1be721d96ac14756fead6e6828368e35ef787e60095414ff"
+    },
+    {
+      "path": "examples/reviewed-campaign-message/results.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, example, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "61d70989adee4d1a2cc6ea86d1e30af5804f95638ea95979c0ac0b0d68629175"
+    },
+    {
+      "path": "pyproject.toml",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "48da3c5b4254eac2edfba47cf89533d57a5b347bf16907e5d8f77829df7c3b15"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "756cc9e506ae4ee1a6f6c0507088b5cfc0dc8ba350fb2d2d46f1ffa72033adb6"
+    },
+    {
+      "path": "schemas/README.md",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "353dcd5ce50f6ed0c21b567e7d9116d7e30c56bc3e3fbde8bcc8c60d99c5fb12"
+    },
+    {
+      "path": "schemas/menaxvi.io/v1alpha1/business-context.schema.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "de5b06b93f0c6487dd1fb1d907ec320c5e018efebb24c51b5cc50e73e9e988c6"
+    },
+    {
+      "path": "schemas/menaxvi.io/v1alpha1/common.schema.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "36474f6624001f6e87a3bc24d5f7242dc193e34f4aba592bfd42ba34b1bfa1fc"
+    },
+    {
+      "path": "schemas/menaxvi.io/v1alpha1/module.schema.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "083990718d3b5fdf242e7fb89943d70c19d662badf6c72dcaf38c8ea661a3a9b"
+    },
+    {
+      "path": "schemas/menaxvi.io/v1alpha1/provenance-record.schema.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "f5386ccf216d4eac2b786e7b3eae32b2340cc8caaad1ce318f528b37e0ee2186"
+    },
+    {
+      "path": "schemas/menaxvi.io/v1alpha1/role.schema.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c8402467c95e08ddaed0c410cc7ac115136d118bc41f7438f7effbb3ef35b3a6"
+    },
+    {
+      "path": "schemas/menaxvi.io/v1alpha1/skill.schema.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "e1f05f6d558ff32ac0829b5f141a808d4a65252364d510f71dee92f7741efa10"
+    },
+    {
+      "path": "schemas/menaxvi.io/v1alpha1/task.schema.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "6126d60df00a4fd1b59c3925fe41fe2e24f46d1b05cce2c8bf1e0e43028a5269"
+    },
+    {
+      "path": "schemas/menaxvi.io/v1alpha1/workflow.schema.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1ab374fe3749addb783b42ebe230c6b0b486ee91314b2ad688f443e4871e5dba"
+    },
+    {
+      "path": "scripts/audit_supply_chain.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI supply-chain clearance workstream",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI to inventory and enforce immutable, license-reviewed dependencies.",
+      "evidence": [
+        "docs/governance/SUPPLY-CHAIN.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "e220eeed66bba61693db701a63d2dc23471a41a1f75fce9356800cca394a9288"
+    },
+    {
+      "path": "scripts/build_release.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "7fd0d3f4f391753e2c7cfcd3111ca2ec95571c1bece03a1033e29496acc739ef"
+    },
+    {
+      "path": "scripts/check_release_content.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "f55ffbf1c92316be84180e351f2b566eaf0f735dd232ec8b296c9d32663f2d12"
+    },
+    {
+      "path": "scripts/release_gate.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "6991f2bee2c77893211bad3f995bf368c7f3df3eb312df9a583794bea6dba2fe"
+    },
+    {
+      "path": "scripts/run_acceptance.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b0ce38f2c6af2e72085da8a16858b75f4610fcd3f87248a8033fa568142bdfb0"
+    },
+    {
+      "path": "scripts/validate_repository.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b9c5511155d183ecd608ab867033fc344f45d3fd57efa9e917a96fc0dc54fbad"
+    },
+    {
+      "path": "scripts/verify_customer_dashboard_journey.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI professionalization working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original code, documentation, schema, test, migration record, or release evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "564791326a61875c78ffca1daf9e38cf2711446069ab19a64490ac13efc5e1dd"
+    },
+    {
+      "path": "scripts/verify_file_rights.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "0f8127d882a1f2b29fa6fe32d39cda0cf8d4924bd226abb363d30c3306c6d423"
+    },
+    {
+      "path": "supply-chain/dependencies.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI supply-chain clearance workstream",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI to inventory and enforce immutable, license-reviewed dependencies.",
+      "evidence": [
+        "docs/governance/SUPPLY-CHAIN.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "dc8316437cf928c2767267217237cd6be3f6fb09c6590dca6c6a8dfe0640afc0"
+    },
+    {
+      "path": "tests/acceptance/test_repository_acceptance.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "97959d9cb2a4df5cd3c9f8adac4b39c94d47eedaed1a7d1668a54621809a1b07"
+    },
+    {
+      "path": "tests/fixtures/business-context/invalid-approved-claim-without-evidence.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "8cbd62ebc4632d2823c63e7bebea69254b75ba18f9c9879c9ccb711a36d1a0cf"
+    },
+    {
+      "path": "tests/fixtures/business-context/invalid-missing-approval-owners.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "610e5dea4847925cd002056b696eee6ff6e365508ad2d1a9d2be0854338b978f"
+    },
+    {
+      "path": "tests/fixtures/business-context/valid.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "201ac619b78fb45654acbad07e34edc79e1ba6b274391e8f9af3cbf5dedaeb25"
+    },
+    {
+      "path": "tests/fixtures/schemas/invalid/cases.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "6733fd0f0cfeefc7ecc2a8adb3e3ad2ee3b1b996ddcecb712b211bf449bbf5fd"
+    },
+    {
+      "path": "tests/fixtures/schemas/invalid/module-unversioned-role-ref.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "8998166b2e21420e32fbaa45fc6f94f3759c8580fca91a7a05a2ad7e5cf23357"
+    },
+    {
+      "path": "tests/fixtures/schemas/invalid/provenance-original-with-repository-source.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "2eb5bdfcd3ca70bb1a4478c369211268320a96438968d35c85533920b9a9dfa3"
+    },
+    {
+      "path": "tests/fixtures/schemas/invalid/role-missing-capabilities.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "faca35d8761b0e583ca400b9d28c254a486789d83d6f4a2a4af759f05cfbb0bc"
+    },
+    {
+      "path": "tests/fixtures/schemas/invalid/skill-empty-procedure.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "0d37426d6232ec417500f84b4768be90e73c2690717de94b2370ec105ad3f592"
+    },
+    {
+      "path": "tests/fixtures/schemas/invalid/task-wrong-role-kind.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "b0dcb53117363090eb555382855bb9b35a6820d07a2cabdb85229c68ddac92ab"
+    },
+    {
+      "path": "tests/fixtures/schemas/invalid/workflow-incomplete-human-gate.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1ed5abca02d17b37715b2e66afd7e40dc76f2408ef9fb420ea37650728edcf0d"
+    },
+    {
+      "path": "tests/fixtures/schemas/valid/module.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "5c6bee76c86198202f8d035a6b65610e7ede9a90a2ecde62ec03e5047101a03a"
+    },
+    {
+      "path": "tests/fixtures/schemas/valid/provenance-record.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "722ee0916dc6b4eb58177e82a892bcf74be7a81fa731a02d9373932cf9799403"
+    },
+    {
+      "path": "tests/fixtures/schemas/valid/role.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "4d1ab255d56e5a52161a93addc98095971921ab1a770f6985e1c4ea82b1eb3f0"
+    },
+    {
+      "path": "tests/fixtures/schemas/valid/skill.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "f93dd28fcba3b89e50deb6b825806e49f9151e987aaf3120126c4a992d8b52ae"
+    },
+    {
+      "path": "tests/fixtures/schemas/valid/task.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "ca9255fe0732d3e63fcd43ea16c29576bf069a0ab4a7bd531c9aa1b7a2e418b2"
+    },
+    {
+      "path": "tests/fixtures/schemas/valid/workflow.json",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "bb88240c38b49564efc81cc9cb41ea62125338be240cb2665776dc5e57000aea"
+    },
+    {
+      "path": "tests/test_business_context_schema.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "a5ae7213685b470061da51ee27c2bfda5d78742e315fd32a4987b1d621987c13"
+    },
+    {
+      "path": "tests/test_canonical_schemas.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "884303c654d5f1099e2f9a4c7fd703a4e5dd1f7c4de7d951ba462f416c64fc67"
+    },
+    {
+      "path": "tests/test_catalog_loader.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "4069083d0d3aaba1f1a9890393c8fcf5d98b060718cfc1ce4d0735ae1d452ab6"
+    },
+    {
+      "path": "tests/test_customer_dashboard_architecture.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI customer dashboard implementation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original dashboard code, documentation, test, or release tooling.",
+      "evidence": [
+        "docs/architecture/CUSTOMER-DASHBOARD.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "ea07c5814ae2e62d0e0d4e23653f9c56ce0f272ba7d09a7cedbab1fdc1b8a71c"
+    },
+    {
+      "path": "tests/test_customer_dashboard_journey.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI professionalization working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original code, documentation, schema, test, migration record, or release evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "c729a83be47ba6ce45f99a4a14744a7b7b0bd10402ef9f33a761952a89b77622"
+    },
+    {
+      "path": "tests/test_customer_documentation.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, example, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "5f5c969c97f11f03babf961886d4769065aa97c60bc4cafb5168bf7a66a3e0f3"
+    },
+    {
+      "path": "tests/test_dashboard.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI customer dashboard implementation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original dashboard code, documentation, test, or release tooling.",
+      "evidence": [
+        "docs/architecture/CUSTOMER-DASHBOARD.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "676b845ed7b40890f17124bab40f45bde0bbda06e05db2b5bcce0b2454e71f19"
+    },
+    {
+      "path": "tests/test_dashboard_api.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI customer dashboard implementation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original dashboard code, documentation, test, or release tooling.",
+      "evidence": [
+        "docs/architecture/CUSTOMER-DASHBOARD.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "50f18eae28ac08bd36c8569fac693add17aa17865a15e73cdf0b993119d8b1a9"
+    },
+    {
+      "path": "tests/test_file_rights.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "f54baffc7e2e9569730b0a94b2742e05ab3b1b69ae3b245e55a5aba02aee4a05"
+    },
+    {
+      "path": "tests/test_manual_workflow.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI MEN-007 manual adapter implementation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as provider-neutral workflow code, automated tests, or implementation evidence.",
+      "evidence": [
+        "docs/evidence/MEN-007.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1ca058c5e2d91fae1fdced42beddc8b40dc7075782e18c083ae168db070f351f"
+    },
+    {
+      "path": "tests/test_policy_evidence.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI professionalization working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original code, documentation, schema, test, migration record, or release evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "3f42d2d6739db3dd4a352ac3085b3ed1b6f8e9405125c68cd4549a08a7a27458"
+    },
+    {
+      "path": "tests/test_providers.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, example, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d1c6fe541998f03ee43233f90151db1a68b573f5cd69d86fec7c34658b2e959f"
+    },
+    {
+      "path": "tests/test_recovery.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, example, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "a5e8d6b5bc64568f334f1649bebe70dd322cccabda05f4c235d262a53b5b59f8"
+    },
+    {
+      "path": "tests/test_release_artifact.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "3a3dc8bd4380ebbb506b309a839693150a99f5db2395dc8df0d2c3cc3fc8b109"
+    },
+    {
+      "path": "tests/test_release_gate.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d9867ccf005d067b818606b39c940e81d206476d4a8ec20b6240bfbf6fcd677f"
+    },
+    {
+      "path": "tests/test_supply_chain.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI supply-chain clearance workstream",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI to inventory and enforce immutable, license-reviewed dependencies.",
+      "evidence": [
+        "docs/governance/SUPPLY-CHAIN.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "bccf3efd1f1ba5abcbc79a608942d78e1f9ea9970ec29ea3a573285f8c8d9936"
+    },
+    {
+      "path": "tests/test_validator.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "8588cdb5586b82d9544ab9574248727a6753fe98c36acbc4cd8f68006816ed4d"
+    },
+    {
+      "path": "tooling/menaxvi/__init__.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "6141648c6e3ac18aba0ed31ede91475f23f577766ca206437b2798198336ac3c"
+    },
+    {
+      "path": "tooling/menaxvi/__main__.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "d3ebe6709443a20a0e2224f5146000427c822c7ab6c4a345d770acfacc39652a"
+    },
+    {
+      "path": "tooling/menaxvi/cli.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md",
+        "docs/evidence/MEN-007.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "6855845b9170ece2c707077662c7c093fdd62ccaa2dff9e3b7d93fc5efca99ca"
+    },
+    {
+      "path": "tooling/menaxvi/dashboard.html",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI customer dashboard implementation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original dashboard code, documentation, test, or release tooling.",
+      "evidence": [
+        "docs/architecture/CUSTOMER-DASHBOARD.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "0838b26140a72282e074233df8d9155f1e573b306e9af5a17dee8adeb63af8dd"
+    },
+    {
+      "path": "tooling/menaxvi/dashboard.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI customer dashboard implementation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI by the authorized project team as original dashboard code, documentation, test, or release tooling.",
+      "evidence": [
+        "docs/architecture/CUSTOMER-DASHBOARD.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "4e09ceb8a9af6c81a62b2ce4494c1b16ba5d54da278077b1cb50ad3579cdc69c"
+    },
+    {
+      "path": "tooling/menaxvi/manual.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI MEN-007 manual adapter implementation",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as provider-neutral workflow code, automated tests, or implementation evidence.",
+      "evidence": [
+        "docs/evidence/MEN-007.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "0e06e340cb7a599be5f515c8f9e9bbf9fbd8fb7787edf319441bc525b7931a53"
+    },
+    {
+      "path": "tooling/menaxvi/providers.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, example, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "1a423f186b564a2f4a0cd60e48d771a9471aad365198d4c96ded37153469ac51"
+    },
+    {
+      "path": "tooling/menaxvi/recovery.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, example, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "71c9acfd3b6661968c81adcf6b4f00473b2bd1669a7f826bd8dc144341577cc5"
+    },
+    {
+      "path": "tooling/menaxvi/validator.py",
+      "classification": "MENAXVI-original",
+      "source": "MENAXVI remediation working set",
+      "license": "MIT",
+      "rightsBasis": "Created for MENAXVI as project code, schema, test, documentation, configuration, or mechanical audit evidence.",
+      "evidence": [
+        "docs/governance/PROVENANCE.md"
+      ],
+      "releaseAllowed": true,
+      "sha256": "345015bc2d04e7e1090e1c6c11b9c0d09b0eb9d87b56baa198f524f90181f25e"
+    }
+  ],
+  "summary": {
+    "fileCount": 304,
+    "classifications": {
+      "MENAXVI-original": 108,
+      "rewritten-clean-room": 195,
+      "third-party-compatible": 1
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.product-launch-planning",
+    "status": "active",
+    "title": "Product launch planning provenance",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "rewritten-clean-room",
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "890dc97ab5f4f5364d4eed8346cd1e4d6ff46388377eb9ce068e7e72b34e875f",
+        "path": "catalog/migrated/skill/product-launch-planning.json"
+      }
+    ],
+    "license": {
+      "redistributionAllowed": true,
+      "spdxId": "MIT"
+    },
+    "review": {
+      "notes": "Professional clean-room replacement. Legacy files remain preserved in quarantine and are mapped by the migration record.",
+      "reviewedAt": "2026-11-13T23:48:58Z",
+      "reviewedBy": "MENAXVI migration review",
+      "status": "approved"
+    },
+    "source": {
+      "type": "original"
+    },
+    "subject": {
+      "path": "catalog/migrated/skill/product-launch-planning.json"
+    }
+  }
+}

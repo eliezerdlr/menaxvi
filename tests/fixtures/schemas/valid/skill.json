@@ -1,0 +1,60 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Skill",
+  "metadata": {
+    "id": "marketing.copy-review",
+    "version": "1.0.0",
+    "title": "Evidence-based copy review",
+    "status": "active",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.copy-review",
+      "version": "1.0.0"
+    }
+  },
+  "spec": {
+    "summary": "Review marketing copy against supplied claims, brand constraints, and explicit acceptance criteria.",
+    "purpose": "Produce a bounded and evidence-based copy assessment.",
+    "inputs": [
+      {
+        "name": "draft-copy",
+        "description": "The copy draft to review.",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "name": "review-report",
+        "description": "Structured findings and recommended corrections.",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      }
+    ],
+    "procedure": [
+      {
+        "id": "check-claims",
+        "instruction": "Compare each material claim with the supplied evidence."
+      },
+      {
+        "id": "report-findings",
+        "instruction": "Record each finding with its location, impact, and correction."
+      }
+    ],
+    "constraints": [
+      "Do not invent evidence or performance claims.",
+      "Do not imitate or represent a real person."
+    ],
+    "policies": [
+      {
+        "policyId": "claims.evidence-required",
+        "enforcement": "required"
+      }
+    ]
+  }
+}

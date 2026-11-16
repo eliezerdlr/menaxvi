@@ -1,0 +1,66 @@
+{
+  "patterns": [
+    {
+      "id": "project-guidance",
+      "requiredSections": [
+        "purpose",
+        "build-and-test",
+        "structure",
+        "standards",
+        "protected-resources",
+        "verification"
+      ],
+      "rule": "Keep root guidance concise; move path-specific detail into conditional rules."
+    },
+    {
+      "id": "event-automation",
+      "requiredFields": [
+        "event",
+        "inputContract",
+        "guard",
+        "timeout",
+        "failureMode",
+        "test"
+      ],
+      "rule": "Security controls fail closed; non-critical automation degrades without blocking unrelated work."
+    },
+    {
+      "id": "tool-integration",
+      "requiredFields": [
+        "purpose",
+        "trustBoundary",
+        "capabilities",
+        "contextCost",
+        "timeouts",
+        "recovery",
+        "removal"
+      ],
+      "rule": "Prefer discovery and least privilege; never embed credentials or auto-install integrations."
+    },
+    {
+      "id": "parallel-work",
+      "requiredFields": [
+        "workItems",
+        "owners",
+        "isolation",
+        "dependencies",
+        "handoffs",
+        "mergeGate"
+      ],
+      "rule": "Parallelize only independent work and preserve one accountable integrator."
+    },
+    {
+      "id": "ci-validation",
+      "requiredFields": [
+        "trigger",
+        "checks",
+        "permissions",
+        "secretsBoundary",
+        "artifacts",
+        "failurePolicy"
+      ],
+      "rule": "Generated automation is provider-neutral guidance until explicitly adapted and reviewed."
+    }
+  ],
+  "schema": "menaxvi.development-assistance-patterns/v1"
+}

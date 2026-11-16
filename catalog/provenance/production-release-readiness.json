@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.production-release-readiness",
+    "status": "active",
+    "title": "Production release readiness provenance",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "rewritten-clean-room",
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "7305c8b23f41d9486f0dafcbbee7fd26e2a53bfa80101a9609d3a120629eded8",
+        "path": "catalog/migrated/skill/production-release-readiness.json"
+      }
+    ],
+    "license": {
+      "redistributionAllowed": true,
+      "spdxId": "MIT"
+    },
+    "review": {
+      "notes": "Professional clean-room replacement. Legacy files remain preserved in quarantine and are mapped by the migration record.",
+      "reviewedAt": "2026-11-13T23:48:58Z",
+      "reviewedBy": "MENAXVI migration review",
+      "status": "approved"
+    },
+    "source": {
+      "type": "original"
+    },
+    "subject": {
+      "path": "catalog/migrated/skill/production-release-readiness.json"
+    }
+  }
+}

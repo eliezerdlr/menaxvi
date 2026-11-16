@@ -1,0 +1,25 @@
+schema: menaxvi.workflow/v1
+id: wf-strategic-planning
+name: Enterprise strategic planning
+principles:
+  - evidence_before_assertion
+  - independent_analysis_before_synthesis
+  - explicit_decision_owner
+  - reversible_stages
+stages:
+  - id: set_direction
+    requires_review: true
+  - id: assess_context
+    requires_review: true
+  - id: make_choices
+    requires_review: true
+  - id: align_functions
+    requires_review: true
+  - id: resource_plan
+    requires_review: true
+  - id: operating_cadence
+    requires_review: true
+outputs:
+  - decision_brief
+  - action_register
+  - risk_and_assumption_log

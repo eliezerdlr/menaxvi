@@ -1,0 +1,17 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+__pycache__/
+*.py[cod]
+reports/generated/
+reports/customer-journey-dashboard.json
+
+# Generated release and local operational state
+build/
+dist/
+reports/
+.paperclip/
+quarantine/

@@ -1,0 +1,26 @@
+{
+  "id": "framework-operations",
+  "providerIntegrations": [],
+  "roles": [
+    "orchestration-lead",
+    "business-analysis-lead",
+    "solution-architecture-lead",
+    "data-platform-lead",
+    "software-delivery-lead",
+    "delivery-operations-lead",
+    "product-management-lead",
+    "product-operations-lead",
+    "quality-engineering-lead",
+    "iteration-facilitator",
+    "team-topology-designer",
+    "experience-design-lead"
+  ],
+  "rollback": "Remove this package and restore its 18 assigned source records to pending_remediation; quarantined origins remain unchanged.",
+  "schema": "menaxvi.framework-operations-module/v1",
+  "status": "active",
+  "version": "1.0.0",
+  "workflows": [
+    "governed-work-routing",
+    "capability-package-delivery"
+  ]
+}

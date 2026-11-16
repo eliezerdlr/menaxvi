@@ -1,0 +1,12 @@
+workflow:
+  id: defensive-incident-response
+  authorization: incident-commander
+  phases:
+    - {id: triage, output: severity-and-scope}
+    - {id: preserve-evidence, output: evidence-register}
+    - {id: contain, gate: approved-reversible-action}
+    - {id: eradicate, gate: root-cause-evidence}
+    - {id: recover, gate: service-owner-approval}
+    - {id: monitor, output: recovery-validation}
+    - {id: learn, output: corrective-action-register}
+  safeguards: [least-privilege, chain-of-custody, data-minimization, rollback, escalation]

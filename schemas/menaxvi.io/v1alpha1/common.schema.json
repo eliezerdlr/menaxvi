@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.menaxvi.io/v1alpha1/common.schema.json",
+  "title": "MENAXVI v1alpha1 common definitions",
+  "description": "Shared structural definitions for canonical MENAXVI resources.",
+  "$defs": {
+    "canonicalId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)*$",
+      "minLength": 3,
+      "maxLength": 128
+    },
+    "semanticVersion": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$"
+    },
+    "lifecycleStatus": {
+      "type": "string",
+      "enum": ["draft", "active", "deprecated", "retired"]
+    },
+    "labels": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)*$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "maxLength": 128
+      },
+      "maxProperties": 32
+    },
+    "resourceMetadata": {
+      "type": "object",
+      "required": ["id", "version", "title", "status", "provenanceRef"],
+      "properties": {
+        "id": { "$ref": "#/$defs/canonicalId" },
+        "version": { "$ref": "#/$defs/semanticVersion" },
+        "title": { "type": "string", "minLength": 3, "maxLength": 160 },
+        "status": { "$ref": "#/$defs/lifecycleStatus" },
+        "provenanceRef": { "$ref": "#/$defs/provenanceRef" },
+        "labels": { "$ref": "#/$defs/labels" }
+      },
+      "additionalProperties": false
+    },
+    "provenanceMetadata": {
+      "type": "object",
+      "required": ["id", "version", "title", "status"],
+      "properties": {
+        "id": { "$ref": "#/$defs/canonicalId" },
+        "version": { "$ref": "#/$defs/semanticVersion" },
+        "title": { "type": "string", "minLength": 3, "maxLength": 160 },
+        "status": { "$ref": "#/$defs/lifecycleStatus" },
+        "labels": { "$ref": "#/$defs/labels" }
+      },
+      "additionalProperties": false
+    },
+    "roleRef": {
+      "type": "object",
+      "required": ["kind", "id", "version"],
+      "properties": {
+        "kind": { "const": "Role" },
+        "id": { "$ref": "#/$defs/canonicalId" },
+        "version": { "$ref": "#/$defs/semanticVersion" }
+      },
+      "additionalProperties": false
+    },
+    "skillRef": {
+      "type": "object",
+      "required": ["kind", "id", "version"],
+      "properties": {
+        "kind": { "const": "Skill" },
+        "id": { "$ref": "#/$defs/canonicalId" },
+        "version": { "$ref": "#/$defs/semanticVersion" }
+      },
+      "additionalProperties": false
+    },
+    "taskRef": {
+      "type": "object",
+      "required": ["kind", "id", "version"],
+      "properties": {
+        "kind": { "const": "Task" },
+        "id": { "$ref": "#/$defs/canonicalId" },
+        "version": { "$ref": "#/$defs/semanticVersion" }
+      },
+      "additionalProperties": false
+    },
+    "workflowRef": {
+      "type": "object",
+      "required": ["kind", "id", "version"],
+      "properties": {
+        "kind": { "const": "Workflow" },
+        "id": { "$ref": "#/$defs/canonicalId" },
+        "version": { "$ref": "#/$defs/semanticVersion" }
+      },
+      "additionalProperties": false
+    },
+    "moduleRef": {
+      "type": "object",
+      "required": ["kind", "id", "version"],
+      "properties": {
+        "kind": { "const": "Module" },
+        "id": { "$ref": "#/$defs/canonicalId" },
+        "version": { "$ref": "#/$defs/semanticVersion" }
+      },
+      "additionalProperties": false
+    },
+    "provenanceRef": {
+      "type": "object",
+      "required": ["kind", "id", "version"],
+      "properties": {
+        "kind": { "const": "ProvenanceRecord" },
+        "id": { "$ref": "#/$defs/canonicalId" },
+        "version": { "$ref": "#/$defs/semanticVersion" }
+      },
+      "additionalProperties": false
+    },
+    "resourceRef": {
+      "oneOf": [
+        { "$ref": "#/$defs/roleRef" },
+        { "$ref": "#/$defs/skillRef" },
+        { "$ref": "#/$defs/taskRef" },
+        { "$ref": "#/$defs/workflowRef" },
+        { "$ref": "#/$defs/moduleRef" }
+      ]
+    },
+    "policyBinding": {
+      "type": "object",
+      "required": ["policyId", "enforcement"],
+      "properties": {
+        "policyId": { "$ref": "#/$defs/canonicalId" },
+        "enforcement": { "type": "string", "enum": ["required", "advisory"] },
+        "parameters": { "type": "object" }
+      },
+      "additionalProperties": false
+    },
+    "dataContract": {
+      "type": "object",
+      "required": ["name", "required", "schema"],
+      "properties": {
+        "name": { "$ref": "#/$defs/canonicalId" },
+        "description": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "required": { "type": "boolean" },
+        "schema": { "type": "object", "minProperties": 1 }
+      },
+      "additionalProperties": false
+    },
+    "artifactContract": {
+      "type": "object",
+      "required": ["name", "mediaType"],
+      "properties": {
+        "name": { "$ref": "#/$defs/canonicalId" },
+        "mediaType": {
+          "type": "string",
+          "pattern": "^[a-z0-9!#$&^_.+-]+/[a-z0-9!#$&^_.+-]+$"
+        },
+        "description": { "type": "string", "minLength": 1, "maxLength": 500 }
+      },
+      "additionalProperties": false
+    },
+    "condition": {
+      "type": "object",
+      "required": ["description"],
+      "properties": {
+        "description": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "requiredEvidence": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 200 },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

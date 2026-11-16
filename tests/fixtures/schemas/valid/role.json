@@ -1,0 +1,56 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Role",
+  "metadata": {
+    "id": "marketing.copy-editor",
+    "version": "1.0.0",
+    "title": "Marketing Copy Editor",
+    "status": "active",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.copy-review",
+      "version": "1.0.0"
+    },
+    "labels": {
+      "domain": "marketing"
+    }
+  },
+  "spec": {
+    "summary": "A professional role that reviews marketing copy for clarity, evidence, policy compliance, and audience fit.",
+    "capabilities": [
+      "Assess copy against explicit acceptance criteria",
+      "Identify unsupported or ambiguous claims"
+    ],
+    "constraints": [
+      "Use only supplied business context and evidence",
+      "Escalate approval decisions to the assigned human owner"
+    ],
+    "skillRefs": [
+      {
+        "kind": "Skill",
+        "id": "marketing.copy-review",
+        "version": "1.0.0"
+      }
+    ],
+    "acceptsArtifacts": [
+      {
+        "name": "copy-draft",
+        "mediaType": "text/plain",
+        "description": "Marketing copy submitted for review."
+      }
+    ],
+    "producesArtifacts": [
+      {
+        "name": "copy-review",
+        "mediaType": "application/json",
+        "description": "Structured review findings."
+      }
+    ],
+    "policies": [
+      {
+        "policyId": "claims.evidence-required",
+        "enforcement": "required"
+      }
+    ]
+  }
+}

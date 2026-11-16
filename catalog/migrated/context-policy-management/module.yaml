@@ -1,0 +1,12 @@
+{
+  "contracts": [
+    "manifest-contract",
+    "governed-operations"
+  ],
+  "id": "context-policy-management",
+  "providerIntegrations": [],
+  "rollback": "Remove this package and restore its 11 assigned source records to pending_remediation; quarantined origins remain unchanged.",
+  "schema": "menaxvi.context-policy-management-module/v1",
+  "status": "active",
+  "version": "1.0.0"
+}

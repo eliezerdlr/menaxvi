@@ -1,0 +1,46 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Module",
+  "metadata": {
+    "id": "marketing.copy-governance",
+    "version": "1.0.0",
+    "title": "Copy Governance",
+    "status": "active",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.copy-review",
+      "version": "1.0.0"
+    }
+  },
+  "spec": {
+    "summary": "A curated product boundary for evidence-based copy review and explicit human approval.",
+    "roles": [
+      {
+        "kind": "Role",
+        "id": "marketing.copy-editor",
+        "version": "1.0.0"
+      }
+    ],
+    "skills": [
+      {
+        "kind": "Skill",
+        "id": "marketing.copy-review",
+        "version": "1.0.0"
+      }
+    ],
+    "tasks": [
+      {
+        "kind": "Task",
+        "id": "marketing.review-copy",
+        "version": "1.0.0"
+      }
+    ],
+    "workflows": [
+      {
+        "kind": "Workflow",
+        "id": "marketing.copy-review-approval",
+        "version": "1.0.0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+routes:
+  posture_assessment: [security-assessment-orchestrator, security-community-research-curator]
+  application_security: [secure-coding-advisor]
+  mobile_security: [mobile-application-security-tester]
+  network_detection: [network-security-monitoring-analyst]
+  vulnerability_management: [security-knowledge-researcher]
+  identity_defense: [password-audit-specialist]
+  control_validation: [penetration-testing-methodologist, vulnerability-validation-specialist]
+  public_exposure_review: [open-source-intelligence-analyst]
+  defensive_procedures: [security-command-planner]
+  incident_response: [network-security-monitoring-analyst, security-knowledge-researcher]
+reject_or_escalate:
+  - missing owner authorization or scope
+  - offensive, destructive, evasive, or credential-targeting request
+  - personal profiling or social engineering
+  - production change without rollback approval

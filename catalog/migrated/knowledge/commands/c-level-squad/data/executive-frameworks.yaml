@@ -1,0 +1,13 @@
+schema: menaxvi.knowledge-catalog/v1
+id: executive-strategy-frameworks
+frameworks:
+  - name: vision-to-execution
+    stages: [vision, mission, strategic_choices, annual_outcomes, quarterly_initiatives, measures]
+  - name: portfolio-horizons
+    stages: [core, adjacent, future]
+  - name: operating-model
+    dimensions: [value_streams, decision_rights, roles, cadence, controls, measures]
+  - name: investment-case
+    dimensions: [strategic_fit, value, cost, risk, capacity, reversibility]
+  - name: board-readiness
+    dimensions: [decision, evidence, alternatives, risks, governance, asks]

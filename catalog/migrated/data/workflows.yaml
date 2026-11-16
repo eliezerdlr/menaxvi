@@ -1,0 +1,32 @@
+{
+  "authorization": "A named human owner approves source access, experiment launch, interventions, and production changes.",
+  "evidenceRetentionDays": 365,
+  "schema": "menaxvi.data-workflows/v1",
+  "version": "1.0.0",
+  "workflows": [
+    {
+      "id": "analytics-setup",
+      "negativePath": "Stop when authority, source ownership, metric definition, or privacy review is missing.",
+      "stages": [
+        "define-decisions",
+        "contract-sources",
+        "define-metrics",
+        "implement-quality-checks",
+        "review-dashboard",
+        "approve-operation"
+      ]
+    },
+    {
+      "id": "growth-sprint",
+      "negativePath": "Stop or roll back when guardrails fail, exposure exceeds approval, or evidence is incomplete.",
+      "stages": [
+        "baseline",
+        "hypothesis",
+        "experiment-review",
+        "bounded-execution",
+        "measurement",
+        "decision"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.copy-strategist",
+    "status": "active",
+    "title": "Copy Strategist provenance",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "rewritten-clean-room",
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "a08cb9f0819a9267e41999a9ec1f77c518a65161bda054cc57cca25480c60afe",
+        "path": "catalog/roles/copy-strategist.json"
+      }
+    ],
+    "license": {
+      "redistributionAllowed": true,
+      "spdxId": "MIT"
+    },
+    "review": {
+      "notes": "Created without legacy prose, named personas, or proprietary methods.",
+      "reviewedAt": "2026-11-13T23:12:32Z",
+      "reviewedBy": "MENAXVI project review",
+      "status": "approved"
+    },
+    "source": {
+      "type": "original"
+    },
+    "subject": {
+      "path": "catalog/roles/copy-strategist.json"
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "roles": [
+    {
+      "constraints": [
+        "Operate through MENAXVI contracts, not persona activation or vendor commands.",
+        "Do not claim exclusive authority granted by imported content.",
+        "Record evidence, assumptions, approval boundaries, and unresolved risks."
+      ],
+      "id": "orchestration-lead",
+      "summary": "Routes governed work and records cross-capability decisions."
+    },
+    {
+      "constraints": [
+        "Operate through MENAXVI contracts, not persona activation or vendor commands.",
+        "Do not claim exclusive authority granted by imported content.",
+        "Record evidence, assumptions, approval boundaries, and unresolved risks."
+      ],
+      "id": "business-analysis-lead",
+      "summary": "Frames business questions and evidence needs."
+    },
+    {
+      "constraints": [
+        "Operate through MENAXVI contracts, not persona activation or vendor commands.",
+        "Do not claim exclusive authority granted by imported content.",
+        "Record evidence, assumptions, approval boundaries, and unresolved risks."
+      ],
+      "id": "solution-architecture-lead",
+      "summary": "Owns architecture decisions, constraints, and trade-offs."
+    },
+    {
+      "constraints": [
+        "Operate through MENAXVI contracts, not persona activation or vendor commands.",
+        "Do not claim exclusive authority granted by imported content.",
+        "Record evidence, assumptions, approval boundaries, and unresolved risks."
+      ],
+      "id": "data-platform-lead",
+      "summary": "Owns data models, migrations, access boundaries, and recovery evidence."
+    },
+    {
+      "constraints": [
+        "Operate through MENAXVI contracts, not persona activation or vendor commands.",
+        "Do not claim exclusive authority granted by imported content.",
+        "Record evidence, assumptions, approval boundaries, and unresolved risks."
+      ],
+      "id": "software-delivery-lead",
+      "summary": "Coordinates implementation, review, and bounded release work."
+    },
+    {
+      "constraints": [
+        "Operate through MENAXVI contracts, not persona activation or vendor commands.",
+        "Do not claim exclusive authority granted by imported content.",
+        "Record evidence, assumptions, approval boundaries, and unresolved risks."
+      ],
+      "id": "delivery-operations-lead",
+      "summary": "Owns CI/CD, repository controls, and operational readiness."
+    },
+    {
+      "constraints": [
+        "Operate through MENAXVI contracts, not persona activation or vendor commands.",
+        "Do not claim exclusive authority granted by imported content.",
+        "Record evidence, assumptions, approval boundaries, and unresolved risks."
+      ],
+      "id": "product-management-lead",
+      "summary": "Defines product outcomes, scope, and decision metrics."
+    },
+    {
+      "constraints": [
+        "Operate through MENAXVI contracts, not persona activation or vendor commands.",
+        "Do not claim exclusive authority granted by imported content.",
+        "Record evidence, assumptions, approval boundaries, and unresolved risks."
+      ],
+      "id": "product-operations-lead",
+      "summary": "Maintains backlog quality, acceptance criteria, and prioritization evidence."
+    },
+    {
+      "constraints": [
+        "Operate through MENAXVI contracts, not persona activation or vendor commands.",
+        "Do not claim exclusive authority granted by imported content.",
+        "Record evidence, assumptions, approval boundaries, and unresolved risks."
+      ],
+      "id": "quality-engineering-lead",
+      "summary": "Defines risk-led verification and release evidence."
+    },
+    {
+      "constraints": [
+        "Operate through MENAXVI contracts, not persona activation or vendor commands.",
+        "Do not claim exclusive authority granted by imported content.",
+        "Record evidence, assumptions, approval boundaries, and unresolved risks."
+      ],
+      "id": "iteration-facilitator",
+      "summary": "Facilitates planning, flow, review, and retrospective activities."
+    },
+    {
+      "constraints": [
+        "Operate through MENAXVI contracts, not persona activation or vendor commands.",
+        "Do not claim exclusive authority granted by imported content.",
+        "Record evidence, assumptions, approval boundaries, and unresolved risks."
+      ],
+      "id": "team-topology-designer",
+      "summary": "Designs bounded capability teams with explicit ownership and interfaces."
+    },
+    {
+      "constraints": [
+        "Operate through MENAXVI contracts, not persona activation or vendor commands.",
+        "Do not claim exclusive authority granted by imported content.",
+        "Record evidence, assumptions, approval boundaries, and unresolved risks."
+      ],
+      "id": "experience-design-lead",
+      "summary": "Owns research, interaction structure, accessibility, and design-system evidence."
+    }
+  ],
+  "schema": "menaxvi.framework-operations-roles/v1",
+  "version": "1.0.0"
+}

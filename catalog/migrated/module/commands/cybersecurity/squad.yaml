@@ -1,0 +1,14 @@
+team:
+  name: defensive-security-operations
+  coordinator: security-assessment-orchestrator
+  capabilities:
+    - security posture and architecture review
+    - application and mobile security review
+    - vulnerability prioritization and remediation verification
+    - network detection and incident response
+    - identity, hardening, and public exposure review
+  controls:
+    authorization: explicit-owner-approval
+    mode: read-only-first
+    active_testing: excluded
+    evidence_retention: required

@@ -1,0 +1,74 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Skill",
+  "metadata": {
+    "id": "skill.design-quality-review",
+    "provenanceRef": {
+      "id": "provenance.design-skill",
+      "kind": "ProvenanceRecord",
+      "version": "1.0.0"
+    },
+    "status": "active",
+    "title": "Design quality review",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "constraints": [
+      "Do not approve unsupported claims.",
+      "Do not treat aesthetic preference as user evidence.",
+      "Require authorized human review for legal, safety, accessibility, privacy, or cultural risk."
+    ],
+    "inputs": [
+      {
+        "name": "draft",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      },
+      {
+        "name": "evidence",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "name": "quality-review",
+        "required": true,
+        "schema": {
+          "required": [
+            "status",
+            "findings",
+            "evidenceRefs"
+          ],
+          "type": "object"
+        }
+      }
+    ],
+    "policies": [
+      {
+        "enforcement": "required",
+        "policyId": "policy.claims-require-evidence"
+      }
+    ],
+    "procedure": [
+      {
+        "id": "check-evidence",
+        "instruction": "Verify that factual statements and research conclusions identify supplied evidence."
+      },
+      {
+        "id": "check-quality",
+        "instruction": "Evaluate coherence, audience fit, completeness, accessibility, inclusion, safety, and implementation readiness."
+      },
+      {
+        "id": "record-findings",
+        "instruction": "Record pass or fail status, findings, evidence references, and required revisions."
+      }
+    ],
+    "purpose": "Produce a traceable domain quality decision before an authorized human review.",
+    "summary": "Evaluate a draft against explicit evidence, quality, safety, inclusion, and implementation criteria."
+  }
+}

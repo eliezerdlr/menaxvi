@@ -1,0 +1,209 @@
+{
+  "schema": "menaxvi.data-tasks/v1",
+  "tasks": [
+    {
+      "acceptance": [
+        "all sources have owners and rights",
+        "transformations are reproducible",
+        "findings distinguish observation from inference",
+        "privacy and quality checks pass",
+        "a human review decision is recorded"
+      ],
+      "id": "analyze-data",
+      "inputs": [
+        "decision-question",
+        "authorized-data-sources",
+        "measurement-window"
+      ],
+      "outputs": [
+        "analysis-package",
+        "evidence-ledger",
+        "review-request"
+      ],
+      "ownerRole": "analytics-specialist",
+      "purpose": "Turn a decision question and governed dataset into a reproducible analysis.",
+      "steps": [
+        "validate authority and source contracts",
+        "profile data quality and record exclusions",
+        "perform the minimum sufficient analysis",
+        "record findings, uncertainty, and limitations",
+        "produce a recommendation for human review"
+      ]
+    },
+    {
+      "acceptance": [
+        "all sources have owners and rights",
+        "transformations are reproducible",
+        "findings distinguish observation from inference",
+        "privacy and quality checks pass",
+        "a human review decision is recorded"
+      ],
+      "id": "build-audience-plan",
+      "inputs": [
+        "decision-question",
+        "authorized-data-sources",
+        "measurement-window"
+      ],
+      "outputs": [
+        "analysis-package",
+        "evidence-ledger",
+        "review-request"
+      ],
+      "ownerRole": "audience-development-analyst",
+      "purpose": "Create a consent-aware audience plan with measurable outcomes.",
+      "steps": [
+        "validate authority and source contracts",
+        "profile data quality and record exclusions",
+        "perform the minimum sufficient analysis",
+        "record findings, uncertainty, and limitations",
+        "produce a recommendation for human review"
+      ]
+    },
+    {
+      "acceptance": [
+        "all sources have owners and rights",
+        "transformations are reproducible",
+        "findings distinguish observation from inference",
+        "privacy and quality checks pass",
+        "a human review decision is recorded"
+      ],
+      "id": "build-community-strategy",
+      "inputs": [
+        "decision-question",
+        "authorized-data-sources",
+        "measurement-window"
+      ],
+      "outputs": [
+        "analysis-package",
+        "evidence-ledger",
+        "review-request"
+      ],
+      "ownerRole": "community-analyst",
+      "purpose": "Create a community strategy tied to member and business outcomes.",
+      "steps": [
+        "validate authority and source contracts",
+        "profile data quality and record exclusions",
+        "perform the minimum sufficient analysis",
+        "record findings, uncertainty, and limitations",
+        "produce a recommendation for human review"
+      ]
+    },
+    {
+      "acceptance": [
+        "all sources have owners and rights",
+        "transformations are reproducible",
+        "findings distinguish observation from inference",
+        "privacy and quality checks pass",
+        "a human review decision is recorded"
+      ],
+      "id": "diagnose-data-request",
+      "inputs": [
+        "decision-question",
+        "authorized-data-sources",
+        "measurement-window"
+      ],
+      "outputs": [
+        "analysis-package",
+        "evidence-ledger",
+        "review-request"
+      ],
+      "ownerRole": "data-operations-lead",
+      "purpose": "Triage a data request and route it to an accountable specialist.",
+      "steps": [
+        "validate authority and source contracts",
+        "profile data quality and record exclusions",
+        "perform the minimum sufficient analysis",
+        "record findings, uncertainty, and limitations",
+        "produce a recommendation for human review"
+      ]
+    },
+    {
+      "acceptance": [
+        "all sources have owners and rights",
+        "transformations are reproducible",
+        "findings distinguish observation from inference",
+        "privacy and quality checks pass",
+        "a human review decision is recorded"
+      ],
+      "id": "measure-growth",
+      "inputs": [
+        "decision-question",
+        "authorized-data-sources",
+        "measurement-window"
+      ],
+      "outputs": [
+        "analysis-package",
+        "evidence-ledger",
+        "review-request"
+      ],
+      "ownerRole": "growth-experiment-analyst",
+      "purpose": "Design and evaluate a bounded growth experiment.",
+      "steps": [
+        "validate authority and source contracts",
+        "profile data quality and record exclusions",
+        "perform the minimum sufficient analysis",
+        "record findings, uncertainty, and limitations",
+        "produce a recommendation for human review"
+      ]
+    },
+    {
+      "acceptance": [
+        "all sources have owners and rights",
+        "transformations are reproducible",
+        "findings distinguish observation from inference",
+        "privacy and quality checks pass",
+        "a human review decision is recorded"
+      ],
+      "id": "optimize-retention",
+      "inputs": [
+        "decision-question",
+        "authorized-data-sources",
+        "measurement-window"
+      ],
+      "outputs": [
+        "analysis-package",
+        "evidence-ledger",
+        "review-request"
+      ],
+      "ownerRole": "customer-success-analyst",
+      "purpose": "Identify retention risks and propose reviewable interventions.",
+      "steps": [
+        "validate authority and source contracts",
+        "profile data quality and record exclusions",
+        "perform the minimum sufficient analysis",
+        "record findings, uncertainty, and limitations",
+        "produce a recommendation for human review"
+      ]
+    },
+    {
+      "acceptance": [
+        "all sources have owners and rights",
+        "transformations are reproducible",
+        "findings distinguish observation from inference",
+        "privacy and quality checks pass",
+        "a human review decision is recorded"
+      ],
+      "id": "review-analytics-output",
+      "inputs": [
+        "decision-question",
+        "authorized-data-sources",
+        "measurement-window"
+      ],
+      "outputs": [
+        "analysis-package",
+        "evidence-ledger",
+        "review-request"
+      ],
+      "ownerRole": "data-operations-lead",
+      "purpose": "Review an analytics package for integrity, privacy, and decision fitness.",
+      "steps": [
+        "validate authority and source contracts",
+        "profile data quality and record exclusions",
+        "perform the minimum sufficient analysis",
+        "record findings, uncertainty, and limitations",
+        "produce a recommendation for human review"
+      ]
+    }
+  ],
+  "version": "1.0.0"
+}

@@ -1,0 +1,332 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.menaxvi.io/v1alpha1/business-context.schema.json",
+  "title": "MENAXVI business context",
+  "description": "Portable onboarding contract for the business context required by governed marketing workflows.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["apiVersion", "kind", "metadata", "spec"],
+  "properties": {
+    "apiVersion": {"const": "menaxvi.io/v1alpha1"},
+    "kind": {"const": "BusinessContext"},
+    "metadata": {"$ref": "#/$defs/metadata"},
+    "spec": {"$ref": "#/$defs/businessContextSpec"}
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)*$",
+      "minLength": 3,
+      "maxLength": 128
+    },
+    "nonBlankText": {
+      "type": "string",
+      "pattern": "\\S",
+      "maxLength": 4000
+    },
+    "shortText": {
+      "type": "string",
+      "pattern": "\\S",
+      "maxLength": 200
+    },
+    "referenceList": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/identifier"},
+      "uniqueItems": true
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version", "title", "status", "provenanceRef"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "version": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$"
+        },
+        "title": {"type": "string", "minLength": 3, "maxLength": 160},
+        "status": {"enum": ["draft", "active", "deprecated", "retired"]},
+        "provenanceRef": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "id", "version"],
+          "properties": {
+            "kind": {"const": "ProvenanceRecord"},
+            "id": {"$ref": "#/$defs/identifier"},
+            "version": {
+              "type": "string",
+              "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$"
+            }
+          }
+        },
+        "labels": {
+          "type": "object",
+          "propertyNames": {"pattern": "^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)*$"},
+          "additionalProperties": {"type": "string", "maxLength": 128},
+          "maxProperties": 32
+        }
+      }
+    },
+    "businessContextSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "company",
+        "audiences",
+        "offers",
+        "brand",
+        "claims",
+        "evidence",
+        "channels",
+        "constraints",
+        "approvalOwners"
+      ],
+      "properties": {
+        "company": {"$ref": "#/$defs/company"},
+        "audiences": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/audience"}
+        },
+        "offers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/offer"}
+        },
+        "brand": {"$ref": "#/$defs/brand"},
+        "claims": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/claim"}
+        },
+        "evidence": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/evidence"}
+        },
+        "channels": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/channel"}
+        },
+        "constraints": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/constraint"}
+        },
+        "approvalOwners": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/approvalOwner"}
+        }
+      }
+    },
+    "company": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["legalName", "displayName", "description", "industry", "markets", "languages"],
+      "properties": {
+        "legalName": {"$ref": "#/$defs/shortText"},
+        "displayName": {"$ref": "#/$defs/shortText"},
+        "description": {"$ref": "#/$defs/nonBlankText"},
+        "industry": {"$ref": "#/$defs/shortText"},
+        "website": {"type": "string", "format": "uri", "maxLength": 2048},
+        "markets": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[A-Z]{2}$"}
+        },
+        "languages": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[a-z]{2,3}(?:-[A-Z]{2})?$"}
+        }
+      }
+    },
+    "audience": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "description", "needs", "exclusions"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "name": {"$ref": "#/$defs/shortText"},
+        "description": {"$ref": "#/$defs/nonBlankText"},
+        "needs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/shortText"}
+        },
+        "painPoints": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/shortText"}
+        },
+        "exclusions": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/shortText"}
+        },
+        "markets": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[A-Z]{2}$"}
+        }
+      }
+    },
+    "offer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "description", "valueProposition", "audienceRefs", "availability"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "name": {"$ref": "#/$defs/shortText"},
+        "description": {"$ref": "#/$defs/nonBlankText"},
+        "valueProposition": {"$ref": "#/$defs/nonBlankText"},
+        "audienceRefs": {
+          "allOf": [
+            {"$ref": "#/$defs/referenceList"},
+            {"minItems": 1}
+          ]
+        },
+        "price": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["amount", "currency"],
+          "properties": {
+            "amount": {"type": "number", "minimum": 0},
+            "currency": {"type": "string", "pattern": "^[A-Z]{3}$"},
+            "qualifier": {"$ref": "#/$defs/shortText"}
+          }
+        },
+        "terms": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/shortText"}
+        },
+        "availability": {"enum": ["planned", "available", "paused", "retired"]}
+      }
+    },
+    "brand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["positioning", "voice"],
+      "properties": {
+        "positioning": {"$ref": "#/$defs/nonBlankText"},
+        "promise": {"$ref": "#/$defs/nonBlankText"},
+        "voice": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["traits", "do", "avoid"],
+          "properties": {
+            "traits": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {"$ref": "#/$defs/shortText"}
+            },
+            "do": {
+              "type": "array",
+              "minItems": 1,
+              "items": {"$ref": "#/$defs/shortText"}
+            },
+            "avoid": {
+              "type": "array",
+              "minItems": 1,
+              "items": {"$ref": "#/$defs/shortText"}
+            }
+          }
+        }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "statement", "status", "evidenceRefs", "approvalOwnerRefs"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "statement": {"$ref": "#/$defs/nonBlankText"},
+        "status": {"enum": ["proposed", "substantiated", "approved", "rejected", "expired"]},
+        "evidenceRefs": {"$ref": "#/$defs/referenceList"},
+        "approvalOwnerRefs": {
+          "allOf": [
+            {"$ref": "#/$defs/referenceList"},
+            {"minItems": 1}
+          ]
+        },
+        "expiresAt": {"type": "string", "format": "date-time"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"enum": ["substantiated", "approved"]}}, "required": ["status"]},
+          "then": {"properties": {"evidenceRefs": {"minItems": 1}}}
+        }
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "title", "source", "capturedAt"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "type": {"enum": ["research", "customer-data", "case-study", "certification", "legal-review", "product-record", "other"]},
+        "title": {"$ref": "#/$defs/shortText"},
+        "source": {"$ref": "#/$defs/nonBlankText"},
+        "uri": {"type": "string", "format": "uri", "maxLength": 2048},
+        "capturedAt": {"type": "string", "format": "date-time"},
+        "validUntil": {"type": "string", "format": "date-time"},
+        "notes": {"$ref": "#/$defs/nonBlankText"}
+      }
+    },
+    "channel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "name", "purpose", "audienceRefs", "status"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "type": {"enum": ["website", "email", "search", "social", "paid-media", "marketplace", "messaging", "offline", "other"]},
+        "name": {"$ref": "#/$defs/shortText"},
+        "purpose": {"$ref": "#/$defs/nonBlankText"},
+        "audienceRefs": {"$ref": "#/$defs/referenceList"},
+        "status": {"enum": ["planned", "active", "paused", "retired"]}
+      }
+    },
+    "constraint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "category", "rule", "severity", "appliesTo", "approvalOwnerRefs"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "category": {"enum": ["legal", "regulatory", "privacy", "brand", "budget", "channel", "operational", "safety", "other"]},
+        "rule": {"$ref": "#/$defs/nonBlankText"},
+        "severity": {"enum": ["block", "warn"]},
+        "appliesTo": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": ["all", "audience", "offer", "brand", "claim", "channel", "workflow", "artifact"]}
+        },
+        "approvalOwnerRefs": {
+          "allOf": [
+            {"$ref": "#/$defs/referenceList"},
+            {"minItems": 1}
+          ]
+        },
+        "source": {"$ref": "#/$defs/nonBlankText"}
+      }
+    },
+    "approvalOwner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "displayName", "role", "scopes"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "displayName": {"$ref": "#/$defs/shortText"},
+        "role": {"$ref": "#/$defs/shortText"},
+        "userRef": {"$ref": "#/$defs/identifier"},
+        "scopes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": ["business-context", "audience", "offer", "brand", "claim", "channel", "constraint", "legal", "privacy", "final-artifact"]}
+        },
+        "required": {"type": "boolean", "default": true}
+      }
+    }
+  }
+}

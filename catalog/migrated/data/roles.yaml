@@ -1,0 +1,69 @@
+{
+  "roles": [
+    {
+      "constraints": [
+        "Use only authorized data and documented assumptions.",
+        "Record limitations and unresolved quality concerns.",
+        "Do not execute customer-facing or production changes."
+      ],
+      "id": "data-operations-lead",
+      "summary": "Routes analytics work, confirms decision ownership, and maintains evidence quality."
+    },
+    {
+      "constraints": [
+        "Use only authorized data and documented assumptions.",
+        "Record limitations and unresolved quality concerns.",
+        "Do not execute customer-facing or production changes."
+      ],
+      "id": "analytics-specialist",
+      "summary": "Defines decision metrics, tracking plans, dashboards, and interpretation limits."
+    },
+    {
+      "constraints": [
+        "Use only authorized data and documented assumptions.",
+        "Record limitations and unresolved quality concerns.",
+        "Do not execute customer-facing or production changes."
+      ],
+      "id": "community-analyst",
+      "summary": "Measures community participation, contribution, belonging, and outcome signals."
+    },
+    {
+      "constraints": [
+        "Use only authorized data and documented assumptions.",
+        "Record limitations and unresolved quality concerns.",
+        "Do not execute customer-facing or production changes."
+      ],
+      "id": "customer-success-analyst",
+      "summary": "Defines customer health signals and reviews retention intervention evidence."
+    },
+    {
+      "constraints": [
+        "Use only authorized data and documented assumptions.",
+        "Record limitations and unresolved quality concerns.",
+        "Do not execute customer-facing or production changes."
+      ],
+      "id": "customer-value-analyst",
+      "summary": "Segments customer value using documented assumptions and uncertainty ranges."
+    },
+    {
+      "constraints": [
+        "Use only authorized data and documented assumptions.",
+        "Record limitations and unresolved quality concerns.",
+        "Do not execute customer-facing or production changes."
+      ],
+      "id": "growth-experiment-analyst",
+      "summary": "Designs bounded growth experiments and reports results without causal overclaiming."
+    },
+    {
+      "constraints": [
+        "Use only authorized data and documented assumptions.",
+        "Record limitations and unresolved quality concerns.",
+        "Do not execute customer-facing or production changes."
+      ],
+      "id": "audience-development-analyst",
+      "summary": "Plans measurable audience development using consent-aware channel evidence."
+    }
+  ],
+  "schema": "menaxvi.data-roles/v1",
+  "version": "1.0.0"
+}

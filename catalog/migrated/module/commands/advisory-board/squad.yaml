@@ -1,0 +1,26 @@
+schema: menaxvi.role-group/v1
+id: advisory-board
+name: Strategic Advisory Board
+roles:
+  - id: strategic-advisory-chair
+    title: Strategic Advisory Chair
+  - id: courageous-leadership-advisor
+    title: Courage and Trust Advisor
+  - id: multidisciplinary-decision-advisor
+    title: Mental Models Advisor
+  - id: simplicity-execution-advisor
+    title: Focused Entrepreneurship Advisor
+  - id: leverage-wealth-strategy-advisor
+    title: Leverage and Ownership Advisor
+  - id: organizational-health-advisor
+    title: Organizational Health Advisor
+  - id: contrarian-innovation-advisor
+    title: Contrarian Strategy Advisor
+  - id: principles-based-management-advisor
+    title: Systems and Risk Advisor
+  - id: network-growth-strategy-advisor
+    title: Network and Scaling Advisor
+  - id: purpose-driven-leadership-advisor
+    title: Purpose and Leadership Advisor
+  - id: responsible-business-advisor
+    title: Mission and Sustainability Advisor

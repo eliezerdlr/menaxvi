@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.reviewed-campaign-message",
+    "status": "active",
+    "title": "Reviewed campaign message provenance",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "rewritten-clean-room",
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "1eddc4e5cfc85cde379cb505c0b25f02dc08b415094ea2c56957689fb53df413",
+        "path": "catalog/workflows/reviewed-campaign-message.json"
+      }
+    ],
+    "license": {
+      "redistributionAllowed": true,
+      "spdxId": "MIT"
+    },
+    "review": {
+      "notes": "Created without legacy prose, named personas, or proprietary methods.",
+      "reviewedAt": "2026-11-13T23:12:32Z",
+      "reviewedBy": "MENAXVI project review",
+      "status": "approved"
+    },
+    "source": {
+      "type": "original"
+    },
+    "subject": {
+      "path": "catalog/workflows/reviewed-campaign-message.json"
+    }
+  }
+}

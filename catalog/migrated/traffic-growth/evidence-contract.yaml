@@ -1,0 +1,35 @@
+{
+  "measurementChecks": [
+    "event-validity",
+    "deduplication",
+    "attribution-window",
+    "conversion-lag",
+    "sample-size",
+    "incrementality-limitations",
+    "privacy-review"
+  ],
+  "prohibited": [
+    "automatic campaign launch",
+    "automatic spend or bid change",
+    "unsubstantiated claims",
+    "sensitive targeting without authority",
+    "dark patterns",
+    "provider credentials in artifacts",
+    "performance guarantees"
+  ],
+  "required": [
+    "objective",
+    "owner",
+    "audienceBasis",
+    "consentAndSuppression",
+    "claimsEvidence",
+    "channelAssumptions",
+    "budgetBoundaries",
+    "measurementPlan",
+    "guardrails",
+    "rollbackPlan",
+    "recommendation",
+    "reviewDecision"
+  ],
+  "schema": "menaxvi.traffic-growth-evidence-contract/v1"
+}

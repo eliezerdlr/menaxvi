@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.menaxvi.io/v1alpha1/role.schema.json",
+  "title": "MENAXVI Role",
+  "description": "A governed professional role. It describes expertise and boundaries without runtime or provider identity semantics.",
+  "type": "object",
+  "required": ["apiVersion", "kind", "metadata", "spec"],
+  "properties": {
+    "apiVersion": { "const": "menaxvi.io/v1alpha1" },
+    "kind": { "const": "Role" },
+    "metadata": { "$ref": "common.schema.json#/$defs/resourceMetadata" },
+    "spec": {
+      "type": "object",
+      "required": [
+        "summary",
+        "capabilities",
+        "constraints",
+        "skillRefs",
+        "acceptsArtifacts",
+        "producesArtifacts",
+        "policies"
+      ],
+      "properties": {
+        "summary": { "type": "string", "minLength": 20, "maxLength": 1000 },
+        "capabilities": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 3, "maxLength": 200 },
+          "uniqueItems": true
+        },
+        "constraints": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 3, "maxLength": 300 },
+          "uniqueItems": true
+        },
+        "skillRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "common.schema.json#/$defs/skillRef" },
+          "uniqueItems": true
+        },
+        "acceptsArtifacts": {
+          "type": "array",
+          "items": { "$ref": "common.schema.json#/$defs/artifactContract" },
+          "uniqueItems": true
+        },
+        "producesArtifacts": {
+          "type": "array",
+          "items": { "$ref": "common.schema.json#/$defs/artifactContract" },
+          "uniqueItems": true
+        },
+        "policies": {
+          "type": "array",
+          "items": { "$ref": "common.schema.json#/$defs/policyBinding" },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

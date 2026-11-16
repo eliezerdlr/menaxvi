@@ -1,0 +1,46 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Module",
+  "metadata": {
+    "id": "module.design-strategy",
+    "provenanceRef": {
+      "id": "provenance.design-module",
+      "kind": "ProvenanceRecord",
+      "version": "1.0.0"
+    },
+    "status": "active",
+    "title": "Design Operations",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "roles": [
+      {
+        "id": "role.design-strategy",
+        "kind": "Role",
+        "version": "1.0.0"
+      }
+    ],
+    "skills": [
+      {
+        "id": "skill.design-quality-review",
+        "kind": "Skill",
+        "version": "1.0.0"
+      }
+    ],
+    "summary": "Translate approved product and brand requirements into accessible, testable design specifications.",
+    "tasks": [
+      {
+        "id": "task.design-strategy",
+        "kind": "Task",
+        "version": "1.0.0"
+      }
+    ],
+    "workflows": [
+      {
+        "id": "workflow.design-strategy",
+        "kind": "Workflow",
+        "version": "1.0.0"
+      }
+    ]
+  }
+}

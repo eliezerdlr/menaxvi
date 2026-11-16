@@ -1,0 +1,16 @@
+schema: menaxvi.role-group/v1
+id: c-level-squad
+name: Executive Strategy Council
+roles:
+  - id: executive-vision-strategist
+    title: Executive Strategy Lead
+  - id: enterprise-ai-strategy-architect
+    title: AI Strategy Executive
+  - id: enterprise-information-architect
+    title: Information Systems Executive
+  - id: marketing-strategy-architect
+    title: Marketing Strategy Executive
+  - id: operations-execution-orchestrator
+    title: Operations Strategy Executive
+  - id: technology-strategy-architect
+    title: Technology Strategy Executive

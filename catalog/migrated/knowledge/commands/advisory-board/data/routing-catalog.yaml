@@ -1,0 +1,25 @@
+schema: menaxvi.routing-catalog/v1
+domain: advisory-board
+routes:
+  - role: strategic-advisory-chair
+    capability: "question framing"
+  - role: courageous-leadership-advisor
+    capability: "psychological safety"
+  - role: multidisciplinary-decision-advisor
+    capability: "inversion"
+  - role: simplicity-execution-advisor
+    capability: "scope reduction"
+  - role: leverage-wealth-strategy-advisor
+    capability: "specific knowledge"
+  - role: organizational-health-advisor
+    capability: "team trust"
+  - role: contrarian-innovation-advisor
+    capability: "differentiation"
+  - role: principles-based-management-advisor
+    capability: "causal systems"
+  - role: network-growth-strategy-advisor
+    capability: "network effects"
+  - role: purpose-driven-leadership-advisor
+    capability: "purpose clarity"
+  - role: responsible-business-advisor
+    capability: "mission integrity"

@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.message-clarity-review",
+    "status": "active",
+    "title": "Message clarity review provenance",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "rewritten-clean-room",
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "7022831737d48b420d85782f57a10f8303eace9546722e9586213532a1f6eddd",
+        "path": "catalog/skills/message-clarity-review.json"
+      }
+    ],
+    "license": {
+      "redistributionAllowed": true,
+      "spdxId": "MIT"
+    },
+    "review": {
+      "notes": "Created without legacy prose, named personas, or proprietary methods.",
+      "reviewedAt": "2026-11-13T23:12:32Z",
+      "reviewedBy": "MENAXVI project review",
+      "status": "approved"
+    },
+    "source": {
+      "type": "original"
+    },
+    "subject": {
+      "path": "catalog/skills/message-clarity-review.json"
+    }
+  }
+}

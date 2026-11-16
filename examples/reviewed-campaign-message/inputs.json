@@ -1,0 +1,15 @@
+{
+  "brief": {
+    "audience": "Operations leaders",
+    "channel": "email",
+    "desiredOutcome": "Request a review",
+    "nextAction": "Reply with approval"
+  },
+  "evidence": [
+    {
+      "id": "evidence-1",
+      "statement": "The workflow requires manual review before approval.",
+      "source": "approved MENAXVI workflow contract"
+    }
+  ]
+}

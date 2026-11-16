@@ -1,0 +1,140 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Task",
+  "metadata": {
+    "id": "task.brand-strategy",
+    "provenanceRef": {
+      "id": "provenance.brand-task",
+      "kind": "ProvenanceRecord",
+      "version": "1.0.0"
+    },
+    "status": "active",
+    "title": "Develop a brand strategy",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "acceptanceCriteria": [
+      {
+        "description": "Every factual claim or research conclusion identifies supplied evidence."
+      },
+      {
+        "description": "The output covers the requested scope and records explicit exclusions."
+      },
+      {
+        "description": "The quality review records failures, risks, and revision actions.",
+        "requiredEvidence": [
+          "quality-review"
+        ]
+      },
+      {
+        "description": "The package is marked draft and requires human approval."
+      }
+    ],
+    "inputs": [
+      {
+        "name": "business-context",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      },
+      {
+        "name": "audience-research",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      },
+      {
+        "name": "market-evidence",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "name": "brand-strategy",
+        "required": true,
+        "schema": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      {
+        "name": "decision-ledger",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      },
+      {
+        "name": "quality-review",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      }
+    ],
+    "policies": [
+      {
+        "enforcement": "required",
+        "policyId": "policy.claims-require-evidence"
+      },
+      {
+        "enforcement": "required",
+        "policyId": "policy.human-approval-before-publication"
+      }
+    ],
+    "preconditions": [
+      {
+        "description": "All required inputs are approved and identify their owner and source."
+      },
+      {
+        "description": "The intended audience, decision, scope, and prohibited actions are explicit."
+      }
+    ],
+    "purpose": "Develop an evidence-based brand strategy and identity direction from an approved business brief.",
+    "roleRef": {
+      "id": "role.brand-strategy",
+      "kind": "Role",
+      "version": "1.0.0"
+    },
+    "skillRefs": [
+      {
+        "id": "skill.brand-quality-review",
+        "kind": "Skill",
+        "version": "1.0.0"
+      }
+    ],
+    "steps": [
+      {
+        "dependsOn": [],
+        "id": "inspect",
+        "instruction": "Inspect inputs, list evidence, constraints, assumptions, and missing information."
+      },
+      {
+        "dependsOn": [
+          "inspect"
+        ],
+        "id": "develop",
+        "instruction": "Develop an evidence-based brand strategy and identity direction from an approved business brief."
+      },
+      {
+        "dependsOn": [
+          "develop"
+        ],
+        "id": "evaluate",
+        "instruction": "Evaluate the output for evidence, coherence, inclusion, safety, accessibility, and implementation readiness."
+      },
+      {
+        "dependsOn": [
+          "evaluate"
+        ],
+        "id": "package",
+        "instruction": "Package the draft, decision ledger, quality review, and unresolved risks for human review."
+      }
+    ]
+  }
+}

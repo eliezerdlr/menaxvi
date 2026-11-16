@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.menaxvi.io/v1alpha1/module.schema.json",
+  "title": "MENAXVI Module",
+  "description": "A customer-facing product boundary composed only of pinned canonical resource references.",
+  "type": "object",
+  "required": ["apiVersion", "kind", "metadata", "spec"],
+  "properties": {
+    "apiVersion": { "const": "menaxvi.io/v1alpha1" },
+    "kind": { "const": "Module" },
+    "metadata": { "$ref": "common.schema.json#/$defs/resourceMetadata" },
+    "spec": {
+      "type": "object",
+      "required": ["summary", "roles", "skills", "tasks", "workflows"],
+      "properties": {
+        "summary": { "type": "string", "minLength": 20, "maxLength": 1000 },
+        "roles": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "common.schema.json#/$defs/roleRef" },
+          "uniqueItems": true
+        },
+        "skills": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "common.schema.json#/$defs/skillRef" },
+          "uniqueItems": true
+        },
+        "tasks": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "common.schema.json#/$defs/taskRef" },
+          "uniqueItems": true
+        },
+        "workflows": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "common.schema.json#/$defs/workflowRef" },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

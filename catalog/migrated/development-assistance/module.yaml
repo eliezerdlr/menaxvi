@@ -1,0 +1,24 @@
+{
+  "capabilities": [
+    "request-routing",
+    "repository-integration",
+    "configuration-governance",
+    "event-automation",
+    "tool-integration",
+    "work-coordination",
+    "capability-packaging",
+    "change-intelligence"
+  ],
+  "contracts": [
+    "assistance-context",
+    "governed-operations",
+    "portable-patterns",
+    "delivery-workflows"
+  ],
+  "id": "development-assistance",
+  "providerIntegrations": [],
+  "rollback": "Remove this package and restore its 60 assigned source records to pending_remediation; quarantined origins remain unchanged.",
+  "schema": "menaxvi.development-assistance-module/v1",
+  "status": "active",
+  "version": "1.0.0"
+}

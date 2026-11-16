@@ -1,0 +1,35 @@
+{
+  "prohibited": [
+    "undocumented source data",
+    "personal data without purpose and authority",
+    "causal claims from descriptive evidence",
+    "automatic customer action without approval"
+  ],
+  "qualityChecks": [
+    "completeness",
+    "validity",
+    "freshness",
+    "deduplication",
+    "selection-bias",
+    "sample-size"
+  ],
+  "required": [
+    "question",
+    "sources",
+    "transformations",
+    "qualityChecks",
+    "findings",
+    "limitations",
+    "recommendation",
+    "reviewDecision"
+  ],
+  "schema": "menaxvi.data-evidence-contract/v1",
+  "sourceFields": [
+    "id",
+    "owner",
+    "collectedAt",
+    "scope",
+    "rights",
+    "privacyClassification"
+  ]
+}

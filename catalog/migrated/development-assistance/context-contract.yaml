@@ -1,0 +1,29 @@
+{
+  "failureBehavior": "Fail closed when scope, authority, validation, or rollback is missing; preserve the last validated repository state.",
+  "optional": [
+    "providerId",
+    "adapterCapabilities",
+    "toolInventory",
+    "contextBudget"
+  ],
+  "prohibited": [
+    "provider session state as canonical state",
+    "credentials",
+    "implicit home-directory inspection",
+    "persona authority",
+    "automatic remote installation",
+    "unapproved repository mutation"
+  ],
+  "required": [
+    "requestId",
+    "objective",
+    "repositoryScope",
+    "owner",
+    "constraints",
+    "authority",
+    "evidence",
+    "acceptanceChecks",
+    "rollback"
+  ],
+  "schema": "menaxvi.development-assistance-context/v1"
+}

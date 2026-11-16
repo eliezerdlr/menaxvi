@@ -1,0 +1,116 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "BusinessContext",
+  "metadata": {
+    "id": "acme.business-context",
+    "version": "1.0.0",
+    "title": "Acme Digital business context",
+    "status": "active",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.acme-original",
+      "version": "1.0.0"
+    }
+  },
+  "spec": {
+    "company": {
+      "legalName": "Acme Serviços Digitais Ltda.",
+      "displayName": "Acme Digital",
+      "description": "A fictional provider of governed marketing operations software.",
+      "industry": "Marketing technology",
+      "website": "https://example.com",
+      "markets": ["BR"],
+      "languages": ["pt-BR", "en"]
+    },
+    "audiences": [
+      {
+        "id": "marketing-leaders",
+        "name": "Marketing leaders",
+        "description": "Leaders responsible for repeatable and governed campaign delivery.",
+        "needs": ["Reduce rework", "Make approval ownership explicit"],
+        "painPoints": ["Scattered business context"],
+        "exclusions": ["Organizations seeking unsupervised publishing"],
+        "markets": ["BR"]
+      }
+    ],
+    "offers": [
+      {
+        "id": "governed-workspace",
+        "name": "Governed workspace",
+        "description": "A workspace for structured marketing context and workflows.",
+        "valueProposition": "Give teams one reviewed source of context before execution.",
+        "audienceRefs": ["marketing-leaders"],
+        "price": {"amount": 499, "currency": "BRL", "qualifier": "per month"},
+        "terms": ["Subject to a signed service agreement"],
+        "availability": "available"
+      }
+    ],
+    "brand": {
+      "positioning": "A practical governance layer for marketing work.",
+      "promise": "Make approved context available at the point of execution.",
+      "voice": {
+        "traits": ["clear", "direct", "responsible"],
+        "do": ["Use specific and verifiable language"],
+        "avoid": ["Guarantees and unsupported superlatives"]
+      }
+    },
+    "claims": [
+      {
+        "id": "reviewed-context",
+        "statement": "Every active context record has an assigned approval owner.",
+        "status": "approved",
+        "evidenceRefs": ["product-control-record"],
+        "approvalOwnerRefs": ["marketing-approver"]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "product-control-record",
+        "type": "product-record",
+        "title": "Approval ownership control",
+        "source": "Internal product control specification",
+        "uri": "https://example.com/evidence/approval-control",
+        "capturedAt": "2026-03-20T12:00:00Z"
+      }
+    ],
+    "channels": [
+      {
+        "id": "company-website",
+        "type": "website",
+        "name": "Company website",
+        "purpose": "Explain the product to prospective customers.",
+        "audienceRefs": ["marketing-leaders"],
+        "status": "active"
+      }
+    ],
+    "constraints": [
+      {
+        "id": "no-performance-guarantees",
+        "category": "legal",
+        "rule": "Do not publish guaranteed performance outcomes.",
+        "severity": "block",
+        "appliesTo": ["claim", "artifact"],
+        "approvalOwnerRefs": ["legal-approver"],
+        "source": "Marketing claims policy"
+      }
+    ],
+    "approvalOwners": [
+      {
+        "id": "marketing-approver",
+        "displayName": "Marketing approval queue",
+        "role": "Marketing approver",
+        "userRef": "team.marketing-approvers",
+        "scopes": ["business-context", "claim", "final-artifact"],
+        "required": true
+      },
+      {
+        "id": "legal-approver",
+        "displayName": "Legal approval queue",
+        "role": "Legal approver",
+        "userRef": "team.legal-approvers",
+        "scopes": ["claim", "constraint", "legal"],
+        "required": true
+      }
+    ]
+  }
+}

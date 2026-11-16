@@ -1,0 +1,108 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Workflow",
+  "metadata": {
+    "id": "workflow.design-strategy",
+    "provenanceRef": {
+      "id": "provenance.design-workflow",
+      "kind": "ProvenanceRecord",
+      "version": "1.0.0"
+    },
+    "status": "active",
+    "title": "Produce a reviewed design specification",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "evidencePolicy": {
+      "recordDecisions": true,
+      "recordInputs": true,
+      "recordOutputs": true,
+      "retentionDays": 365
+    },
+    "failurePolicy": {
+      "maxAttempts": 2,
+      "strategy": "manual-intervention"
+    },
+    "gates": [
+      {
+        "afterNodes": [
+          "develop-and-review"
+        ],
+        "approverRole": "Authorized domain reviewer",
+        "decisionOptions": [
+          "approve_draft",
+          "request_revision",
+          "reject"
+        ],
+        "evidenceRequired": true,
+        "id": "human-approval",
+        "type": "human"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "product-brief",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      },
+      {
+        "name": "user-evidence",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      },
+      {
+        "name": "brand-constraints",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "dependsOn": [],
+        "id": "develop-and-review",
+        "inputBindings": {
+          "brand-constraints": "workflow.inputs.brand-constraints",
+          "product-brief": "workflow.inputs.product-brief",
+          "user-evidence": "workflow.inputs.user-evidence"
+        },
+        "taskRef": {
+          "id": "task.design-strategy",
+          "kind": "Task",
+          "version": "1.0.0"
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "name": "reviewed-package",
+        "schema": {
+          "required": [
+            "draft",
+            "decisionLedger",
+            "qualityReview",
+            "gateDecision"
+          ],
+          "type": "object"
+        },
+        "source": "develop-and-review outputs plus human-approval decision"
+      }
+    ],
+    "policies": [
+      {
+        "enforcement": "required",
+        "policyId": "policy.claims-require-evidence"
+      },
+      {
+        "enforcement": "required",
+        "policyId": "policy.human-approval-before-publication"
+      }
+    ],
+    "purpose": "Translate approved product and brand requirements into accessible, testable design specifications. Require an authorized reviewer before handoff."
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Module",
+  "metadata": {
+    "id": "module.copy-foundation",
+    "version": "1.0.0",
+    "title": "Copy Foundation",
+    "status": "active",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.copy-foundation",
+      "version": "1.0.0"
+    }
+  },
+  "spec": {
+    "summary": "A minimal governed capability for drafting and reviewing one evidence-backed campaign message.",
+    "roles": [
+      {
+        "kind": "Role",
+        "id": "role.copy-strategist",
+        "version": "1.0.0"
+      }
+    ],
+    "skills": [
+      {
+        "kind": "Skill",
+        "id": "skill.message-clarity-review",
+        "version": "1.0.0"
+      }
+    ],
+    "tasks": [
+      {
+        "kind": "Task",
+        "id": "task.draft-campaign-message",
+        "version": "1.0.0"
+      }
+    ],
+    "workflows": [
+      {
+        "kind": "Workflow",
+        "id": "workflow.reviewed-campaign-message",
+        "version": "1.0.0"
+      }
+    ]
+  }
+}

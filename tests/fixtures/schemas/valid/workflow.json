@@ -1,0 +1,78 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Workflow",
+  "metadata": {
+    "id": "marketing.copy-review-approval",
+    "version": "1.0.0",
+    "title": "Copy review and approval",
+    "status": "active",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.copy-review",
+      "version": "1.0.0"
+    }
+  },
+  "spec": {
+    "purpose": "Run a governed copy review and require an explicit human approval decision.",
+    "inputs": [
+      {
+        "name": "draft-copy",
+        "description": "The draft copy to assess.",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "review-copy",
+        "taskRef": {
+          "kind": "Task",
+          "id": "marketing.review-copy",
+          "version": "1.0.0"
+        },
+        "dependsOn": [],
+        "inputBindings": {
+          "draft-copy": "workflow.inputs.draft-copy"
+        }
+      }
+    ],
+    "gates": [
+      {
+        "id": "approve-copy",
+        "type": "human",
+        "afterNodes": ["review-copy"],
+        "approverRole": "Marketing owner",
+        "decisionOptions": ["approve", "request-changes"],
+        "evidenceRequired": true
+      }
+    ],
+    "outputs": [
+      {
+        "name": "review-report",
+        "source": "nodes.review-copy.outputs.review-report",
+        "schema": {
+          "type": "object"
+        }
+      }
+    ],
+    "failurePolicy": {
+      "strategy": "manual-intervention",
+      "maxAttempts": 1
+    },
+    "evidencePolicy": {
+      "recordInputs": true,
+      "recordDecisions": true,
+      "recordOutputs": true,
+      "retentionDays": 365
+    },
+    "policies": [
+      {
+        "policyId": "claims.evidence-required",
+        "enforcement": "required"
+      }
+    ]
+  }
+}

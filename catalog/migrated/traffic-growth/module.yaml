@@ -1,0 +1,50 @@
+{
+  "id": "traffic-growth-operations",
+  "policies": [
+    "provider-neutral-design",
+    "human-approval-before-spend-or-publish",
+    "consent-and-suppression",
+    "privacy-preserving-measurement",
+    "substantiated-claims",
+    "no-dark-patterns",
+    "reversible-change-plan"
+  ],
+  "providerIntegrations": [],
+  "roles": [
+    "growth-operations-lead",
+    "campaign-strategist",
+    "audience-research-specialist",
+    "media-planning-specialist",
+    "paid-acquisition-specialist",
+    "organic-acquisition-specialist",
+    "creative-strategy-specialist",
+    "landing-experience-specialist",
+    "measurement-architect",
+    "campaign-analyst",
+    "experimentation-specialist",
+    "budget-steward",
+    "lifecycle-growth-specialist",
+    "partnership-acquisition-specialist",
+    "conversion-optimization-specialist",
+    "campaign-quality-reviewer"
+  ],
+  "rollback": "Remove this package and restore its 33 source records to pending_remediation; quarantined origins remain unchanged.",
+  "schema": "menaxvi.traffic-growth-module/v1",
+  "status": "active",
+  "tasks": [
+    "diagnose-growth-request",
+    "create-campaign-strategy",
+    "create-media-plan",
+    "create-creative-test-plan",
+    "design-measurement-plan",
+    "audit-campaign-operation",
+    "analyze-campaign-performance",
+    "prepare-budget-decision",
+    "prepare-optimization-decision"
+  ],
+  "version": "1.0.0",
+  "workflows": [
+    "campaign-readiness",
+    "optimization-cycle"
+  ]
+}

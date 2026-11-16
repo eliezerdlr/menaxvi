@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.copy-review",
+    "version": "1.0.0",
+    "title": "Copy review provenance",
+    "status": "active"
+  },
+  "spec": {
+    "subject": {
+      "path": "catalog/modules/copy-review.json"
+    },
+    "classification": "MENAXVI-original",
+    "authors": [
+      {
+        "name": "MENAXVI",
+        "type": "organization"
+      }
+    ],
+    "source": {
+      "type": "repository",
+      "uri": "https://example.invalid/imported.git",
+      "revision": "abc123"
+    },
+    "license": {
+      "spdxId": "MIT",
+      "redistributionAllowed": true
+    },
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    ],
+    "review": {
+      "status": "approved",
+      "reviewedBy": "MENAXVI governance",
+      "reviewedAt": "2026-04-07T12:00:00Z"
+    }
+  }
+}

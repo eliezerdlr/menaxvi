@@ -1,0 +1,9 @@
+schema: menaxvi.module-config/v1
+id: advisory-board
+name: Strategic Advisory Board
+version: 2.0.0
+mode: professional-advisory
+requires_evidence_labels: true
+requires_human_decision_owner: true
+prohibits_impersonation: true
+prohibits_personal_brand_dependency: true

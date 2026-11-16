@@ -1,0 +1,89 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Task",
+  "metadata": {
+    "id": "marketing.review-copy",
+    "version": "1.0.0",
+    "title": "Review marketing copy",
+    "status": "active",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.copy-review",
+      "version": "1.0.0"
+    }
+  },
+  "spec": {
+    "purpose": "Review a copy draft and return evidence-linked findings before approval.",
+    "roleRef": {
+      "kind": "Role",
+      "id": "marketing.copy-editor",
+      "version": "1.0.0"
+    },
+    "skillRefs": [
+      {
+        "kind": "Skill",
+        "id": "marketing.copy-review",
+        "version": "1.0.0"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "draft-copy",
+        "description": "The draft copy to assess.",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      {
+        "name": "approved-claims",
+        "description": "Claims and supporting evidence approved for use.",
+        "required": true,
+        "schema": {
+          "type": "array"
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "name": "review-report",
+        "description": "Findings with evidence and recommended corrections.",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      }
+    ],
+    "preconditions": [
+      {
+        "description": "A human owner has supplied the copy draft and approved claims.",
+        "requiredEvidence": ["draft-copy", "approved-claims"]
+      }
+    ],
+    "steps": [
+      {
+        "id": "inspect-claims",
+        "instruction": "Map each material claim in the draft to supplied evidence.",
+        "dependsOn": []
+      },
+      {
+        "id": "write-report",
+        "instruction": "Record findings and corrections without changing the source draft.",
+        "dependsOn": ["inspect-claims"]
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "description": "Every material claim is linked to evidence or marked unsupported.",
+        "requiredEvidence": ["review-report"]
+      }
+    ],
+    "policies": [
+      {
+        "policyId": "claims.evidence-required",
+        "enforcement": "required"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Module",
+  "metadata": {
+    "id": "module.movement-strategy",
+    "provenanceRef": {
+      "id": "provenance.movement-module",
+      "kind": "ProvenanceRecord",
+      "version": "1.0.0"
+    },
+    "status": "active",
+    "title": "Community Movement Strategy",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "roles": [
+      {
+        "id": "role.movement-strategy",
+        "kind": "Role",
+        "version": "1.0.0"
+      }
+    ],
+    "skills": [
+      {
+        "id": "skill.movement-quality-review",
+        "kind": "Skill",
+        "version": "1.0.0"
+      }
+    ],
+    "summary": "Design an ethical participation strategy that helps a community organize around a shared, lawful objective.",
+    "tasks": [
+      {
+        "id": "task.movement-strategy",
+        "kind": "Task",
+        "version": "1.0.0"
+      }
+    ],
+    "workflows": [
+      {
+        "id": "workflow.movement-strategy",
+        "kind": "Workflow",
+        "version": "1.0.0"
+      }
+    ]
+  }
+}

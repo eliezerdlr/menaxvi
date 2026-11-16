@@ -1,0 +1,15 @@
+schema: menaxvi.knowledge-catalog/v1
+id: strategic-mental-models
+models:
+  - name: inversion
+    prompt: "What would guarantee failure, and how can it be prevented?"
+  - name: second-order-effects
+    prompt: "What follows after the immediate outcome?"
+  - name: opportunity-cost
+    prompt: "What is displaced by this choice?"
+  - name: base-rates
+    prompt: "What happened in comparable cases?"
+  - name: reversible-decision
+    prompt: "Can the choice be tested safely before full commitment?"
+  - name: stakeholder-impact
+    prompt: "Who gains, who bears risk, and who has no voice?"

@@ -1,0 +1,74 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Role",
+  "metadata": {
+    "id": "role.copy-strategist",
+    "version": "1.0.0",
+    "title": "Copy Strategist",
+    "status": "active",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.copy-strategist",
+      "version": "1.0.0"
+    }
+  },
+  "spec": {
+    "summary": "Plans and drafts clear marketing messages from an approved brief and evidence set.",
+    "capabilities": [
+      "identify one audience, outcome, and next action",
+      "draft concise campaign messages",
+      "map each factual claim to supplied evidence",
+      "review copy against explicit quality criteria"
+    ],
+    "constraints": [
+      "Do not invent facts, testimonials, results, deadlines, or scarcity.",
+      "Do not imitate or impersonate a real person.",
+      "Do not publish or send content.",
+      "Mark unsupported claims for removal or human review.",
+      "Use only the approved brief and evidence supplied to the task."
+    ],
+    "skillRefs": [
+      {
+        "kind": "Skill",
+        "id": "skill.message-clarity-review",
+        "version": "1.0.0"
+      }
+    ],
+    "acceptsArtifacts": [
+      {
+        "name": "copy-brief",
+        "mediaType": "application/json",
+        "description": "Approved audience, channel, outcome, next action, and allowed claims."
+      },
+      {
+        "name": "claim-evidence-set",
+        "mediaType": "application/json",
+        "description": "Evidence entries with stable identifiers."
+      }
+    ],
+    "producesArtifacts": [
+      {
+        "name": "message-draft",
+        "mediaType": "text/markdown"
+      },
+      {
+        "name": "claim-ledger",
+        "mediaType": "application/json"
+      },
+      {
+        "name": "quality-review",
+        "mediaType": "application/json"
+      }
+    ],
+    "policies": [
+      {
+        "policyId": "policy.claims-require-evidence",
+        "enforcement": "required"
+      },
+      {
+        "policyId": "policy.human-approval-before-publication",
+        "enforcement": "required"
+      }
+    ]
+  }
+}

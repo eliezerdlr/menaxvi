@@ -1,0 +1,43 @@
+{
+  "schema": "menaxvi.development-assistance-workflows/v1",
+  "workflows": [
+    {
+      "gate": "No activation until security, provenance, compatibility, and rollback checks pass.",
+      "id": "project-assistance-setup",
+      "stages": [
+        "discover",
+        "classify",
+        "define-guidance",
+        "define-policy",
+        "select-automation",
+        "verify",
+        "handoff"
+      ]
+    },
+    {
+      "gate": "Unknown or unavailable evidence is reported as unknown, never as passing.",
+      "id": "assistance-audit",
+      "stages": [
+        "inventory",
+        "validate-contracts",
+        "inspect-permissions",
+        "inspect-automation",
+        "inspect-integrations",
+        "score-evidence",
+        "recommend"
+      ]
+    },
+    {
+      "gate": "Upstream changes never modify canonical contracts without review.",
+      "id": "knowledge-refresh",
+      "stages": [
+        "select-authoritative-sources",
+        "collect-bounded-evidence",
+        "compare-current-contract",
+        "assess-impact",
+        "propose-change",
+        "review"
+      ]
+    }
+  ]
+}

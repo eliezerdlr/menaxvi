@@ -1,0 +1,116 @@
+{
+  "authorization": "All writes require an explicit target, validated input, caller write authority, and a recorded change preview.",
+  "negativePath": "On any failed check, return a structured error and perform no partial write.",
+  "operations": [
+    {
+      "checks": [
+        "valid-name",
+        "unique-domain",
+        "non-empty-rules",
+        "write-authority"
+      ],
+      "id": "create-domain",
+      "inputs": [
+        "name",
+        "rules"
+      ],
+      "result": "Create one inactive-by-default domain and return rollback data."
+    },
+    {
+      "checks": [
+        "domain-exists",
+        "non-empty-rule",
+        "write-authority"
+      ],
+      "id": "add-rule",
+      "inputs": [
+        "domain",
+        "rule"
+      ],
+      "result": "Append one rule using the next contiguous index."
+    },
+    {
+      "checks": [
+        "domain-exists",
+        "index-exists",
+        "non-empty-replacement",
+        "write-authority"
+      ],
+      "id": "edit-rule",
+      "inputs": [
+        "domain",
+        "index",
+        "replacement"
+      ],
+      "result": "Replace one rule and preserve all unrelated content."
+    },
+    {
+      "checks": [
+        "domain-exists",
+        "index-exists",
+        "minimum-rule-count",
+        "write-authority"
+      ],
+      "id": "remove-rule",
+      "inputs": [
+        "domain",
+        "index"
+      ],
+      "result": "Remove one rule and renumber remaining rules contiguously."
+    },
+    {
+      "checks": [
+        "domain-exists",
+        "valid-state",
+        "write-authority"
+      ],
+      "id": "set-domain-state",
+      "inputs": [
+        "domain",
+        "state"
+      ],
+      "result": "Set the requested explicit state; never infer a toggle from stale state."
+    },
+    {
+      "checks": [
+        "valid-name",
+        "known-operation",
+        "no-embedded-authority",
+        "write-authority"
+      ],
+      "id": "create-command-alias",
+      "inputs": [
+        "name",
+        "operation",
+        "arguments"
+      ],
+      "result": "Create a provider-neutral alias for one governed operation."
+    },
+    {
+      "checks": [
+        "non-empty-rule",
+        "bounded-candidates"
+      ],
+      "id": "suggest-domain",
+      "inputs": [
+        "rule",
+        "candidateDomains"
+      ],
+      "result": "Return ranked suggestions with factors; perform no write."
+    },
+    {
+      "checks": [
+        "read-authority",
+        "bounded-inputs"
+      ],
+      "id": "diagnose",
+      "inputs": [
+        "manifest",
+        "domains"
+      ],
+      "result": "Report schema, reference, state, and sequence defects without reading home directories, session logs, or provider state."
+    }
+  ],
+  "schema": "menaxvi.context-policy-operations/v1",
+  "version": "1.0.0"
+}

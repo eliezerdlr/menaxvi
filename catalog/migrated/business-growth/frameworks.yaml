@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "business-growth-professional-frameworks",
+  "title": "Professional business growth frameworks",
+  "description": "Provider-neutral guidance for offer design, pricing, consent-based lead generation, and evidence-led growth operations.",
+  "frameworks": [
+    {
+      "id": "offer-design",
+      "purpose": "Define a credible customer outcome and the delivery components required to achieve it.",
+      "method": [
+        "document the customer problem and desired outcome",
+        "define audience eligibility and exclusions",
+        "map deliverables to customer obstacles",
+        "state evidence, dependencies, limits, and delivery effort",
+        "test comprehension and feasibility before launch"
+      ],
+      "requiredEvidence": [
+        "customer research",
+        "delivery capacity",
+        "claim support",
+        "unit economics"
+      ],
+      "guardrails": [
+        "no guaranteed outcomes without substantiation",
+        "no manufactured urgency or scarcity",
+        "no hidden conditions"
+      ]
+    },
+    {
+      "id": "pricing",
+      "purpose": "Set a sustainable price from customer value, alternatives, delivery cost, risk, and market evidence.",
+      "method": [
+        "calculate full delivery and support cost",
+        "compare credible alternatives and switching costs",
+        "estimate customer value as a range, not a promise",
+        "select a pricing model and document assumptions",
+        "validate willingness to pay through ethical research and experiments"
+      ],
+      "requiredEvidence": [
+        "cost model",
+        "competitive context",
+        "customer interviews or tests",
+        "margin and refund sensitivity"
+      ],
+      "guardrails": [
+        "show total price and material terms",
+        "avoid deceptive anchoring",
+        "review affordability and fairness"
+      ]
+    },
+    {
+      "id": "lead-generation",
+      "purpose": "Build consent-based demand across measurable channels.",
+      "method": [
+        "define an eligible audience and useful problem-led message",
+        "choose channels based on audience behavior and economics",
+        "create a relevant educational or diagnostic entry point",
+        "capture consent and route leads with clear expectations",
+        "measure qualified progression, cost, and channel quality"
+      ],
+      "requiredEvidence": [
+        "consent basis",
+        "channel hypothesis",
+        "qualification definition",
+        "attribution plan"
+      ],
+      "guardrails": [
+        "no purchased-contact spam",
+        "honor suppression and opt-out",
+        "do not misrepresent identity or intent"
+      ]
+    },
+    {
+      "id": "growth-operations",
+      "purpose": "Improve growth by finding and resolving the highest-impact verified constraint.",
+      "method": [
+        "baseline demand, conversion, delivery, retention, and cash metrics",
+        "identify the limiting stage with evidence",
+        "select one bounded intervention and success threshold",
+        "run the intervention with owner, budget, and stop conditions",
+        "review results and standardize, revise, or stop"
+      ],
+      "requiredEvidence": [
+        "baseline metrics",
+        "constraint rationale",
+        "experiment record",
+        "post-change review"
+      ],
+      "guardrails": [
+        "protect service quality and customer trust",
+        "do not scale an unprofitable or unstable process",
+        "separate correlation from causal claims"
+      ]
+    }
+  ],
+  "qualityStandard": {
+    "requiredSections": [
+      "objective",
+      "inputs",
+      "assumptions",
+      "method",
+      "evidence",
+      "risks",
+      "success measures",
+      "next decision"
+    ],
+    "reviewChecks": [
+      "claims are supportable",
+      "terms and pricing are clear",
+      "consent and privacy are respected",
+      "delivery capacity is credible",
+      "metrics include quality and retention, not volume alone"
+    ]
+  },
+  "provenance": {
+    "method": "clean-room",
+    "evidence": "reports/MEN-024-business-growth-clean-room.json"
+  }
+}

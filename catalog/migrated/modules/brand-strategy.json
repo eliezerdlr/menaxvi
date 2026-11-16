@@ -1,0 +1,46 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Module",
+  "metadata": {
+    "id": "module.brand-strategy",
+    "provenanceRef": {
+      "id": "provenance.brand-module",
+      "kind": "ProvenanceRecord",
+      "version": "1.0.0"
+    },
+    "status": "active",
+    "title": "Brand Strategy",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "roles": [
+      {
+        "id": "role.brand-strategy",
+        "kind": "Role",
+        "version": "1.0.0"
+      }
+    ],
+    "skills": [
+      {
+        "id": "skill.brand-quality-review",
+        "kind": "Skill",
+        "version": "1.0.0"
+      }
+    ],
+    "summary": "Develop an evidence-based brand strategy and identity direction from an approved business brief.",
+    "tasks": [
+      {
+        "id": "task.brand-strategy",
+        "kind": "Task",
+        "version": "1.0.0"
+      }
+    ],
+    "workflows": [
+      {
+        "id": "workflow.brand-strategy",
+        "kind": "Workflow",
+        "version": "1.0.0"
+      }
+    ]
+  }
+}

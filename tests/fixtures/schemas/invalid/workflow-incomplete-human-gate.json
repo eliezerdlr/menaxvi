@@ -1,0 +1,58 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Workflow",
+  "metadata": {
+    "id": "marketing.copy-review-approval",
+    "version": "1.0.0",
+    "title": "Copy review and approval",
+    "status": "active",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.copy-review",
+      "version": "1.0.0"
+    }
+  },
+  "spec": {
+    "purpose": "Run a governed copy review and require explicit approval.",
+    "inputs": [],
+    "nodes": [
+      {
+        "id": "review-copy",
+        "taskRef": {
+          "kind": "Task",
+          "id": "marketing.review-copy",
+          "version": "1.0.0"
+        },
+        "dependsOn": [],
+        "inputBindings": {}
+      }
+    ],
+    "gates": [
+      {
+        "id": "approve-copy",
+        "type": "human",
+        "afterNodes": ["review-copy"],
+        "decisionOptions": ["approve", "request-changes"],
+        "evidenceRequired": true
+      }
+    ],
+    "outputs": [
+      {
+        "name": "review-report",
+        "source": "nodes.review-copy.outputs.review-report",
+        "schema": { "type": "object" }
+      }
+    ],
+    "failurePolicy": {
+      "strategy": "stop",
+      "maxAttempts": 1
+    },
+    "evidencePolicy": {
+      "recordInputs": true,
+      "recordDecisions": true,
+      "recordOutputs": true,
+      "retentionDays": 365
+    },
+    "policies": []
+  }
+}

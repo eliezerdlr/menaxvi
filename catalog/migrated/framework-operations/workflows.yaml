@@ -1,0 +1,31 @@
+{
+  "authorization": "Provider selection, remote publication, repository mutation, deployment, and production changes require authority outside imported role text.",
+  "schema": "menaxvi.framework-operations-workflows/v1",
+  "version": "1.0.0",
+  "workflows": [
+    {
+      "id": "governed-work-routing",
+      "negativePath": "Stop when ownership, authority, required capability, or acceptance evidence is missing.",
+      "stages": [
+        "classify-request",
+        "select-capability",
+        "confirm-authority",
+        "execute-bounded-work",
+        "verify-evidence",
+        "record-handoff"
+      ]
+    },
+    {
+      "id": "capability-package-delivery",
+      "negativePath": "Do not publish or activate a package that lacks compatibility, security, provenance, and rollback evidence.",
+      "stages": [
+        "define-contract",
+        "design-package",
+        "implement-reversibly",
+        "verify-compatibility",
+        "review-release",
+        "record-rollback"
+      ]
+    }
+  ]
+}

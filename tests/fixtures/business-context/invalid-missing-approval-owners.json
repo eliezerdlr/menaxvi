@@ -1,0 +1,60 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "BusinessContext",
+  "metadata": {
+    "id": "invalid.context",
+    "version": "1.0.0",
+    "title": "Invalid context without approval owners",
+    "status": "draft",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.original",
+      "version": "1.0.0"
+    }
+  },
+  "spec": {
+    "company": {
+      "legalName": "Example Ltd.",
+      "displayName": "Example",
+      "description": "A fictional company.",
+      "industry": "Software",
+      "markets": ["BR"],
+      "languages": ["pt-BR"]
+    },
+    "audiences": [{
+      "id": "leaders",
+      "name": "Leaders",
+      "description": "Business leaders.",
+      "needs": ["Reliable information"],
+      "exclusions": []
+    }],
+    "offers": [{
+      "id": "service",
+      "name": "Service",
+      "description": "A fictional service.",
+      "valueProposition": "Organize approved information.",
+      "audienceRefs": ["leaders"],
+      "availability": "planned"
+    }],
+    "brand": {
+      "positioning": "Responsible software.",
+      "voice": {
+        "traits": ["clear"],
+        "do": ["Use evidence"],
+        "avoid": ["Unsupported claims"]
+      }
+    },
+    "claims": [],
+    "evidence": [],
+    "channels": [{
+      "id": "website",
+      "type": "website",
+      "name": "Website",
+      "purpose": "Product information.",
+      "audienceRefs": ["leaders"],
+      "status": "planned"
+    }],
+    "constraints": [],
+    "approvalOwners": []
+  }
+}

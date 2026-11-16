@@ -1,0 +1,32 @@
+{
+  "authorization": "A named human owner approves launch, publication, targeting, spend, bid, budget, suppression, partner, and provider-account changes.",
+  "evidenceRetentionDays": 365,
+  "schema": "menaxvi.traffic-growth-workflows/v1",
+  "version": "1.0.0",
+  "workflows": [
+    {
+      "id": "campaign-readiness",
+      "negativePath": "Stop when authority, consent, claim evidence, destination readiness, tracking QA, budget limits, or rollback ownership is missing.",
+      "stages": [
+        "outcome-and-owner",
+        "audience-and-consent",
+        "offer-and-claims",
+        "media-and-creative",
+        "measurement-and-qa",
+        "human-launch-decision"
+      ]
+    },
+    {
+      "id": "optimization-cycle",
+      "negativePath": "Do not scale or reallocate when data is immature, attribution is disputed, guardrails fail, or the change lacks explicit approval.",
+      "stages": [
+        "data-quality-check",
+        "performance-diagnosis",
+        "hypothesis",
+        "bounded-change-plan",
+        "human-change-decision",
+        "measurement-and-rollback-review"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Module",
+  "metadata": {
+    "id": "module.storytelling-strategy",
+    "provenanceRef": {
+      "id": "provenance.storytelling-module",
+      "kind": "ProvenanceRecord",
+      "version": "1.0.0"
+    },
+    "status": "active",
+    "title": "Narrative Strategy",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "roles": [
+      {
+        "id": "role.storytelling-strategy",
+        "kind": "Role",
+        "version": "1.0.0"
+      }
+    ],
+    "skills": [
+      {
+        "id": "skill.storytelling-quality-review",
+        "kind": "Skill",
+        "version": "1.0.0"
+      }
+    ],
+    "summary": "Build truthful audience-centered narratives from approved facts, goals, and evidence.",
+    "tasks": [
+      {
+        "id": "task.storytelling-strategy",
+        "kind": "Task",
+        "version": "1.0.0"
+      }
+    ],
+    "workflows": [
+      {
+        "id": "workflow.storytelling-strategy",
+        "kind": "Workflow",
+        "version": "1.0.0"
+      }
+    ]
+  }
+}

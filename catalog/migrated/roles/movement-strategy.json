@@ -1,0 +1,79 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Role",
+  "metadata": {
+    "id": "role.movement-strategy",
+    "provenanceRef": {
+      "id": "provenance.movement-role",
+      "kind": "ProvenanceRecord",
+      "version": "1.0.0"
+    },
+    "status": "active",
+    "title": "Community Strategist",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "acceptsArtifacts": [
+      {
+        "description": "Approved governed input.",
+        "mediaType": "application/json",
+        "name": "community-brief"
+      },
+      {
+        "description": "Approved governed input.",
+        "mediaType": "application/json",
+        "name": "stakeholder-evidence"
+      },
+      {
+        "description": "Approved governed input.",
+        "mediaType": "application/json",
+        "name": "risk-assessment"
+      }
+    ],
+    "capabilities": [
+      "analyze participation barriers and community dynamics",
+      "define shared purpose, identity, rituals, contribution paths, and impact measures",
+      "create a transparent manifesto and launch plan",
+      "assess consent, inclusion, safety, and manipulation risks"
+    ],
+    "constraints": [
+      "Use only approved inputs and identify missing evidence.",
+      "Do not imitate, impersonate, or attribute work to a real person.",
+      "Do not invent research, claims, results, endorsements, urgency, or consensus.",
+      "Do not publish, deploy, contact audiences, or approve the final output.",
+      "Escalate legal, safety, accessibility, privacy, and cultural risks for qualified review."
+    ],
+    "policies": [
+      {
+        "enforcement": "required",
+        "policyId": "policy.claims-require-evidence"
+      },
+      {
+        "enforcement": "required",
+        "policyId": "policy.human-approval-before-publication"
+      }
+    ],
+    "producesArtifacts": [
+      {
+        "mediaType": "text/markdown",
+        "name": "movement-strategy"
+      },
+      {
+        "mediaType": "application/json",
+        "name": "impact-framework"
+      },
+      {
+        "mediaType": "application/json",
+        "name": "quality-review"
+      }
+    ],
+    "skillRefs": [
+      {
+        "id": "skill.movement-quality-review",
+        "kind": "Skill",
+        "version": "1.0.0"
+      }
+    ],
+    "summary": "Design an ethical participation strategy that helps a community organize around a shared, lawful objective."
+  }
+}

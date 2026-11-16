@@ -1,0 +1,29 @@
+{
+  "schema": "menaxvi.supply-chain.v1",
+  "dependencies": [
+    {
+      "name": "setuptools",
+      "ecosystem": "pypi",
+      "version": "80.9.0",
+      "scope": "build",
+      "license": "MIT",
+      "source": "https://pypi.org/project/setuptools/80.9.0/",
+      "licenseEvidence": "https://github.com/pypa/setuptools/blob/v80.9.0/LICENSE",
+      "reviewed": true
+    },
+    {
+      "name": "jsonschema",
+      "ecosystem": "pypi",
+      "version": "4.26.0",
+      "scope": "development",
+      "license": "MIT",
+      "source": "https://pypi.org/project/jsonschema/4.26.0/",
+      "licenseEvidence": "https://github.com/python-jsonschema/jsonschema/blob/v4.26.0/COPYING",
+      "reviewed": true
+    }
+  ],
+  "runtime": {
+    "externalDependencies": [],
+    "basis": "The shipped zipapp contains only MENAXVI Python sources and uses the Python standard library."
+  }
+}

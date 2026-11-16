@@ -1,0 +1,47 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.copy-review",
+    "version": "1.0.0",
+    "title": "Copy review canonical slice provenance",
+    "status": "active",
+    "labels": {
+      "domain": "marketing"
+    }
+  },
+  "spec": {
+    "subject": {
+      "path": "catalog/modules/copy-review.json"
+    },
+    "classification": "MENAXVI-original",
+    "authors": [
+      {
+        "name": "MENAXVI",
+        "type": "organization",
+        "identifier": "https://menaxvi.io"
+      }
+    ],
+    "source": {
+      "type": "original"
+    },
+    "license": {
+      "spdxId": "MIT",
+      "uri": "https://spdx.org/licenses/MIT.html",
+      "redistributionAllowed": true
+    },
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "path": "catalog/modules/copy-review.json"
+      }
+    ],
+    "review": {
+      "status": "approved",
+      "reviewedBy": "MENAXVI governance",
+      "reviewedAt": "2026-04-07T12:00:00Z",
+      "notes": "Synthetic fixture for canonical schema validation."
+    }
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "authorization": "Reads, writes, process execution, network access, publication, and infrastructure changes are distinct capabilities and require explicit authority.",
+  "negativePath": "On a failed check, return a structured finding and perform no partial mutation, installation, publication, or remote action.",
+  "operations": [
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "audit-project-assistance",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "audit-configuration",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "audit-integration",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "assess-context-health",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "configure-assistance",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "design-event-automation",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "design-permissions",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "design-tool-integration",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "create-capability-package",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "create-project-guidance",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "create-conditional-rules",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "create-work-topology",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "diagnose-assistance",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "integrate-project",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "plan-ci-validation",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "plan-parallel-work",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "plan-sandboxing",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "plan-worktrees",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "prepare-brownfield-integration",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "prepare-enterprise-policy",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "prepare-multi-project-setup",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "prepare-repository",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "run-setup-wizard",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "optimize-context",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "optimize-workflow",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    },
+    {
+      "checks": [
+        "bounded-scope",
+        "validated-inputs",
+        "required-authority",
+        "negative-path",
+        "acceptance-evidence"
+      ],
+      "id": "review-upstream-change",
+      "result": "Return a preview or bounded artifact plus verification and rollback evidence; do not activate provider-specific behavior."
+    }
+  ],
+  "schema": "menaxvi.development-assistance-operations/v1"
+}

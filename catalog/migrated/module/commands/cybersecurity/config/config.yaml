@@ -1,0 +1,14 @@
+module:
+  name: authorized-defensive-security
+  version: 1.0.0
+  domain: defensive-security-operations
+  purpose: Governed assessment, hardening, detection, incident response, and evidence workflows.
+  authorization_required: true
+  default_mode: read-only
+  prohibited:
+    - exploitation or payload delivery
+    - credential attacks or secret extraction
+    - automated password guessing or mass scanning
+    - persistence, evasion, or destructive testing
+    - personal profiling or social engineering
+  evidence_required: [scope, owner, source, timestamp, finding, remediation, validation]

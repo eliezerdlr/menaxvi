@@ -1,0 +1,38 @@
+[
+  {
+    "file": "role-missing-capabilities.json",
+    "kind": "Role",
+    "validator": "required",
+    "path": "/spec"
+  },
+  {
+    "file": "skill-empty-procedure.json",
+    "kind": "Skill",
+    "validator": "minItems",
+    "path": "/spec/procedure"
+  },
+  {
+    "file": "task-wrong-role-kind.json",
+    "kind": "Task",
+    "validator": "const",
+    "path": "/spec/roleRef/kind"
+  },
+  {
+    "file": "workflow-incomplete-human-gate.json",
+    "kind": "Workflow",
+    "validator": "oneOf",
+    "path": "/spec/gates/0"
+  },
+  {
+    "file": "module-unversioned-role-ref.json",
+    "kind": "Module",
+    "validator": "required",
+    "path": "/spec/roles/0"
+  },
+  {
+    "file": "provenance-original-with-repository-source.json",
+    "kind": "ProvenanceRecord",
+    "validator": "const",
+    "path": "/spec/source/type"
+  }
+]

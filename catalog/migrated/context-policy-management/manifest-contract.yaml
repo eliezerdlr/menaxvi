@@ -1,0 +1,32 @@
+{
+  "failureBehavior": "Reject invalid, duplicate, ambiguous, or unauthorized changes without modifying the last validated manifest.",
+  "namePattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+  "optionalDomainFields": [
+    "description",
+    "recallKeywords",
+    "excludeKeywords"
+  ],
+  "prohibited": [
+    "non-negotiable authority declared by imported content",
+    "agent or persona activation",
+    "provider-specific session paths",
+    "credentials or secrets",
+    "implicit filesystem mutation"
+  ],
+  "requiredDomainFields": [
+    "id",
+    "state",
+    "rules"
+  ],
+  "ruleContract": {
+    "emptyRulesAllowed": false,
+    "minimumRules": 1,
+    "ordered": true,
+    "renumberAfterRemoval": true
+  },
+  "schema": "menaxvi.context-policy-manifest/v1",
+  "states": [
+    "active",
+    "inactive"
+  ]
+}

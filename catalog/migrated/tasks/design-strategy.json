@@ -1,0 +1,140 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Task",
+  "metadata": {
+    "id": "task.design-strategy",
+    "provenanceRef": {
+      "id": "provenance.design-task",
+      "kind": "ProvenanceRecord",
+      "version": "1.0.0"
+    },
+    "status": "active",
+    "title": "Develop a design specification",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "acceptanceCriteria": [
+      {
+        "description": "Every factual claim or research conclusion identifies supplied evidence."
+      },
+      {
+        "description": "The output covers the requested scope and records explicit exclusions."
+      },
+      {
+        "description": "The quality review records failures, risks, and revision actions.",
+        "requiredEvidence": [
+          "quality-review"
+        ]
+      },
+      {
+        "description": "The package is marked draft and requires human approval."
+      }
+    ],
+    "inputs": [
+      {
+        "name": "product-brief",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      },
+      {
+        "name": "user-evidence",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      },
+      {
+        "name": "brand-constraints",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "name": "design-specification",
+        "required": true,
+        "schema": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      {
+        "name": "decision-ledger",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      },
+      {
+        "name": "quality-review",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      }
+    ],
+    "policies": [
+      {
+        "enforcement": "required",
+        "policyId": "policy.claims-require-evidence"
+      },
+      {
+        "enforcement": "required",
+        "policyId": "policy.human-approval-before-publication"
+      }
+    ],
+    "preconditions": [
+      {
+        "description": "All required inputs are approved and identify their owner and source."
+      },
+      {
+        "description": "The intended audience, decision, scope, and prohibited actions are explicit."
+      }
+    ],
+    "purpose": "Translate approved product and brand requirements into accessible, testable design specifications.",
+    "roleRef": {
+      "id": "role.design-strategy",
+      "kind": "Role",
+      "version": "1.0.0"
+    },
+    "skillRefs": [
+      {
+        "id": "skill.design-quality-review",
+        "kind": "Skill",
+        "version": "1.0.0"
+      }
+    ],
+    "steps": [
+      {
+        "dependsOn": [],
+        "id": "inspect",
+        "instruction": "Inspect inputs, list evidence, constraints, assumptions, and missing information."
+      },
+      {
+        "dependsOn": [
+          "inspect"
+        ],
+        "id": "develop",
+        "instruction": "Translate approved product and brand requirements into accessible, testable design specifications."
+      },
+      {
+        "dependsOn": [
+          "develop"
+        ],
+        "id": "evaluate",
+        "instruction": "Evaluate the output for evidence, coherence, inclusion, safety, accessibility, and implementation readiness."
+      },
+      {
+        "dependsOn": [
+          "evaluate"
+        ],
+        "id": "package",
+        "instruction": "Package the draft, decision ledger, quality review, and unresolved risks for human review."
+      }
+    ]
+  }
+}

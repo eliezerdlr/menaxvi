@@ -1,0 +1,24 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Skill",
+  "metadata": {
+    "id": "marketing.copy-review",
+    "version": "1.0.0",
+    "title": "Evidence-based copy review",
+    "status": "active",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.copy-review",
+      "version": "1.0.0"
+    }
+  },
+  "spec": {
+    "summary": "Review marketing copy against supplied evidence and explicit acceptance criteria.",
+    "purpose": "Produce a bounded copy assessment.",
+    "inputs": [],
+    "outputs": [],
+    "procedure": [],
+    "constraints": ["Do not invent evidence"],
+    "policies": []
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Task",
+  "metadata": {
+    "id": "task.draft-campaign-message",
+    "version": "1.0.0",
+    "title": "Draft a campaign message",
+    "status": "active",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.draft-campaign-message",
+      "version": "1.0.0"
+    }
+  },
+  "spec": {
+    "purpose": "Create one reviewable marketing message with traceable claims and no publication action.",
+    "roleRef": {
+      "kind": "Role",
+      "id": "role.copy-strategist",
+      "version": "1.0.0"
+    },
+    "skillRefs": [
+      {
+        "kind": "Skill",
+        "id": "skill.message-clarity-review",
+        "version": "1.0.0"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "brief",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "required": ["audience", "channel", "desiredOutcome", "nextAction"]
+        }
+      },
+      {
+        "name": "evidence",
+        "required": true,
+        "schema": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "statement", "source"]
+          }
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "name": "message-draft",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      {
+        "name": "claim-ledger",
+        "required": true,
+        "schema": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["claim", "evidenceRef"]
+          }
+        }
+      },
+      {
+        "name": "quality-review",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "required": ["audience", "outcome", "evidence", "action", "overall"]
+        }
+      }
+    ],
+    "preconditions": [
+      {
+        "description": "The brief contains all required fields."
+      },
+      {
+        "description": "The permitted next action is explicit."
+      },
+      {
+        "description": "Evidence entries have stable identifiers."
+      }
+    ],
+    "steps": [
+      {
+        "id": "extract",
+        "dependsOn": [],
+        "instruction": "Extract the audience, desired outcome, channel constraints, next action, and allowed claims."
+      },
+      {
+        "id": "draft",
+        "dependsOn": ["extract"],
+        "instruction": "Draft one message that uses only allowed claims and ends with the permitted next action."
+      },
+      {
+        "id": "ledger",
+        "dependsOn": ["draft"],
+        "instruction": "Record each factual claim and its evidence identifier."
+      },
+      {
+        "id": "review",
+        "dependsOn": ["ledger"],
+        "instruction": "Apply the message clarity review skill and record each criterion result."
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "description": "The draft addresses the audience and desired outcome from the brief."
+      },
+      {
+        "description": "Every factual claim maps to one supplied evidence identifier.",
+        "requiredEvidence": ["claim-ledger"]
+      },
+      {
+        "description": "The draft contains one permitted next action."
+      },
+      {
+        "description": "The quality review has no unresolved failure.",
+        "requiredEvidence": ["quality-review"]
+      },
+      {
+        "description": "The output is marked draft and not published."
+      }
+    ],
+    "policies": [
+      {
+        "policyId": "policy.claims-require-evidence",
+        "enforcement": "required"
+      },
+      {
+        "policyId": "policy.human-approval-before-publication",
+        "enforcement": "required"
+      }
+    ]
+  }
+}

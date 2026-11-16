@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.menaxvi.io/v1alpha1/provenance-record.schema.json",
+  "title": "MENAXVI ProvenanceRecord",
+  "description": "Authorship, source, licensing, classification, review, and integrity evidence for a MENAXVI content unit.",
+  "type": "object",
+  "required": ["apiVersion", "kind", "metadata", "spec"],
+  "properties": {
+    "apiVersion": { "const": "menaxvi.io/v1alpha1" },
+    "kind": { "const": "ProvenanceRecord" },
+    "metadata": { "$ref": "common.schema.json#/$defs/provenanceMetadata" },
+    "spec": {
+      "type": "object",
+      "required": ["subject", "classification", "authors", "source", "license", "evidence", "review"],
+      "properties": {
+        "subject": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": ["path"],
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "pattern": "^(?:catalog|schemas|core|adapters|migrations|docs)/(?!\\.\\.(?:/|$))(?!.*(?:/\\.\\.(?:/|$)|//))[A-Za-z0-9._/-]+$",
+                  "maxLength": 500
+                }
+              },
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "required": ["resourceRef"],
+              "properties": {
+                "resourceRef": { "$ref": "common.schema.json#/$defs/resourceRef" }
+              },
+              "additionalProperties": false
+            }
+          ]
+        },
+        "classification": {
+          "type": "string",
+          "enum": [
+            "MENAXVI-original",
+            "third-party-compatible",
+            "rewritten-clean-room",
+            "restricted",
+            "remove"
+          ]
+        },
+        "authors": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["name", "type"],
+            "properties": {
+              "name": { "type": "string", "minLength": 2, "maxLength": 160 },
+              "type": { "type": "string", "enum": ["person", "organization"] },
+              "identifier": { "type": "string", "minLength": 3, "maxLength": 300 }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": true
+        },
+        "source": {
+          "type": "object",
+          "required": ["type"],
+          "properties": {
+            "type": { "type": "string", "enum": ["original", "repository", "url", "package", "unknown"] },
+            "uri": { "type": "string", "format": "uri", "maxLength": 1000 },
+            "revision": { "type": "string", "minLength": 1, "maxLength": 200 },
+            "retrievedAt": { "type": "string", "format": "date-time" }
+          },
+          "additionalProperties": false
+        },
+        "license": {
+          "type": "object",
+          "required": ["redistributionAllowed"],
+          "properties": {
+            "spdxId": { "type": "string", "pattern": "^[A-Za-z0-9.+-]+$", "maxLength": 80 },
+            "name": { "type": "string", "minLength": 2, "maxLength": 200 },
+            "uri": { "type": "string", "format": "uri", "maxLength": 1000 },
+            "redistributionAllowed": { "type": "boolean" }
+          },
+          "anyOf": [
+            { "required": ["spdxId"] },
+            { "required": ["name"] }
+          ],
+          "additionalProperties": false
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["algorithm", "digest"],
+            "properties": {
+              "algorithm": { "const": "sha256" },
+              "digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+              "path": { "type": "string", "minLength": 1, "maxLength": 500 }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": true
+        },
+        "review": {
+          "type": "object",
+          "required": ["status"],
+          "properties": {
+            "status": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+            "reviewedBy": { "type": "string", "minLength": 2, "maxLength": 160 },
+            "reviewedAt": { "type": "string", "format": "date-time" },
+            "notes": { "type": "string", "maxLength": 2000 }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": { "status": { "const": "approved" } },
+                "required": ["status"]
+              },
+              "then": { "required": ["reviewedBy", "reviewedAt"] }
+            }
+          ],
+          "additionalProperties": false
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "classification": { "const": "MENAXVI-original" } },
+            "required": ["classification"]
+          },
+          "then": {
+            "properties": {
+              "source": {
+                "properties": { "type": { "const": "original" } }
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

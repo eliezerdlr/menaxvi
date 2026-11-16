@@ -1,0 +1,15 @@
+schema: menaxvi.routing-catalog/v1
+domain: c-level-squad
+routes:
+  - role: executive-vision-strategist
+    capability: "vision and mission"
+  - role: enterprise-ai-strategy-architect
+    capability: "AI portfolio"
+  - role: enterprise-information-architect
+    capability: "enterprise systems"
+  - role: marketing-strategy-architect
+    capability: "positioning"
+  - role: operations-execution-orchestrator
+    capability: "operating model"
+  - role: technology-strategy-architect
+    capability: "technology roadmap"

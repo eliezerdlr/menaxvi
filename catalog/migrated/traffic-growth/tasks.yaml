@@ -1,0 +1,276 @@
+{
+  "schema": "menaxvi.traffic-growth-tasks/v1",
+  "tasks": [
+    {
+      "acceptance": [
+        "claims are substantiated",
+        "consent and suppression rules are explicit",
+        "provider-specific execution is separated",
+        "financial and reputation guardrails are documented",
+        "a named human records the decision"
+      ],
+      "id": "diagnose-growth-request",
+      "inputs": [
+        "business-outcome",
+        "authorized-audience-evidence",
+        "offer-and-claim-evidence",
+        "budget-and-risk-boundaries"
+      ],
+      "outputs": [
+        "decision-package",
+        "evidence-ledger",
+        "approval-request"
+      ],
+      "ownerRole": "growth-operations-lead",
+      "purpose": "Frame the decision, constraints, and accountable owner.",
+      "steps": [
+        "confirm authority and accountable owner",
+        "validate evidence and privacy constraints",
+        "develop provider-neutral options",
+        "define metrics, guardrails, and rollback",
+        "submit recommendation for human review"
+      ]
+    },
+    {
+      "acceptance": [
+        "claims are substantiated",
+        "consent and suppression rules are explicit",
+        "provider-specific execution is separated",
+        "financial and reputation guardrails are documented",
+        "a named human records the decision"
+      ],
+      "id": "create-campaign-strategy",
+      "inputs": [
+        "business-outcome",
+        "authorized-audience-evidence",
+        "offer-and-claim-evidence",
+        "budget-and-risk-boundaries"
+      ],
+      "outputs": [
+        "decision-package",
+        "evidence-ledger",
+        "approval-request"
+      ],
+      "ownerRole": "campaign-strategist",
+      "purpose": "Create an outcome-led, channel-neutral campaign and acquisition strategy.",
+      "steps": [
+        "confirm authority and accountable owner",
+        "validate evidence and privacy constraints",
+        "develop provider-neutral options",
+        "define metrics, guardrails, and rollback",
+        "submit recommendation for human review"
+      ]
+    },
+    {
+      "acceptance": [
+        "claims are substantiated",
+        "consent and suppression rules are explicit",
+        "provider-specific execution is separated",
+        "financial and reputation guardrails are documented",
+        "a named human records the decision"
+      ],
+      "id": "create-media-plan",
+      "inputs": [
+        "business-outcome",
+        "authorized-audience-evidence",
+        "offer-and-claim-evidence",
+        "budget-and-risk-boundaries"
+      ],
+      "outputs": [
+        "decision-package",
+        "evidence-ledger",
+        "approval-request"
+      ],
+      "ownerRole": "media-planning-specialist",
+      "purpose": "Compare media scenarios using explicit assumptions.",
+      "steps": [
+        "confirm authority and accountable owner",
+        "validate evidence and privacy constraints",
+        "develop provider-neutral options",
+        "define metrics, guardrails, and rollback",
+        "submit recommendation for human review"
+      ]
+    },
+    {
+      "acceptance": [
+        "claims are substantiated",
+        "consent and suppression rules are explicit",
+        "provider-specific execution is separated",
+        "financial and reputation guardrails are documented",
+        "a named human records the decision"
+      ],
+      "id": "create-creative-test-plan",
+      "inputs": [
+        "business-outcome",
+        "authorized-audience-evidence",
+        "offer-and-claim-evidence",
+        "budget-and-risk-boundaries"
+      ],
+      "outputs": [
+        "decision-package",
+        "evidence-ledger",
+        "approval-request"
+      ],
+      "ownerRole": "creative-strategy-specialist",
+      "purpose": "Produce claim-safe creative hypotheses and variants.",
+      "steps": [
+        "confirm authority and accountable owner",
+        "validate evidence and privacy constraints",
+        "develop provider-neutral options",
+        "define metrics, guardrails, and rollback",
+        "submit recommendation for human review"
+      ]
+    },
+    {
+      "acceptance": [
+        "claims are substantiated",
+        "consent and suppression rules are explicit",
+        "provider-specific execution is separated",
+        "financial and reputation guardrails are documented",
+        "a named human records the decision"
+      ],
+      "id": "design-measurement-plan",
+      "inputs": [
+        "business-outcome",
+        "authorized-audience-evidence",
+        "offer-and-claim-evidence",
+        "budget-and-risk-boundaries"
+      ],
+      "outputs": [
+        "decision-package",
+        "evidence-ledger",
+        "approval-request"
+      ],
+      "ownerRole": "measurement-architect",
+      "purpose": "Define privacy-safe events, metrics, attribution, and QA.",
+      "steps": [
+        "confirm authority and accountable owner",
+        "validate evidence and privacy constraints",
+        "develop provider-neutral options",
+        "define metrics, guardrails, and rollback",
+        "submit recommendation for human review"
+      ]
+    },
+    {
+      "acceptance": [
+        "claims are substantiated",
+        "consent and suppression rules are explicit",
+        "provider-specific execution is separated",
+        "financial and reputation guardrails are documented",
+        "a named human records the decision"
+      ],
+      "id": "audit-campaign-operation",
+      "inputs": [
+        "business-outcome",
+        "authorized-audience-evidence",
+        "offer-and-claim-evidence",
+        "budget-and-risk-boundaries"
+      ],
+      "outputs": [
+        "decision-package",
+        "evidence-ledger",
+        "approval-request"
+      ],
+      "ownerRole": "campaign-quality-reviewer",
+      "purpose": "Audit configuration evidence without changing provider accounts.",
+      "steps": [
+        "confirm authority and accountable owner",
+        "validate evidence and privacy constraints",
+        "develop provider-neutral options",
+        "define metrics, guardrails, and rollback",
+        "submit recommendation for human review"
+      ]
+    },
+    {
+      "acceptance": [
+        "claims are substantiated",
+        "consent and suppression rules are explicit",
+        "provider-specific execution is separated",
+        "financial and reputation guardrails are documented",
+        "a named human records the decision"
+      ],
+      "id": "analyze-campaign-performance",
+      "inputs": [
+        "business-outcome",
+        "authorized-audience-evidence",
+        "offer-and-claim-evidence",
+        "budget-and-risk-boundaries"
+      ],
+      "outputs": [
+        "decision-package",
+        "evidence-ledger",
+        "approval-request"
+      ],
+      "ownerRole": "campaign-analyst",
+      "purpose": "Interpret results without causal or attribution overclaiming.",
+      "steps": [
+        "confirm authority and accountable owner",
+        "validate evidence and privacy constraints",
+        "develop provider-neutral options",
+        "define metrics, guardrails, and rollback",
+        "submit recommendation for human review"
+      ]
+    },
+    {
+      "acceptance": [
+        "claims are substantiated",
+        "consent and suppression rules are explicit",
+        "provider-specific execution is separated",
+        "financial and reputation guardrails are documented",
+        "a named human records the decision"
+      ],
+      "id": "prepare-budget-decision",
+      "inputs": [
+        "business-outcome",
+        "authorized-audience-evidence",
+        "offer-and-claim-evidence",
+        "budget-and-risk-boundaries"
+      ],
+      "outputs": [
+        "decision-package",
+        "evidence-ledger",
+        "approval-request"
+      ],
+      "ownerRole": "budget-steward",
+      "purpose": "Prepare bounded allocation options for human approval.",
+      "steps": [
+        "confirm authority and accountable owner",
+        "validate evidence and privacy constraints",
+        "develop provider-neutral options",
+        "define metrics, guardrails, and rollback",
+        "submit recommendation for human review"
+      ]
+    },
+    {
+      "acceptance": [
+        "claims are substantiated",
+        "consent and suppression rules are explicit",
+        "provider-specific execution is separated",
+        "financial and reputation guardrails are documented",
+        "a named human records the decision"
+      ],
+      "id": "prepare-optimization-decision",
+      "inputs": [
+        "business-outcome",
+        "authorized-audience-evidence",
+        "offer-and-claim-evidence",
+        "budget-and-risk-boundaries"
+      ],
+      "outputs": [
+        "decision-package",
+        "evidence-ledger",
+        "approval-request"
+      ],
+      "ownerRole": "conversion-optimization-specialist",
+      "purpose": "Recommend pause, continue, test, or scale decisions with guardrails.",
+      "steps": [
+        "confirm authority and accountable owner",
+        "validate evidence and privacy constraints",
+        "develop provider-neutral options",
+        "define metrics, guardrails, and rollback",
+        "submit recommendation for human review"
+      ]
+    }
+  ],
+  "version": "1.0.0"
+}

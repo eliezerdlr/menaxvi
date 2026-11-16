@@ -1,0 +1,150 @@
+{
+  "roles": [
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "growth-operations-lead",
+      "summary": "Owns operating cadence, decision rights, and escalation."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "campaign-strategist",
+      "summary": "Translates business outcomes into bounded campaign hypotheses."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "audience-research-specialist",
+      "summary": "Builds consent-aware audience definitions from authorized evidence."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "media-planning-specialist",
+      "summary": "Plans provider-neutral channel mix, reach, frequency, and spend scenarios."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "paid-acquisition-specialist",
+      "summary": "Designs paid acquisition tests without direct account mutation."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "organic-acquisition-specialist",
+      "summary": "Plans owned, earned, search, referral, and community acquisition."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "creative-strategy-specialist",
+      "summary": "Defines testable creative briefs and claim-safe variants."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "landing-experience-specialist",
+      "summary": "Aligns campaign promise, destination experience, and conversion intent."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "measurement-architect",
+      "summary": "Defines event, attribution, incrementality, and data-quality contracts."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "campaign-analyst",
+      "summary": "Evaluates performance with uncertainty, limitations, and segment context."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "experimentation-specialist",
+      "summary": "Designs bounded tests with guardrails and stopping rules."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "budget-steward",
+      "summary": "Prepares allocation scenarios and variance controls for approval."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "lifecycle-growth-specialist",
+      "summary": "Coordinates consent-aware retention, reactivation, and suppression logic."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "partnership-acquisition-specialist",
+      "summary": "Plans governed affiliate, creator, and partner acquisition."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "conversion-optimization-specialist",
+      "summary": "Prioritizes evidence-led funnel improvements without dark patterns."
+    },
+    {
+      "constraints": [
+        "Use only authorized audience, campaign, and measurement data.",
+        "Do not publish, change spend, alter bids, or mutate provider accounts.",
+        "Record assumptions, risks, evidence, and the required human decision."
+      ],
+      "id": "campaign-quality-reviewer",
+      "summary": "Reviews authorization, claims, tracking, safety, and launch evidence."
+    }
+  ],
+  "schema": "menaxvi.traffic-growth-roles/v1",
+  "version": "1.0.0"
+}

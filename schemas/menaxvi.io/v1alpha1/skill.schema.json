@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.menaxvi.io/v1alpha1/skill.schema.json",
+  "title": "MENAXVI Skill",
+  "description": "A portable, bounded competency that can be assigned to roles and required by tasks.",
+  "type": "object",
+  "required": ["apiVersion", "kind", "metadata", "spec"],
+  "properties": {
+    "apiVersion": { "const": "menaxvi.io/v1alpha1" },
+    "kind": { "const": "Skill" },
+    "metadata": { "$ref": "common.schema.json#/$defs/resourceMetadata" },
+    "spec": {
+      "type": "object",
+      "required": ["summary", "purpose", "inputs", "outputs", "procedure", "constraints", "policies"],
+      "properties": {
+        "summary": { "type": "string", "minLength": 20, "maxLength": 1000 },
+        "purpose": { "type": "string", "minLength": 10, "maxLength": 500 },
+        "inputs": {
+          "type": "array",
+          "items": { "$ref": "common.schema.json#/$defs/dataContract" },
+          "uniqueItems": true
+        },
+        "outputs": {
+          "type": "array",
+          "items": { "$ref": "common.schema.json#/$defs/dataContract" },
+          "uniqueItems": true
+        },
+        "procedure": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "instruction"],
+            "properties": {
+              "id": { "$ref": "common.schema.json#/$defs/canonicalId" },
+              "instruction": { "type": "string", "minLength": 5, "maxLength": 1000 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 3, "maxLength": 300 },
+          "uniqueItems": true
+        },
+        "policies": {
+          "type": "array",
+          "items": { "$ref": "common.schema.json#/$defs/policyBinding" },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

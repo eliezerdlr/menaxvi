@@ -1,0 +1,31 @@
+{
+  "executionId": "tutorial-001",
+  "nodes": [
+    {
+      "id": "draft-and-review",
+      "status": "completed",
+      "outputs": {
+        "message-draft": "Please review the attached campaign message and reply with approval or requested changes.",
+        "claim-ledger": [],
+        "quality-review": {
+          "overall": "pass"
+        }
+      }
+    }
+  ],
+  "gates": [
+    {
+      "id": "human-approval",
+      "status": "passed",
+      "decision": "approve_draft",
+      "decidedBy": "user:marketing-reviewer",
+      "evidence": "tutorial-review-001"
+    }
+  ],
+  "outputs": {
+    "reviewed-message-package": "artifact://tutorial-reviewed-message"
+  },
+  "residualRisks": [
+    "The manual adapter does not publish content."
+  ]
+}

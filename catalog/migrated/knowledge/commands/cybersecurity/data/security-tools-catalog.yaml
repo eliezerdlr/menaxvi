@@ -1,0 +1,23 @@
+approved_methods:
+  evidence_review:
+    - owner-provided configuration exports
+    - source and dependency analysis
+    - vulnerability scanner reports supplied by authorized operators
+    - cloud and identity posture reports
+  detection:
+    - log and alert query review
+    - packet capture analysis from approved sources
+    - rule validation against synthetic fixtures
+  hardening:
+    - benchmark comparison
+    - least-privilege review
+    - patch and configuration verification
+  incident_response:
+    - evidence preservation and timeline building
+    - indicator scoping in approved telemetry
+    - containment and recovery planning
+prohibited_methods:
+  - exploit frameworks and weaponized payloads
+  - credential extraction or password cracking
+  - automated password guessing and unbounded scanning
+  - persistence, evasion, destructive testing, or data exfiltration

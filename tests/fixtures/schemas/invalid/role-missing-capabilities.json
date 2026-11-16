@@ -1,0 +1,29 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Role",
+  "metadata": {
+    "id": "marketing.copy-editor",
+    "version": "1.0.0",
+    "title": "Marketing Copy Editor",
+    "status": "active",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.copy-review",
+      "version": "1.0.0"
+    }
+  },
+  "spec": {
+    "summary": "A professional role that reviews marketing copy against evidence and explicit criteria.",
+    "constraints": ["Use only supplied evidence"],
+    "skillRefs": [
+      {
+        "kind": "Skill",
+        "id": "marketing.copy-review",
+        "version": "1.0.0"
+      }
+    ],
+    "acceptsArtifacts": [],
+    "producesArtifacts": [],
+    "policies": []
+  }
+}

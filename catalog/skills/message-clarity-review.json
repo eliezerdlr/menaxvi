@@ -1,0 +1,86 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Skill",
+  "metadata": {
+    "id": "skill.message-clarity-review",
+    "version": "1.0.0",
+    "title": "Message clarity review",
+    "status": "active",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.message-clarity-review",
+      "version": "1.0.0"
+    }
+  },
+  "spec": {
+    "summary": "Reviews a marketing message for audience clarity, evidence coverage, and one permitted next action.",
+    "purpose": "Evaluate a draft without relying on a named persuasion framework or personal style.",
+    "inputs": [
+      {
+        "name": "draft",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      {
+        "name": "brief",
+        "required": true,
+        "schema": {
+          "type": "object"
+        }
+      },
+      {
+        "name": "claim-ledger",
+        "required": true,
+        "schema": {
+          "type": "array"
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "name": "quality-review",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "required": ["audience", "outcome", "evidence", "action", "overall"]
+        }
+      }
+    ],
+    "procedure": [
+      {
+        "id": "identify-audience",
+        "instruction": "State the intended audience in one sentence and compare it with the brief."
+      },
+      {
+        "id": "verify-outcome",
+        "instruction": "State the promised outcome and confirm that it does not exceed the brief."
+      },
+      {
+        "id": "verify-evidence",
+        "instruction": "Verify that each factual claim has a matching evidence identifier and remove or escalate unsupported claims."
+      },
+      {
+        "id": "verify-action",
+        "instruction": "Confirm that the message ends with one specific and permitted next action."
+      },
+      {
+        "id": "record-result",
+        "instruction": "Record pass, revise, or escalate for every criterion and for the overall review."
+      }
+    ],
+    "constraints": [
+      "Do not add claims while reviewing the draft.",
+      "Stop when a required input is missing.",
+      "Escalate conflicting evidence for human review."
+    ],
+    "policies": [
+      {
+        "policyId": "policy.claims-require-evidence",
+        "enforcement": "required"
+      }
+    ]
+  }
+}

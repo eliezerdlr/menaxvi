@@ -1,0 +1,50 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "Task",
+  "metadata": {
+    "id": "marketing.review-copy",
+    "version": "1.0.0",
+    "title": "Review marketing copy",
+    "status": "active",
+    "provenanceRef": {
+      "kind": "ProvenanceRecord",
+      "id": "provenance.copy-review",
+      "version": "1.0.0"
+    }
+  },
+  "spec": {
+    "purpose": "Review a copy draft and return evidence-linked findings.",
+    "roleRef": {
+      "kind": "Skill",
+      "id": "marketing.copy-editor",
+      "version": "1.0.0"
+    },
+    "skillRefs": [
+      {
+        "kind": "Skill",
+        "id": "marketing.copy-review",
+        "version": "1.0.0"
+      }
+    ],
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "review-report",
+        "required": true,
+        "schema": { "type": "object" }
+      }
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "review-copy",
+        "instruction": "Review the supplied copy.",
+        "dependsOn": []
+      }
+    ],
+    "acceptanceCriteria": [
+      { "description": "The report identifies unsupported claims." }
+    ],
+    "policies": []
+  }
+}

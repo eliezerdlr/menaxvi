@@ -1,0 +1,35 @@
+{
+  "id": "data-analytics-operations",
+  "policies": [
+    "source-integrity",
+    "minimum-sample-size",
+    "privacy-by-design",
+    "human-approval-for-actions"
+  ],
+  "roles": [
+    "data-operations-lead",
+    "analytics-specialist",
+    "community-analyst",
+    "customer-success-analyst",
+    "customer-value-analyst",
+    "growth-experiment-analyst",
+    "audience-development-analyst"
+  ],
+  "rollback": "Remove this package and restore the 22 records to pending_remediation; quarantined origins remain unchanged.",
+  "schema": "menaxvi.data-module/v1",
+  "status": "active",
+  "tasks": [
+    "analyze-data",
+    "build-audience-plan",
+    "build-community-strategy",
+    "diagnose-data-request",
+    "measure-growth",
+    "optimize-retention",
+    "review-analytics-output"
+  ],
+  "version": "1.0.0",
+  "workflows": [
+    "analytics-setup",
+    "growth-sprint"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "menaxvi.content-policy.v1",
+  "canonicalAuthor": "Eliezer Rodrigues",
+  "blockedLegacyAuthors": [
+    "MENAXVI contributors",
+    "MENAXVI project",
+    "Synkra AIOS"
+  ],
+  "blockedPersonalTerms": [
+    "Fellipe",
+    "Filipe",
+    "Fellipe Sales",
+    "Filipe Sales",
+    "F. Sales",
+    "F Sales",
+    "João Pedro Voss",
+    "Joao Pedro Voss",
+    "JPV",
+    "J. P. V.",
+    "J.P.V.",
+    "Dinastia",
+    "Morphix"
+  ]
+}

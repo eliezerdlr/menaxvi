@@ -1,0 +1,42 @@
+{
+  "apiVersion": "menaxvi.io/v1alpha1",
+  "kind": "ProvenanceRecord",
+  "metadata": {
+    "id": "provenance.copy-foundation",
+    "status": "active",
+    "title": "Copy Foundation provenance",
+    "version": "1.0.0"
+  },
+  "spec": {
+    "authors": [
+      {
+        "name": "Eliezer Rodrigues",
+        "type": "person"
+      }
+    ],
+    "classification": "rewritten-clean-room",
+    "evidence": [
+      {
+        "algorithm": "sha256",
+        "digest": "1f07afe994e428e3ac8f4d60040fc1b44022cb36d10eda07b2ce7f7105f79ba7",
+        "path": "catalog/modules/copy-foundation.json"
+      }
+    ],
+    "license": {
+      "redistributionAllowed": true,
+      "spdxId": "MIT"
+    },
+    "review": {
+      "notes": "Created without legacy prose, named personas, or proprietary methods.",
+      "reviewedAt": "2026-11-13T23:12:32Z",
+      "reviewedBy": "MENAXVI project review",
+      "status": "approved"
+    },
+    "source": {
+      "type": "original"
+    },
+    "subject": {
+      "path": "catalog/modules/copy-foundation.json"
+    }
+  }
+}
