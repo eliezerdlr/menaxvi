@@ -375,6 +375,41 @@ def render_plan(
     return {**body, "planDigest": _digest(body)}
 
 
+def _validate_schema(value: object, schema: object, *, location: str) -> None:
+    if not isinstance(schema, Mapping):
+        raise ManualWorkflowError(f"{location} schema must be an object")
+    expected_type = schema.get("type")
+    matches = {
+        "object": isinstance(value, Mapping),
+        "array": isinstance(value, list),
+        "string": isinstance(value, str),
+        "boolean": isinstance(value, bool),
+        "number": isinstance(value, (int, float)) and not isinstance(value, bool),
+        "integer": isinstance(value, int) and not isinstance(value, bool),
+        "null": value is None,
+    }
+    if expected_type in matches and not matches[expected_type]:
+        raise ManualWorkflowError(f"{location} must be {expected_type}")
+    if expected_type == "object":
+        required = schema.get("required", [])
+        if not isinstance(required, list) or not all(isinstance(key, str) for key in required):
+            raise ManualWorkflowError(f"{location} schema.required must be a string array")
+        missing = [key for key in required if key not in value]
+        if missing:
+            raise ManualWorkflowError(f"{location} is missing required property {missing[0]}")
+        properties = schema.get("properties", {})
+        if isinstance(properties, Mapping):
+            for key, child_schema in properties.items():
+                if key in value:
+                    _validate_schema(value[key], child_schema, location=f"{location}.{key}")
+    elif expected_type == "array" and "items" in schema:
+        for index, item in enumerate(value):
+            _validate_schema(item, schema["items"], location=f"{location}[{index}]")
+    elif expected_type == "string" and isinstance(schema.get("minLength"), int):
+        if len(value) < schema["minLength"]:
+            raise ManualWorkflowError(f"{location} must contain at least {schema['minLength']} characters")
+
+
 def _indexed_results(value: object, *, collection: str) -> dict[str, dict[str, Any]]:
     items = _collection(value, location=collection)
     indexed: dict[str, dict[str, Any]] = {}
@@ -426,6 +461,12 @@ def record_results(plan: Mapping[str, Any], results: Mapping[str, Any]) -> dict[
                 raise ManualWorkflowError(
                     f"node {node_id} outputs do not match the task: "
                     f"missing={missing_outputs}, extra={unknown_outputs}"
+                )
+            for contract in planned_nodes[node_id]["task"]["outputs"]:
+                _validate_schema(
+                    outputs[contract["name"]],
+                    contract.get("schema", {}),
+                    location=f"node {node_id} output {contract['name']}",
                 )
             for dependency in planned_nodes[node_id]["dependsOn"]:
                 if node_results[dependency].get("status") != "completed":
@@ -508,6 +549,13 @@ def record_results(plan: Mapping[str, Any], results: Mapping[str, Any]) -> dict[
             "workflow outputs do not match the plan: "
             f"missing={missing_outputs}, extra={unknown_outputs}"
         )
+    for contract in plan.get("outputs", []):
+        if status == "completed" and contract["name"] in supplied_outputs:
+            _validate_schema(
+                supplied_outputs[contract["name"]],
+                contract.get("schema", {}),
+                location=f"workflow output {contract['name']}",
+            )
     residual_risks = results.get("residualRisks", [])
     if not isinstance(residual_risks, list) or not all(
         isinstance(risk, str) and risk.strip() for risk in residual_risks

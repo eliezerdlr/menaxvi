@@ -2927,7 +2927,7 @@
         "docs/governance/PROVENANCE.md"
       ],
       "releaseAllowed": true,
-      "sha256": "61d70989adee4d1a2cc6ea86d1e30af5804f95638ea95979c0ac0b0d68629175"
+      "sha256": "eb31d68638edf3534565b6c3058e417d88fe53ab5849d14e9d3d7d7693466f14"
     },
     {
       "path": "pyproject.toml",
@@ -3455,7 +3455,7 @@
         "docs/architecture/CUSTOMER-DASHBOARD.md"
       ],
       "releaseAllowed": true,
-      "sha256": "676b845ed7b40890f17124bab40f45bde0bbda06e05db2b5bcce0b2454e71f19"
+      "sha256": "9ed6b6e305c35cee812af5ef8d29d09db132817a94b973e3af9935927ee02c7f"
     },
     {
       "path": "tests/test_dashboard_api.py",
@@ -3491,7 +3491,7 @@
         "docs/evidence/MEN-007.md"
       ],
       "releaseAllowed": true,
-      "sha256": "1ca058c5e2d91fae1fdced42beddc8b40dc7075782e18c083ae168db070f351f"
+      "sha256": "f932232f0a6aa949e489ee07275dc125aacadcdab89dc501a4bde003f5ed0cab"
     },
     {
       "path": "tests/test_policy_evidence.py",
@@ -3624,7 +3624,7 @@
         "docs/architecture/CUSTOMER-DASHBOARD.md"
       ],
       "releaseAllowed": true,
-      "sha256": "0838b26140a72282e074233df8d9155f1e573b306e9af5a17dee8adeb63af8dd"
+      "sha256": "6b8cd0706a2e646fbc1e6b357391fea5de1d86270173ee9b78292f239191fd4a"
     },
     {
       "path": "tooling/menaxvi/dashboard.py",
@@ -3636,7 +3636,7 @@
         "docs/architecture/CUSTOMER-DASHBOARD.md"
       ],
       "releaseAllowed": true,
-      "sha256": "4e09ceb8a9af6c81a62b2ce4494c1b16ba5d54da278077b1cb50ad3579cdc69c"
+      "sha256": "2fc0a49f7e44ff858a1207d463490eedd9813d860f1572789231e4e0455a96fc"
     },
     {
       "path": "tooling/menaxvi/manual.py",
@@ -3648,7 +3648,7 @@
         "docs/evidence/MEN-007.md"
       ],
       "releaseAllowed": true,
-      "sha256": "0e06e340cb7a599be5f515c8f9e9bbf9fbd8fb7787edf319441bc525b7931a53"
+      "sha256": "88d941ea40f30fa97bf0c190e5922b9c968f2117c2361531711aab22cb7cbcb9"
     },
     {
       "path": "tooling/menaxvi/providers.py",

@@ -208,17 +208,53 @@ class DashboardService:
                 execution["evidence"].append(self._event("validation_failed", {"message": "The draft did not pass controlled validation.", "recordDigest": record["recordDigest"]}))
             else:
                 context = data["workspaces"][execution["workspaceId"]]["context"]
-                artifact = {"draft": f"{context['brand']}: {context['offer']} for {context['audience']}. Reply to request a reviewed next step.", "claimLedger": [context["claims"]], "qualityReview": {"overall": "pass"}, "gateDecision": "approve_draft"}
-                results = {"executionId": execution_id, "nodes": [{"id": "draft-and-review", "status": "completed", "outputs": {"message-draft": artifact["draft"], "claim-ledger": artifact["claimLedger"], "quality-review": artifact["qualityReview"]}}], "gates": [{"id": "human-approval", "status": "passed", "decision": "approve_draft", "decidedBy": context["approvalOwners"], "evidence": "dashboard-confirmation"}], "outputs": {"reviewed-message-package": artifact}, "residualRisks": ["The local dashboard does not publish content."]}
-                record = record_results(plan, results)
-                execution["status"] = "completed"
-                execution["record"] = record
+                artifact = self._draft_outputs(context)
+                node_outputs = {"message-draft": artifact["draft"], "claim-ledger": artifact["claimLedger"], "quality-review": artifact["qualityReview"]}
+                validation = {"executionId": execution_id, "nodes": [{"id": "draft-and-review", "status": "completed", "outputs": node_outputs}], "gates": [{"id": "human-approval", "status": "not-run", "reason": "awaiting human review"}], "outputs": {}, "residualRisks": ["Human approval is required before handoff."]}
+                try:
+                    record_results(plan, validation)
+                except ManualWorkflowError as error:
+                    raise DashboardError(f"Generated output failed contract validation: {error}") from error
+                execution["status"] = "awaiting-approval"
                 execution["artifact"] = artifact
-                execution["evidence"].append(self._event("gate_decided", {"gate": "human-approval", "decision": "approve_draft", "decidedBy": context["approvalOwners"]}))
-                execution["evidence"].append(self._event("output_recorded", {"recordDigest": record["recordDigest"], "artifactDigest": _digest(artifact), "output": artifact}))
+                execution["evidence"].append(self._event("output_recorded", {"artifactDigest": _digest(artifact), "output": artifact}))
             execution["updatedAt"] = _now()
             return execution
         return self.store.update(operation)
+
+    def approve(self, email: str, execution_id: str) -> dict[str, Any]:
+        def operation(data: dict[str, Any]) -> dict[str, Any]:
+            execution = self._owned(data, email, execution_id)
+            if execution["status"] != "awaiting-approval" or not execution["artifact"]:
+                raise DashboardError("Generate and review the draft outputs before deciding the gate.")
+            context = data["workspaces"][execution["workspaceId"]]["context"]
+            artifact = {**execution["artifact"], "gateDecision": "approve_draft"}
+            node_outputs = {"message-draft": artifact["draft"], "claim-ledger": artifact["claimLedger"], "quality-review": artifact["qualityReview"]}
+            results = {"executionId": execution_id, "nodes": [{"id": "draft-and-review", "status": "completed", "outputs": node_outputs}], "gates": [{"id": "human-approval", "status": "passed", "decision": "approve_draft", "decidedBy": context["approvalOwners"], "evidence": "dashboard-review-confirmation"}], "outputs": {"reviewed-message-package": artifact}, "residualRisks": ["The local dashboard does not publish content."]}
+            try:
+                record = record_results(execution["plan"], results)
+            except ManualWorkflowError as error:
+                raise DashboardError(f"Generated output failed contract validation: {error}") from error
+            execution["status"] = "completed"
+            execution["record"] = record
+            execution["artifact"] = artifact
+            execution["evidence"].append(self._event("gate_decided", {"gate": "human-approval", "decision": "approve_draft", "decidedBy": context["approvalOwners"]}))
+            execution["updatedAt"] = _now()
+            return execution
+        return self.store.update(operation)
+
+    @staticmethod
+    def _draft_outputs(context: Mapping[str, str]) -> dict[str, Any]:
+        portuguese = any(word in f" {context['offer']} {context['audience']} {context['claims']} ".lower() for word in (" para ", " com ", " sua ", " seu ", " você ", " líderes ", " mensagem "))
+        if portuguese:
+            draft = f"{context['offer']} para {context['audience']}. {context['claims']} Responda para solicitar o próximo passo revisado."
+        else:
+            draft = f"{context['offer']} for {context['audience']}. {context['claims']} Reply to request the reviewed next step."
+        return {
+            "draft": draft,
+            "claimLedger": [{"claim": context["claims"], "evidenceRef": "customer-claims"}],
+            "qualityReview": {"audience": "pass", "outcome": "pass", "evidence": "pass", "action": "pass", "overall": "pass"},
+        }
 
     def retry(self, email: str, execution_id: str) -> dict[str, Any]:
         def operation(data: dict[str, Any]) -> dict[str, Any]:
@@ -345,6 +381,7 @@ def dashboard_handler(service: DashboardService, html: str) -> type[BaseHTTPRequ
                 if len(parts) == 4 and parts[0] == "api" and parts[1] == "executions":
                     execution_id, action = parts[2], parts[3]
                     if action == "execute": self._send(200, service.execute(user, execution_id, fail=bool(payload.get("controlledFailure")))); return
+                    if action == "approve": self._send(200, service.approve(user, execution_id)); return
                     if action == "retry": self._send(201, service.retry(user, execution_id)); return
                     if action == "rollback": self._send(200, service.rollback(user, execution_id, str(payload.get("reason", "")))); return
                 self._send(404, {"error": "Not found."})

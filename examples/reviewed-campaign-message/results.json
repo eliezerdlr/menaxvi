@@ -5,9 +5,18 @@
       "id": "draft-and-review",
       "status": "completed",
       "outputs": {
-        "message-draft": "Please review the attached campaign message and reply with approval or requested changes.",
-        "claim-ledger": [],
+        "message-draft": "Please review the campaign message and reply with approval or requested changes.",
+        "claim-ledger": [
+          {
+            "claim": "The campaign message requires human review before handoff.",
+            "evidenceRef": "E-001"
+          }
+        ],
         "quality-review": {
+          "audience": "pass",
+          "outcome": "pass",
+          "evidence": "pass",
+          "action": "pass",
           "overall": "pass"
         }
       }
@@ -23,7 +32,23 @@
     }
   ],
   "outputs": {
-    "reviewed-message-package": "artifact://tutorial-reviewed-message"
+    "reviewed-message-package": {
+      "draft": "Please review the campaign message and reply with approval or requested changes.",
+      "claimLedger": [
+        {
+          "claim": "The campaign message requires human review before handoff.",
+          "evidenceRef": "E-001"
+        }
+      ],
+      "qualityReview": {
+        "audience": "pass",
+        "outcome": "pass",
+        "evidence": "pass",
+        "action": "pass",
+        "overall": "pass"
+      },
+      "gateDecision": "approve_draft"
+    }
   },
   "residualRisks": [
     "The manual adapter does not publish content."

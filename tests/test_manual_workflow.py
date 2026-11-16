@@ -40,8 +40,8 @@ def supplied_results(execution_id: str = "exec-men-007") -> dict[str, object]:
                 "status": "completed",
                 "outputs": {
                     "message-draft": "Draft message",
-                    "claim-ledger": [],
-                    "quality-review": {"overall": "pass"},
+                    "claim-ledger": [{"claim": "The workflow is manually reviewed.", "evidenceRef": "evidence-1"}],
+                    "quality-review": {"audience": "pass", "outcome": "pass", "evidence": "pass", "action": "pass", "overall": "pass"},
                 },
             }
         ],
@@ -54,7 +54,7 @@ def supplied_results(execution_id: str = "exec-men-007") -> dict[str, object]:
                 "evidence": "review-ticket-007",
             }
         ],
-        "outputs": {"reviewed-message-package": "artifact://draft-message"},
+        "outputs": {"reviewed-message-package": {"draft": "Draft message", "claimLedger": [{"claim": "The workflow is manually reviewed.", "evidenceRef": "evidence-1"}], "qualityReview": {"audience": "pass", "outcome": "pass", "evidence": "pass", "action": "pass", "overall": "pass"}, "gateDecision": "approve_draft"}},
         "residualRisks": ["The manual adapter does not publish content."],
     }
 
