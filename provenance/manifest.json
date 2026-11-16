@@ -67,7 +67,7 @@
         "docs/governance/PROVENANCE.md"
       ],
       "releaseAllowed": true,
-      "sha256": "ac82f8f2f609624c07d1fd75e5ede041aacc72e5d967cf7bd8e0d1e235321493"
+      "sha256": "7bdf0575d1b954708c62ccf163f7d04a7f1944b96456c52b6b2eb5e347c53f99"
     },
     {
       "path": ".github/workflows/release.yml",
